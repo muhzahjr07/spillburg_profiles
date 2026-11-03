@@ -29,3 +29,4 @@ jobs:
         with:
           files: release_dist/*.zip
           generate_release_notes: true
+

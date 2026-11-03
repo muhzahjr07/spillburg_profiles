@@ -10,3 +10,4 @@ for comp in ["destination consultancy", "spillburg corporate services", "spillbu
         print(f"Created {zip_dest}.zip")
 
 print("All figma_svg_pages zipped successfully.")
+

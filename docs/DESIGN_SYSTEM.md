@@ -60,3 +60,4 @@ A unified yet distinct design language tailored for each company vertical within
 - **Visual Style**: Corporate Conglomerate & Holding Presence
 - **Tagline**: *"We Make It Happen"*
 - **Color Palette**: Classic Corporate Navy, Pure Gold & Crisp White.
+

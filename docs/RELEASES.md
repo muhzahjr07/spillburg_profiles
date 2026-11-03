@@ -35,3 +35,4 @@ To tag and trigger an automated release package on GitHub:
 git tag -a v1.0.0 -m "Release v1.0.0: Spillburg Group 2026 Corporate Profiles"
 git push origin v1.0.0
 ```
+

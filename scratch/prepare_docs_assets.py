@@ -28,3 +28,4 @@ for prefix, pdf_path in PROFILES.items():
             print(f"Saved {out_name}")
 
 print("Screenshots prepared successfully in docs/screenshots/")
+
