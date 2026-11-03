@@ -1,0 +1,31 @@
+name: Package Profile Releases
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Prepare Release Archives
+        run: |
+          mkdir -p release_dist
+          zip -r release_dist/Destination_Consultancy_2026.zip "destination consultancy"
+          zip -r release_dist/Spillburg_Corporate_Services_2026.zip "spillburg corporate services"
+          zip -r release_dist/Spillburg_Logistics_1_2026.zip "spillburg logistics"
+          zip -r release_dist/Spillburg_Holdings_2026.zip "spillburg holdings/v3"
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: release_dist/*.zip
+          generate_release_notes: true
