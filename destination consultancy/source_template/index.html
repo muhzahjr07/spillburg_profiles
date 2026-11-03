@@ -1,0 +1,1870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Destination Consultancy (Pvt) Ltd - Company Profile 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy-dark: #071E2B;
+    --navy-main: #0B2D3F;
+    --navy-mid: #12455E;
+    --blue-bright: #197498;
+    --blue-light: #38A3C7;
+    --gold-main: #C59B27;
+    --gold-light: #E2BE5A;
+    --gold-pale: #FBF6E8;
+    --text-dark: #0F2330;
+    --text-muted: #4A6070;
+    --bg-light: #F4F8FA;
+    --white: #FFFFFF;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: #1a1a1a;
+    color: var(--text-dark);
+    margin: 0;
+    padding: 0;
+  }
+
+  .page {
+    width: 210mm;
+    height: 297mm;
+    position: relative;
+    overflow: hidden;
+    background: var(--white);
+    page-break-after: always;
+    break-after: page;
+    margin: 0 auto;
+  }
+
+  .page-bg-pattern {
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle at 90% 12%, rgba(25, 116, 152, 0.04) 0%, transparent 45%),
+      radial-gradient(circle at 8% 85%, rgba(197, 155, 39, 0.05) 0%, transparent 45%);
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  /* Header Wave */
+  .header-wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 27mm;
+    z-index: 2;
+  }
+
+  .header-wave-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 24mm;
+    background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy-main) 60%, var(--navy-mid) 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 68%, 62% 100%, 0 84%);
+  }
+
+  .header-wave-gold {
+    position: absolute;
+    top: 1.5mm;
+    left: 0;
+    width: 100%;
+    height: 24.5mm;
+    background: linear-gradient(90deg, var(--gold-main) 0%, var(--gold-light) 50%, var(--blue-bright) 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 71%, 61% 100%, 0 87%);
+    z-index: -1;
+  }
+
+  .header-brand {
+    position: absolute;
+    top: 4.5mm;
+    right: 14mm;
+    display: flex;
+    align-items: center;
+    gap: 3mm;
+    z-index: 5;
+  }
+
+  .header-brand img.compass-icon {
+    width: 10.5mm;
+    height: 10.5mm;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4));
+  }
+
+  .header-brand-text {
+    text-align: right;
+    color: var(--white);
+  }
+
+  .header-brand-text .company {
+    font-size: 8.5pt;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+  }
+
+  .header-brand-text .tagline {
+    font-size: 6.2pt;
+    color: var(--gold-light);
+    font-weight: 600;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    margin-top: 0.5mm;
+  }
+
+  /* Footer Wave */
+  .footer-wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 16mm;
+    z-index: 2;
+  }
+
+  .footer-wave-bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 13.5mm;
+    background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy-main) 65%, var(--navy-mid) 100%);
+    clip-path: polygon(0 35%, 38% 0, 100% 28%, 100% 100%, 0 100%);
+  }
+
+  .footer-wave-gold {
+    position: absolute;
+    bottom: 1.2mm;
+    left: 0;
+    width: 100%;
+    height: 14mm;
+    background: linear-gradient(90deg, var(--blue-bright) 0%, var(--gold-light) 50%, var(--gold-main) 100%);
+    clip-path: polygon(0 38%, 39% 0, 100% 25%, 100% 100%, 0 100%);
+    z-index: -1;
+  }
+
+  .footer-content {
+    position: absolute;
+    bottom: 3mm;
+    left: 15mm;
+    right: 15mm;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+    color: rgba(255,255,255,0.85);
+    font-size: 6.8pt;
+    font-weight: 500;
+    letter-spacing: 0.6px;
+  }
+
+  .page-num {
+    background: var(--gold-main);
+    color: var(--navy-dark);
+    font-weight: 800;
+    font-size: 7.5pt;
+    padding: 1mm 3mm;
+    border-radius: 10mm;
+  }
+
+  /* Content Container */
+  .content {
+    position: relative;
+    z-index: 3;
+    padding: 29mm 15mm 18mm 15mm;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section-eyebrow {
+    font-size: 7.2pt;
+    font-weight: 700;
+    color: var(--gold-main);
+    letter-spacing: 2.2px;
+    text-transform: uppercase;
+    margin-bottom: 1mm;
+    display: flex;
+    align-items: center;
+    gap: 2.5mm;
+  }
+
+  .section-eyebrow::before {
+    content: "";
+    display: inline-block;
+    width: 7mm;
+    height: 0.7mm;
+    background: var(--gold-main);
+  }
+
+  .section-title {
+    font-size: 19pt;
+    font-weight: 800;
+    color: var(--navy-dark);
+    letter-spacing: -0.3px;
+    line-height: 1.12;
+    margin-bottom: 2.5mm;
+    text-transform: uppercase;
+  }
+
+  .section-title span {
+    color: var(--blue-bright);
+  }
+
+  .title-divider {
+    width: 22mm;
+    height: 1.1mm;
+    background: linear-gradient(90deg, var(--gold-main), var(--blue-bright));
+    margin-bottom: 4.5mm;
+    border-radius: 1mm;
+  }
+
+  /* ================= PAGE 1: COVER ================= */
+  .cover-hero {
+    position: absolute;
+    inset: 0;
+    background-image: url('../assets/cover_hero.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+  }
+
+  .cover-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(155deg,
+      rgba(7, 30, 43, 0.93) 0%,
+      rgba(11, 45, 63, 0.84) 48%,
+      rgba(7, 30, 43, 0.96) 100%);
+    z-index: 2;
+  }
+
+  .cover-top-ribbon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 44mm;
+    background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy-main) 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 58%, 0 100%);
+    z-index: 3;
+    border-bottom: 2mm solid var(--gold-main);
+  }
+
+  .cover-top-gold {
+    position: absolute;
+    top: 2.5mm;
+    left: 0;
+    width: 100%;
+    height: 44mm;
+    background: linear-gradient(90deg, var(--gold-main), var(--gold-light), var(--blue-light));
+    clip-path: polygon(0 0, 100% 0, 100% 60%, 0 100%);
+    z-index: 2;
+  }
+
+  .cover-logo-area {
+    position: absolute;
+    top: 7mm;
+    left: 15mm;
+    right: 15mm;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .cover-logo-left {
+    display: flex;
+    align-items: center;
+    gap: 4.5mm;
+  }
+
+  .cover-compass {
+    width: 20mm;
+    height: 20mm;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.45));
+  }
+
+  .cover-wordmark {
+    height: 17mm;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 8px rgba(0,0,0,0.45));
+  }
+
+  .cover-edition-pill {
+    background: rgba(197, 155, 39, 0.18);
+    border: 1px solid var(--gold-light);
+    color: var(--gold-light);
+    font-size: 7.5pt;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 2mm 4mm;
+    border-radius: 2mm;
+    text-transform: uppercase;
+  }
+
+  .cover-center {
+    position: absolute;
+    top: 100mm;
+    left: 16mm;
+    right: 16mm;
+    z-index: 4;
+    color: var(--white);
+  }
+
+  .cover-badge {
+    display: inline-block;
+    background: rgba(197, 155, 39, 0.22);
+    border: 1px solid var(--gold-light);
+    color: var(--gold-light);
+    font-size: 8.5pt;
+    font-weight: 700;
+    letter-spacing: 3px;
+    padding: 2.2mm 5mm;
+    border-radius: 1.5mm;
+    text-transform: uppercase;
+    margin-bottom: 6mm;
+  }
+
+  .cover-main-title {
+    font-size: 32pt;
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -0.5px;
+    text-transform: uppercase;
+    margin-bottom: 4mm;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  }
+
+  .cover-main-title span {
+    color: var(--gold-light);
+    display: block;
+  }
+
+  .cover-sub {
+    font-size: 11pt;
+    font-weight: 400;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.9);
+    max-width: 158mm;
+    border-left: 1.2mm solid var(--gold-main);
+    padding-left: 4.5mm;
+    margin-bottom: 8mm;
+  }
+
+  .cover-pillars {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3.5mm;
+    margin-top: 2mm;
+  }
+
+  .cover-pillar-item {
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(226, 190, 90, 0.35);
+    border-radius: 2.5mm;
+    padding: 3.2mm 4mm;
+    backdrop-filter: blur(6px);
+  }
+
+  .cover-pillar-item .num {
+    font-size: 7pt;
+    font-weight: 800;
+    color: var(--gold-light);
+    letter-spacing: 1.5px;
+    margin-bottom: 1mm;
+  }
+
+  .cover-pillar-item .lbl {
+    font-size: 8pt;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.3;
+  }
+
+  .cover-tagline-banner {
+    position: absolute;
+    bottom: 34mm;
+    right: 0;
+    background: linear-gradient(90deg, var(--gold-main) 0%, var(--gold-light) 100%);
+    color: var(--navy-dark);
+    padding: 3.8mm 16mm 3.8mm 12mm;
+    clip-path: polygon(6% 0, 100% 0, 100% 100%, 0 100%);
+    z-index: 5;
+  }
+
+  .cover-tagline-banner span {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15.5pt;
+    font-weight: 700;
+    font-style: italic;
+    letter-spacing: 1.2px;
+  }
+
+  .cover-bottom-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 24mm;
+    background: var(--navy-dark);
+    border-top: 1mm solid var(--gold-main);
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16mm;
+    color: rgba(255,255,255,0.85);
+    font-size: 7.8pt;
+  }
+
+  /* Cards & Grids */
+  .about-lead-box {
+    background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy-main) 100%);
+    color: var(--white);
+    padding: 5mm 6mm;
+    border-radius: 3mm;
+    border-left: 2mm solid var(--gold-main);
+    margin-bottom: 4.5mm;
+    box-shadow: 0 6px 18px rgba(7, 30, 43, 0.12);
+  }
+
+  .about-lead-box p {
+    font-size: 8.6pt;
+    line-height: 1.58;
+    color: rgba(255,255,255,0.93);
+  }
+
+  .about-lead-box p + p {
+    margin-top: 2.5mm;
+  }
+
+  .vm-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4.5mm;
+    margin-bottom: 4.5mm;
+  }
+
+  .vm-card {
+    background: var(--bg-light);
+    border-radius: 3mm;
+    padding: 4.5mm 5mm;
+    border-top: 1.2mm solid var(--navy-main);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.04);
+  }
+
+  .vm-card.gold-top {
+    border-top-color: var(--gold-main);
+    background: var(--gold-pale);
+  }
+
+  .vm-card h3 {
+    font-size: 10.5pt;
+    font-weight: 800;
+    color: var(--navy-dark);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 2mm;
+    display: flex;
+    align-items: center;
+    gap: 2mm;
+  }
+
+  .vm-card p {
+    font-size: 8.3pt;
+    line-height: 1.52;
+    color: var(--text-dark);
+  }
+
+  .pillars-4-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3mm;
+    margin-bottom: 4.5mm;
+  }
+
+  .pillar-mini {
+    background: var(--white);
+    border: 0.35mm solid rgba(11, 45, 63, 0.14);
+    border-bottom: 1mm solid var(--blue-bright);
+    border-radius: 2.5mm;
+    padding: 3.2mm 3.5mm;
+  }
+
+  .pillar-mini h4 {
+    font-size: 8pt;
+    font-weight: 800;
+    color: var(--navy-dark);
+    margin-bottom: 1.2mm;
+    text-transform: uppercase;
+  }
+
+  .pillar-mini p {
+    font-size: 7.2pt;
+    line-height: 1.42;
+    color: var(--text-muted);
+  }
+
+  /* 4-Step Methodology */
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3.5mm;
+  }
+
+  .step-card {
+    background: linear-gradient(160deg, var(--navy-dark) 0%, var(--navy-main) 100%);
+    color: var(--white);
+    border-radius: 2.8mm;
+    padding: 4mm 3.8mm;
+    position: relative;
+    border-top: 1.2mm solid var(--gold-main);
+  }
+
+  .step-num {
+    font-size: 15pt;
+    font-weight: 800;
+    color: var(--gold-light);
+    line-height: 1;
+    margin-bottom: 1.5mm;
+  }
+
+  .step-card h4 {
+    font-size: 8.8pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    margin-bottom: 1.5mm;
+    color: var(--white);
+  }
+
+  .step-card p {
+    font-size: 7.3pt;
+    line-height: 1.45;
+    color: rgba(255,255,255,0.84);
+  }
+
+  /* Directors 2x2 Grid */
+  .directors-2x2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4.5mm;
+    margin-bottom: 4.5mm;
+  }
+
+  .dir-card {
+    background: var(--white);
+    border-radius: 3mm;
+    border: 0.35mm solid rgba(11, 45, 63, 0.14);
+    box-shadow: 0 5px 15px rgba(7, 30, 43, 0.06);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .dir-card-top {
+    background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy-main) 100%);
+    padding: 4mm 4.5mm;
+    display: flex;
+    align-items: center;
+    gap: 4mm;
+    border-bottom: 1mm solid var(--gold-main);
+  }
+
+  .dir-photo {
+    width: 21mm;
+    height: 21mm;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top center;
+    border: 0.8mm solid var(--gold-light);
+    flex-shrink: 0;
+    background: var(--navy-mid);
+  }
+
+  .dir-meta h3 {
+    font-size: 10pt;
+    font-weight: 800;
+    color: var(--white);
+    line-height: 1.2;
+  }
+
+  .dir-meta .role {
+    font-size: 7.3pt;
+    font-weight: 700;
+    color: var(--gold-light);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 0.8mm;
+    line-height: 1.3;
+  }
+
+  .dir-meta .creds {
+    font-size: 6.5pt;
+    color: rgba(255,255,255,0.78);
+    margin-top: 1mm;
+    line-height: 1.25;
+  }
+
+  .dir-card-body {
+    padding: 3.8mm 4.5mm;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .dir-card-body p {
+    font-size: 7.7pt;
+    line-height: 1.48;
+    color: var(--text-dark);
+    margin-bottom: 2.8mm;
+  }
+
+  .dir-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5mm;
+  }
+
+  .dir-tag {
+    background: var(--bg-light);
+    color: var(--navy-main);
+    border: 0.25mm solid rgba(25, 116, 152, 0.28);
+    font-size: 6.3pt;
+    font-weight: 700;
+    padding: 0.8mm 2.2mm;
+    border-radius: 1.2mm;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+  }
+
+  /* Service Blocks (Pages 4 & 5) */
+  .service-detail-card {
+    background: var(--white);
+    border-radius: 3mm;
+    border: 0.35mm solid rgba(11, 45, 63, 0.14);
+    box-shadow: 0 4px 14px rgba(7, 30, 43, 0.05);
+    margin-bottom: 4.2mm;
+    overflow: hidden;
+  }
+
+  .service-detail-hdr {
+    background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy-main) 100%);
+    color: var(--white);
+    padding: 3.2mm 5mm;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 0.9mm solid var(--gold-main);
+  }
+
+  .service-detail-hdr .left {
+    display: flex;
+    align-items: center;
+    gap: 3mm;
+  }
+
+  .service-detail-hdr .s-num {
+    background: var(--gold-main);
+    color: var(--navy-dark);
+    font-size: 9pt;
+    font-weight: 800;
+    padding: 1mm 2.5mm;
+    border-radius: 1.5mm;
+  }
+
+  .service-detail-hdr h3 {
+    font-size: 10.5pt;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+  }
+
+  .service-detail-hdr .s-tag {
+    font-size: 6.8pt;
+    color: var(--gold-light);
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .service-detail-body {
+    padding: 3.8mm 5mm;
+  }
+
+  .service-detail-body p.intro {
+    font-size: 8pt;
+    line-height: 1.48;
+    color: var(--text-dark);
+    margin-bottom: 2.8mm;
+  }
+
+  .deliverables-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.8mm 5mm;
+  }
+
+  .deliv-item {
+    font-size: 7.6pt;
+    line-height: 1.38;
+    color: var(--text-dark);
+    display: flex;
+    align-items: flex-start;
+    gap: 2mm;
+  }
+
+  .deliv-item::before {
+    content: "▸";
+    color: var(--gold-main);
+    font-weight: 800;
+    flex-shrink: 0;
+  }
+
+  /* Why Sri Lanka & 5 Hubs */
+  .stats-4-bar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3.5mm;
+    margin-bottom: 4.5mm;
+  }
+
+  .stat-tile {
+    background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy-main) 100%);
+    color: var(--white);
+    padding: 3.5mm 4mm;
+    border-radius: 2.5mm;
+    border-bottom: 1.1mm solid var(--gold-main);
+    text-align: center;
+  }
+
+  .stat-tile .val {
+    font-size: 13pt;
+    font-weight: 800;
+    color: var(--gold-light);
+    line-height: 1.1;
+  }
+
+  .stat-tile .lbl {
+    font-size: 7pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    margin-top: 1mm;
+  }
+
+  .stat-tile .sub {
+    font-size: 6.3pt;
+    color: rgba(255,255,255,0.75);
+    margin-top: 0.5mm;
+  }
+
+  .hubs-5-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2.8mm;
+    margin-bottom: 4.5mm;
+  }
+
+  .hub-card {
+    background: var(--bg-light);
+    border: 0.35mm solid rgba(11, 45, 63, 0.14);
+    border-top: 1.2mm solid var(--blue-bright);
+    border-radius: 2.5mm;
+    padding: 3.2mm 3mm;
+  }
+
+  .hub-card:nth-child(odd) {
+    border-top-color: var(--gold-main);
+  }
+
+  .hub-card .h-num {
+    font-size: 7.5pt;
+    font-weight: 800;
+    color: var(--gold-main);
+    margin-bottom: 1mm;
+  }
+
+  .hub-card h4 {
+    font-size: 8.2pt;
+    font-weight: 800;
+    color: var(--navy-dark);
+    text-transform: uppercase;
+    margin-bottom: 1.5mm;
+    line-height: 1.2;
+  }
+
+  .hub-card p {
+    font-size: 7pt;
+    line-height: 1.42;
+    color: var(--text-muted);
+  }
+
+  /* Mandates / Projects Grid */
+  .mandates-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3.8mm;
+  }
+
+  .mandate-card {
+    background: var(--white);
+    border: 0.35mm solid rgba(11, 45, 63, 0.14);
+    border-left: 1.5mm solid var(--navy-main);
+    border-radius: 2.5mm;
+    padding: 3.5mm 4.2mm;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.03);
+  }
+
+  .mandate-card:nth-child(even) {
+    border-left-color: var(--gold-main);
+  }
+
+  .mandate-sector {
+    font-size: 6.5pt;
+    font-weight: 800;
+    color: var(--blue-bright);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1mm;
+  }
+
+  .mandate-card h4 {
+    font-size: 9pt;
+    font-weight: 800;
+    color: var(--navy-dark);
+    margin-bottom: 1.5mm;
+    line-height: 1.25;
+  }
+
+  .mandate-card p {
+    font-size: 7.4pt;
+    line-height: 1.44;
+    color: var(--text-muted);
+    margin-bottom: 2mm;
+  }
+
+  .mandate-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2mm;
+  }
+
+  .mandate-tag {
+    background: var(--gold-pale);
+    color: var(--navy-dark);
+    font-size: 6pt;
+    font-weight: 700;
+    padding: 0.6mm 2mm;
+    border-radius: 1mm;
+  }
+</style>
+</head>
+<body>
+
+<!-- ==================== PAGE 1: COVER ==================== -->
+<div class="page">
+  <div class="cover-hero"></div>
+  <div class="cover-overlay"></div>
+  <div class="cover-top-gold"></div>
+  <div class="cover-top-ribbon"></div>
+
+  <div class="cover-logo-area">
+    <div class="cover-logo-left">
+      <img src="../assets/icon_compass.png" alt="Compass Icon" class="cover-compass">
+      <img src="../assets/logo_white.png" alt="Destination Consultancy" class="cover-wordmark">
+    </div>
+    <div class="cover-edition-pill">Company Profile • 2026</div>
+  </div>
+
+  <div class="cover-center">
+    <div class="cover-badge">Strategic Advisory &amp; Investment Facilitation</div>
+    <h1 class="cover-main-title">
+      Destination
+      <span>Consultancy (Pvt) Ltd</span>
+    </h1>
+    <p class="cover-sub">
+      A premier Sri Lanka-based multidisciplinary management and investment consultancy firm serving as your strategic bridge and execution partner for market entry, project development, sustainability, certification readiness, BPO setup, and digital growth.
+    </p>
+
+    <div class="cover-pillars">
+      <div class="cover-pillar-item">
+        <div class="num">01 • INVESTMENT &amp; M&amp;A</div>
+        <div class="lbl">Market Entry, BOI &amp; Port City Advisory, Project Structuring</div>
+      </div>
+      <div class="cover-pillar-item">
+        <div class="num">02 • ESG &amp; STANDARDS</div>
+        <div class="lbl">Sustainability Frameworks, Carbon Accounting &amp; ISO Readiness</div>
+      </div>
+      <div class="cover-pillar-item">
+        <div class="num">03 • BPO &amp; DIGITAL</div>
+        <div class="lbl">Shared Services Setup, AI/CRM Automation &amp; Digital Growth</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cover-tagline-banner">
+    <span>“Success Beyond Boundaries”</span>
+  </div>
+
+  <div class="cover-bottom-bar">
+    <div><strong>HEADQUARTERS:</strong> #14, Basement Level, Cinnamon Lakeside Hotel, Colombo 02, Sri Lanka</div>
+    <div><strong>WEB:</strong> www.destinationconsultancy.com &nbsp;|&nbsp; <strong>TEL:</strong> +94 11 233 6116</div>
+  </div>
+</div>
+
+<!-- ==================== PAGE 2: ABOUT US & METHODOLOGY ==================== -->
+<div class="page">
+  <div class="page-bg-pattern"></div>
+  <div class="header-wave">
+    <div class="header-wave-bg"></div>
+    <div class="header-wave-gold"></div>
+    <div class="header-brand">
+      <div class="header-brand-text">
+        <div class="company">Destination Consultancy (Pvt) Ltd</div>
+        <div class="tagline">Success Beyond Boundaries</div>
+      </div>
+      <img src="../assets/icon_compass.png" alt="Icon" class="compass-icon">
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="section-eyebrow">Corporate Overview • Who We Are</div>
+    <h2 class="section-title">A Multidisciplinary <span>Advisory Partner</span></h2>
+    <div class="title-divider"></div>
+
+    <div class="about-lead-box">
+      <p>
+        <strong>Destination Consultancy (Private) Limited</strong> is a premier, Sri Lanka-based multidisciplinary management and investment consultancy firm headquartered in the heart of Colombo. Positioned at the crossroads of South Asian commerce, we serve as a strategic bridge and execution partner for international investors, global corporations, development agencies, and ambitious domestic enterprises looking to establish, scale, or transform their operations in Sri Lanka and across the region.
+      </p>
+      <p>
+        Whether you are a foreign investor evaluating market entry under the <strong>Board of Investment (BOI)</strong> or <strong>Colombo Port City</strong> frameworks, an industrial leader aligning with international <strong>ISO and ESG standards</strong>, or a fast-growing business building a <strong>BPO centre or digital growth engine</strong>, Destination Consultancy provides integrated, end-to-end solutions under one roof.
+      </p>
+    </div>
+
+    <div class="vm-grid">
+      <div class="vm-card">
+        <h3>Our Vision</h3>
+        <p>
+          To be the most trusted strategic advisory and execution partner for sustainable investment, enterprise transformation, and cross-border business growth in Sri Lanka and the region.
+        </p>
+      </div>
+      <div class="vm-card gold-top">
+        <h3>Our Mission</h3>
+        <p>
+          To empower investors and enterprises with actionable intelligence, seamless regulatory navigation, sustainable frameworks, and end-to-end operational support—turning complex market opportunities into lasting commercial success.
+        </p>
+      </div>
+    </div>
+
+    <div class="section-eyebrow" style="margin-top: 1mm;">Our Core Pillars</div>
+    <div class="pillars-4-grid">
+      <div class="pillar-mini">
+        <h4>Strategic Insight</h4>
+        <p>Data-driven feasibility studies, market intelligence, and rigorous commercial structuring.</p>
+      </div>
+      <div class="pillar-mini">
+        <h4>Regulatory Navigation</h4>
+        <p>Direct coordination across BOI, Port City Colombo, and line ministries for seamless approvals.</p>
+      </div>
+      <div class="pillar-mini">
+        <h4>Hands-On Execution</h4>
+        <p>We go beyond advisory—supporting incorporation, recruitment, setup, and operational launch.</p>
+      </div>
+      <div class="pillar-mini">
+        <h4>Global Standards</h4>
+        <p>Aligning local enterprises with international ISO, ESG, and digital best practices.</p>
+      </div>
+    </div>
+
+    <div class="section-eyebrow" style="margin-top: 1mm;">How We Work • From First Conversation to Long-Term Operations</div>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">01</div>
+        <h4>Discover</h4>
+        <p>Understand your commercial objectives, market context, regulatory requirements, and operational priorities.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">02</div>
+        <h4>Structure</h4>
+        <p>Design the optimal market-entry vehicle, project finance architecture, compliance framework, or operating model.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">03</div>
+        <h4>Execute</h4>
+        <p>Coordinate statutory approvals, legal documentation, local partners, facility implementation, and delivery milestones.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">04</div>
+        <h4>Scale</h4>
+        <p>Support ongoing operational optimisation, ISO/ESG governance, digital adoption, and long-term regional expansion.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-wave">
+    <div class="footer-wave-bg"></div>
+    <div class="footer-wave-gold"></div>
+    <div class="footer-content">
+      <span>DESTINATION CONSULTANCY (PVT) LTD &nbsp;|&nbsp; WWW.DESTINATIONCONSULTANCY.COM</span>
+      <span class="page-num">02</span>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== PAGE 3: BOARD OF DIRECTORS ==================== -->
+<div class="page">
+  <div class="page-bg-pattern"></div>
+  <div class="header-wave">
+    <div class="header-wave-bg"></div>
+    <div class="header-wave-gold"></div>
+    <div class="header-brand">
+      <div class="header-brand-text">
+        <div class="company">Destination Consultancy (Pvt) Ltd</div>
+        <div class="tagline">Success Beyond Boundaries</div>
+      </div>
+      <img src="../assets/icon_compass.png" alt="Icon" class="compass-icon">
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="section-eyebrow">Leadership &amp; Governance • Senior Involvement</div>
+    <h2 class="section-title">Board of <span>Directors</span></h2>
+    <div class="title-divider"></div>
+
+    <p style="font-size: 8.2pt; line-height: 1.5; color: var(--text-muted); margin-bottom: 4mm;">
+      Every client engagement at Destination Consultancy is guided by a director with domain-specific operational experience across investment facilitation, sustainable infrastructure, digital transformation, and capital markets.
+    </p>
+
+    <div class="directors-2x2">
+      <!-- Director 1 -->
+      <div class="dir-card">
+        <div class="dir-card-top">
+          <img src="../assets/dir_shaameel.jpg" alt="Shaameel Mohideen" class="dir-photo">
+          <div class="dir-meta">
+            <h3>Shaameel Mohideen</h3>
+            <div class="role">Executive Director &amp; CEO – Investment Facilitation &amp; Market Entry</div>
+            <div class="creds">MBA (Australia), CMA (Australia), MABE (UK), FCPM, AM (SLIM), FSLID, JP (All Island)</div>
+          </div>
+        </div>
+        <div class="dir-card-body">
+          <p>
+            Specialises in BOI and Port City Colombo advisory, government approvals, market entry, corporate services, project structuring, and cross-border partnerships. Provides institutional navigation, investor facilitation, regulatory coordination, and international business connectivity across key global investment corridors.
+          </p>
+          <div class="dir-tags">
+            <span class="dir-tag">BOI &amp; Port City</span>
+            <span class="dir-tag">Market Entry</span>
+            <span class="dir-tag">Project Structuring</span>
+            <span class="dir-tag">Investor Facilitation</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Director 2 -->
+      <div class="dir-card">
+        <div class="dir-card-top">
+          <img src="../assets/dir_azad.jpg" alt="Azad Hamdoon" class="dir-photo">
+          <div class="dir-meta">
+            <h3>Azad Hamdoon</h3>
+            <div class="role">Director – Sustainable Infrastructure &amp; Project Development</div>
+            <div class="creds">15+ Years in Renewable Energy, Waste Management &amp; Agribusiness</div>
+          </div>
+        </div>
+        <div class="dir-card-body">
+          <p>
+            Brings over 15 years of hands-on leadership in renewable energy, waste management, agribusiness infrastructure, and large-scale project development. Leads sustainability-linked projects, clean-energy transitions, infrastructure development, and practical on-ground project execution.
+          </p>
+          <div class="dir-tags">
+            <span class="dir-tag">Renewable Energy</span>
+            <span class="dir-tag">Waste Management</span>
+            <span class="dir-tag">Agribusiness</span>
+            <span class="dir-tag">Project Development</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Director 3 -->
+      <div class="dir-card">
+        <div class="dir-card-top">
+          <img src="../assets/dir_faazil.jpg" alt="Faazil Ibrahim" class="dir-photo">
+          <div class="dir-meta">
+            <h3>Faazil Ibrahim</h3>
+            <div class="role">Director – Strategy, Digital Transformation &amp; Business Growth</div>
+            <div class="creds">20+ Years Across GCC &amp; South Asia Operations &amp; Digital Strategy</div>
+          </div>
+        </div>
+        <div class="dir-card-body">
+          <p>
+            Over 20 years of senior experience across customer success, business operations, digital strategy, and revenue growth in the GCC and South Asia. Connects strategy to execution through scalable operating models, BPO capability, customer experience design, digital transformation, and demand creation.
+          </p>
+          <div class="dir-tags">
+            <span class="dir-tag">Digital Transformation</span>
+            <span class="dir-tag">Business Growth</span>
+            <span class="dir-tag">BPO Operations</span>
+            <span class="dir-tag">Customer Experience</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Director 4 -->
+      <div class="dir-card">
+        <div class="dir-card-top">
+          <img src="../assets/dir_eardley.jpg" alt="Eardley Kern" class="dir-photo">
+          <div class="dir-meta">
+            <h3>Eardley Kern</h3>
+            <div class="role">Director – Capital Markets &amp; Investment Advisory</div>
+            <div class="creds">32+ Years in Capital Markets, Financial Services &amp; Corporate Performance</div>
+          </div>
+        </div>
+        <div class="dir-card-body">
+          <p>
+            Over 32 years of executive leadership in capital markets and financial services, combining an investment and corporate-performance perspective with strategic marketing leadership. Strengthens funding strategy, investment readiness, financial-market insight, and board-level governance credibility.
+          </p>
+          <div class="dir-tags">
+            <span class="dir-tag">Capital Markets</span>
+            <span class="dir-tag">Investment Advisory</span>
+            <span class="dir-tag">Corporate Performance</span>
+            <span class="dir-tag">Financial Services</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy-main) 100%); color: var(--white); border-radius: 3mm; padding: 4mm 5.5mm; border-left: 2mm solid var(--gold-main); display: flex; align-items: center; justify-content: space-between; gap: 5mm;">
+      <div>
+        <div style="font-size: 7pt; font-weight: 800; color: var(--gold-light); letter-spacing: 1.8px; text-transform: uppercase; margin-bottom: 1mm;">Integrated Board-Level Stewardship</div>
+        <div style="font-size: 8.2pt; line-height: 1.45; color: rgba(255,255,255,0.9);">
+          Together, our four directors cover the full commercial lifecycle—<strong>Market Entry, Capital Structuring, Sustainable Infrastructure, and Digital &amp; Operational Growth</strong>—ensuring senior accountability from initial feasibility to full-scale operations.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-wave">
+    <div class="footer-wave-bg"></div>
+    <div class="footer-wave-gold"></div>
+    <div class="footer-content">
+      <span>DESTINATION CONSULTANCY (PVT) LTD &nbsp;|&nbsp; WWW.DESTINATIONCONSULTANCY.COM</span>
+      <span class="page-num">03</span>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== PAGE 4: CONNECTED SERVICES (PART 1: 01 - 03) ==================== -->
+<div class="page">
+  <div class="page-bg-pattern"></div>
+  <div class="header-wave">
+    <div class="header-wave-bg"></div>
+    <div class="header-wave-gold"></div>
+    <div class="header-brand">
+      <div class="header-brand-text">
+        <div class="company">Destination Consultancy (Pvt) Ltd</div>
+        <div class="tagline">Success Beyond Boundaries</div>
+      </div>
+      <img src="../assets/icon_compass.png" alt="Icon" class="compass-icon">
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="section-eyebrow">Six Connected Practice Areas • Part I</div>
+    <h2 class="section-title">Investment, M&amp;A &amp; <span>Sustainability</span></h2>
+    <div class="title-divider"></div>
+
+    <!-- Service 01 -->
+    <div class="service-detail-card">
+      <div class="service-detail-hdr">
+        <div class="left">
+          <span class="s-num">01</span>
+          <h3>Investment, Feasibility Study &amp; Market Entry</h3>
+        </div>
+        <span class="s-tag">Gateway &amp; Regulatory Advisory</span>
+      </div>
+      <div class="service-detail-body">
+        <p class="intro">
+          Entering a new market requires clarity, local intelligence, and seamless coordination across government and regulatory bodies. We guide foreign and domestic investors from initial exploration to legal establishment and commercial launch in Sri Lanka.
+        </p>
+        <div class="deliverables-grid">
+          <div class="deliv-item">Market-entry strategy &amp; commercial viability assessments</div>
+          <div class="deliv-item">BOI (Board of Investment) &amp; Port City Colombo advisory</div>
+          <div class="deliv-item">Government, ministry &amp; line-agency approvals &amp; licensing</div>
+          <div class="deliv-item">Company incorporation, secretarial &amp; legal set-up</div>
+          <div class="deliv-item">Investment opportunity assessment &amp; site selection</div>
+          <div class="deliv-item">Foreign investor support, visas &amp; banking coordination</div>
+          <div class="deliv-item">Local representation &amp; ongoing stakeholder engagement</div>
+          <div class="deliv-item">Tax holiday &amp; duty-free concession structuring</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service 02 -->
+    <div class="service-detail-card">
+      <div class="service-detail-hdr">
+        <div class="left">
+          <span class="s-num">02</span>
+          <h3>Project Development, Mergers &amp; Acquisitions</h3>
+        </div>
+        <span class="s-tag">Structuring &amp; Capital Advisory</span>
+      </div>
+      <div class="service-detail-body">
+        <p class="intro">
+          We transform high-potential concepts into bankable, investment-ready projects and guide corporate transactions with rigorous financial and strategic discipline across greenfield, brownfield, PPP, and cross-border M&amp;A mandates.
+        </p>
+        <div class="deliverables-grid">
+          <div class="deliv-item">Comprehensive bankable feasibility studies &amp; financial models</div>
+          <div class="deliv-item">Investor-grade business plans, pitch decks &amp; IMs</div>
+          <div class="deliv-item">End-to-end project structuring (PPP, BOT, BOO &amp; private)</div>
+          <div class="deliv-item">Project financing facilitation &amp; capital-market advisory</div>
+          <div class="deliv-item">JV &amp; strategic local/international partner matchmaking</div>
+          <div class="deliv-item">Mergers &amp; acquisitions (M&amp;A) buy-side &amp; sell-side advisory</div>
+          <div class="deliv-item">Project management office (PMO) setup &amp; execution oversight</div>
+          <div class="deliv-item">Valuation reviews &amp; pre-transaction readiness</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service 03 -->
+    <div class="service-detail-card" style="margin-bottom: 0;">
+      <div class="service-detail-hdr">
+        <div class="left">
+          <span class="s-num">03</span>
+          <h3>Sustainability &amp; ESG Advisory</h3>
+        </div>
+        <span class="s-tag">Climate, ESG &amp; Clean Energy</span>
+      </div>
+      <div class="service-detail-body">
+        <p class="intro">
+          As global supply chains, financiers, and regulators demand measurable sustainability performance, we help organisations embed Environmental, Social, and Governance (ESG) principles into their core strategy and daily operations.
+        </p>
+        <div class="deliverables-grid">
+          <div class="deliv-item">Corporate sustainability strategy &amp; ESG framework design</div>
+          <div class="deliv-item">Organizational &amp; product carbon-footprint (GHG) assessment</div>
+          <div class="deliv-item">Sustainability reporting aligned with GRI &amp; ISSB (IFRS S1/S2)</div>
+          <div class="deliv-item">Renewable-energy transition planning &amp; green project advisory</div>
+          <div class="deliv-item">Circular-economy solutions, waste-to-value &amp; resource efficiency</div>
+          <div class="deliv-item">Sustainable supply chain assessments &amp; UN SDG alignment</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-wave">
+    <div class="footer-wave-bg"></div>
+    <div class="footer-wave-gold"></div>
+    <div class="footer-content">
+      <span>DESTINATION CONSULTANCY (PVT) LTD &nbsp;|&nbsp; WWW.DESTINATIONCONSULTANCY.COM</span>
+      <span class="page-num">04</span>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== PAGE 5: CONNECTED SERVICES (PART 2: 04 - 06) ==================== -->
+<div class="page">
+  <div class="page-bg-pattern"></div>
+  <div class="header-wave">
+    <div class="header-wave-bg"></div>
+    <div class="header-wave-gold"></div>
+    <div class="header-brand">
+      <div class="header-brand-text">
+        <div class="company">Destination Consultancy (Pvt) Ltd</div>
+        <div class="tagline">Success Beyond Boundaries</div>
+      </div>
+      <img src="../assets/icon_compass.png" alt="Icon" class="compass-icon">
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="section-eyebrow">Six Connected Practice Areas • Part II</div>
+    <h2 class="section-title">ISO Systems, BPO &amp; <span>Digital Growth</span></h2>
+    <div class="title-divider"></div>
+
+    <!-- Service 04 -->
+    <div class="service-detail-card">
+      <div class="service-detail-hdr">
+        <div class="left">
+          <span class="s-num">04</span>
+          <h3>Certification &amp; Management Systems</h3>
+        </div>
+        <span class="s-tag">ISO Readiness &amp; Governance</span>
+      </div>
+      <div class="service-detail-body">
+        <p class="intro">
+          International certifications unlock global markets, strengthen operational discipline, and build institutional trust. We provide end-to-end advisory and implementation support to prepare your organisation for successful third-party certification audits.
+        </p>
+        <div class="deliverables-grid">
+          <div class="deliv-item"><strong>ISO 9001:</strong> Quality Management Systems</div>
+          <div class="deliv-item"><strong>ISO 14001:</strong> Environmental Management Systems</div>
+          <div class="deliv-item"><strong>ISO 45001:</strong> Occupational Health &amp; Safety</div>
+          <div class="deliv-item"><strong>ISO 27001:</strong> Information Security Management</div>
+          <div class="deliv-item"><strong>ISO 22301:</strong> Business Continuity Management</div>
+          <div class="deliv-item"><strong>ISO 22000 / HACCP:</strong> Food Safety Management</div>
+          <div class="deliv-item">Gap assessments, policy/SOP drafting &amp; internal auditor training</div>
+          <div class="deliv-item">Pre-audit readiness reviews (accredited body issues final cert)</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service 05 -->
+    <div class="service-detail-card">
+      <div class="service-detail-hdr">
+        <div class="left">
+          <span class="s-num">05</span>
+          <h3>BPO Setup &amp; Shared Services Support</h3>
+        </div>
+        <span class="s-tag">Offshore &amp; Back-Office Operations</span>
+      </div>
+      <div class="service-detail-body">
+        <p class="intro">
+          Sri Lanka is a premier destination for Finance &amp; Accounting, IT, Customer Experience, and Knowledge Process Outsourcing. We offer turnkey BPO setup and operational scaling for international companies building captive shared-service centres or outsourcing hubs.
+        </p>
+        <div class="deliverables-grid">
+          <div class="deliv-item">BPO feasibility studies, cost-benefit &amp; operating-model design</div>
+          <div class="deliv-item">Turnkey incorporation, BOI IT/BPO concessions &amp; facility set-up</div>
+          <div class="deliv-item">Talent acquisition strategy, recruitment &amp; onboarding</div>
+          <div class="deliv-item">End-to-end process mapping, SLA definition &amp; SOPs</div>
+          <div class="deliv-item">Quality assurance (QA) &amp; KPI performance management</div>
+          <div class="deliv-item">Technology stack setup, IT infrastructure &amp; data security</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service 06 -->
+    <div class="service-detail-card" style="margin-bottom: 0;">
+      <div class="service-detail-hdr">
+        <div class="left">
+          <span class="s-num">06</span>
+          <h3>Digital Growth &amp; Technology</h3>
+        </div>
+        <span class="s-tag">AI, CRM &amp; Demand Generation</span>
+      </div>
+      <div class="service-detail-body">
+        <p class="intro">
+          Modern enterprises need both robust technology infrastructure and high-performing digital demand engines. We combine strategic marketing, modern search visibility (SEO/AEO/GEO), software engineering, and enterprise IT support to accelerate top-line growth.
+        </p>
+        <div class="deliverables-grid">
+          <div class="deliv-item">Digital strategy, B2B/B2C demand &amp; lead generation</div>
+          <div class="deliv-item">Brand identity, corporate positioning &amp; content strategy</div>
+          <div class="deliv-item">Search visibility across traditional &amp; AI search (SEO / AEO / GEO)</div>
+          <div class="deliv-item">Custom website, web portal &amp; enterprise app development</div>
+          <div class="deliv-item">CRM implementation, marketing automation &amp; pipeline setup</div>
+          <div class="deliv-item">Data analytics, BI dashboards, AI solutions &amp; managed IT</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-wave">
+    <div class="footer-wave-bg"></div>
+    <div class="footer-wave-gold"></div>
+    <div class="footer-content">
+      <span>DESTINATION CONSULTANCY (PVT) LTD &nbsp;|&nbsp; WWW.DESTINATIONCONSULTANCY.COM</span>
+      <span class="page-num">05</span>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== PAGE 6: WHY SRI LANKA & THE 5-HUB CONCEPT ==================== -->
+<div class="page">
+  <div class="page-bg-pattern"></div>
+  <div class="header-wave">
+    <div class="header-wave-bg"></div>
+    <div class="header-wave-gold"></div>
+    <div class="header-brand">
+      <div class="header-brand-text">
+        <div class="company">Destination Consultancy (Pvt) Ltd</div>
+        <div class="tagline">Success Beyond Boundaries</div>
+      </div>
+      <img src="../assets/icon_compass.png" alt="Icon" class="compass-icon">
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="section-eyebrow">Destination Sri Lanka • Strategic Investment Gateway</div>
+    <h2 class="section-title">Why Sri Lanka &amp; <span>The Five-Hub Vision</span></h2>
+    <div class="title-divider"></div>
+
+    <div class="about-lead-box" style="margin-bottom: 4mm;">
+      <p>
+        Positioned at the centre of the Indian Ocean along the world’s busiest East–West maritime trade route, <strong>Sri Lanka</strong> offers unmatched connectivity to South Asia, the Middle East, Africa, East Asia, and Europe. Combining deep-water ports, progressive special economic zones including <strong>Colombo Port City</strong>, an educated English-speaking workforce, and rich natural resources, Sri Lanka is uniquely positioned as a premier regional hub.
+      </p>
+    </div>
+
+    <div class="stats-4-bar">
+      <div class="stat-tile">
+        <div class="val">65,610 km²</div>
+        <div class="lbl">Total Land Area</div>
+        <div class="sub">Compact &amp; resource-rich island</div>
+      </div>
+      <div class="stat-tile">
+        <div class="val">445 × 225 km</div>
+        <div class="lbl">Length × Width</div>
+        <div class="sub">Rapid port-to-hinterland reach</div>
+      </div>
+      <div class="stat-tile">
+        <div class="val">27.5 °C</div>
+        <div class="lbl">Mean Temperature</div>
+        <div class="sub">Year-round tropical climate</div>
+      </div>
+      <div class="stat-tile">
+        <div class="val">Since 1948</div>
+        <div class="lbl">Sovereign Republic</div>
+        <div class="sub">Established commercial law</div>
+      </div>
+    </div>
+
+    <div class="section-eyebrow">The Five-Hub Strategic Framework</div>
+    <div class="hubs-5-grid">
+      <div class="hub-card">
+        <div class="h-num">HUB 01</div>
+        <h4>Maritime Hub</h4>
+        <p>Deep-water ports in Colombo, Hambantota &amp; Trincomalee serving global East–West shipping lanes and transshipment.</p>
+      </div>
+      <div class="hub-card">
+        <div class="h-num">HUB 02</div>
+        <h4>Aviation Hub</h4>
+        <p>Expanding international air cargo and passenger connectivity linking South Asia, the GCC, Europe, and APAC.</p>
+      </div>
+      <div class="hub-card">
+        <div class="h-num">HUB 03</div>
+        <h4>Commercial Hub</h4>
+        <p>Colombo Port City and modernised BOI regimes creating an international financial, offshore, and business centre.</p>
+      </div>
+      <div class="hub-card">
+        <div class="h-num">HUB 04</div>
+        <h4>Energy Hub</h4>
+        <p>Abundant utility-scale solar, wind, hydro, and green-hydrogen potential driving clean-energy investment.</p>
+      </div>
+      <div class="hub-card">
+        <div class="h-num">HUB 05</div>
+        <h4>Knowledge Hub</h4>
+        <p>High literacy, strong English proficiency, and a globally recognised accounting, IT, BPO, and engineering talent pool.</p>
+      </div>
+    </div>
+
+    <div class="section-eyebrow">High-Potential Investment Sectors in Sri Lanka</div>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 3.2mm;">
+      <div class="pillar-mini">
+        <h4>Renewable Energy &amp; Cleantech</h4>
+        <p>Utility-scale solar, wind, biomass, mini-hydro, battery storage, and waste-to-energy projects backed by national targets.</p>
+      </div>
+      <div class="pillar-mini">
+        <h4>BPO, IT &amp; Shared Services</h4>
+        <p>Finance &amp; accounting, software engineering, AI data operations, and multilingual customer experience centres.</p>
+      </div>
+      <div class="pillar-mini">
+        <h4>Tourism &amp; Hospitality</h4>
+        <p>Luxury eco-resorts, wellness tourism, integrated marinas, boutique hotels, and experiential travel infrastructure.</p>
+      </div>
+      <div class="pillar-mini">
+        <h4>Sustainable Agribusiness</h4>
+        <p>Value-added Ceylon tea, spices, coconut derivatives, aquaculture, cold-chain logistics, and organic food exports.</p>
+      </div>
+      <div class="pillar-mini">
+        <h4>Export Manufacturing</h4>
+        <p>High-value apparel, rubber products, electronics assembly, boat building, and pharmaceutical manufacturing.</p>
+      </div>
+      <div class="pillar-mini">
+        <h4>Urban Infrastructure</h4>
+        <p>Commercial towers, mixed-use developments in Colombo Port City, industrial zones, and healthcare facilities.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-wave">
+    <div class="footer-wave-bg"></div>
+    <div class="footer-wave-gold"></div>
+    <div class="footer-content">
+      <span>DESTINATION CONSULTANCY (PVT) LTD &nbsp;|&nbsp; WWW.DESTINATIONCONSULTANCY.COM</span>
+      <span class="page-num">06</span>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== PAGE 7: REGULATORY & INSTITUTIONAL FACILITATION ==================== -->
+<div class="page">
+  <div class="page-bg-pattern"></div>
+  <div class="header-wave">
+    <div class="header-wave-bg"></div>
+    <div class="header-wave-gold"></div>
+    <div class="header-brand">
+      <div class="header-brand-text">
+        <div class="company">Destination Consultancy (Pvt) Ltd</div>
+        <div class="tagline">Success Beyond Boundaries</div>
+      </div>
+      <img src="../assets/icon_compass.png" alt="Icon" class="compass-icon">
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="section-eyebrow">Institutional Navigation • Regulatory Clearances</div>
+    <h2 class="section-title">Investor Facilitation &amp; <span>Regulatory Gateway</span></h2>
+    <div class="title-divider"></div>
+
+    <p style="font-size: 8.3pt; line-height: 1.52; color: var(--text-muted); margin-bottom: 4.5mm;">
+      Foreign and domestic investments in Sri Lanka require structured coordination across statutory agencies. Destination Consultancy manages the entire regulatory pathway—from project application to commercial licensing—eliminating administrative bottlenecks.
+    </p>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; margin-bottom: 4.5mm;">
+      <div class="service-detail-card" style="margin-bottom: 0;">
+        <div class="service-detail-hdr">
+          <div class="left">
+            <span class="s-num">BOI</span>
+            <h3>Board of Investment Approvals</h3>
+          </div>
+        </div>
+        <div class="service-detail-body">
+          <p class="intro">
+            Full lifecycle representation under Section 17 (special incentive regime) and Section 16 (normal law foreign investment entry) of the BOI Act.
+          </p>
+          <div class="deliverables-grid" style="grid-template-columns: 1fr;">
+            <div class="deliv-item">Investment application preparation, financial projections &amp; submission</div>
+            <div class="deliv-item">Negotiation &amp; execution of BOI Investment Agreements</div>
+            <div class="deliv-item">Customs duty-free import clearance for project capital goods</div>
+            <div class="deliv-item">Expatriate entry permits &amp; residence visa recommendations</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-detail-card" style="margin-bottom: 0;">
+        <div class="service-detail-hdr">
+          <div class="left">
+            <span class="s-num">CPCC</span>
+            <h3>Colombo Port City Advisory</h3>
+          </div>
+        </div>
+        <div class="service-detail-body">
+          <p class="intro">
+            Advisory for international businesses establishing offshore entities inside the Colombo Port City Special Economic Zone.
+          </p>
+          <div class="deliverables-grid" style="grid-template-columns: 1fr;">
+            <div class="deliv-item">Authorised Person (AP) licensing &amp; offshore company registration</div>
+            <div class="deliv-item">Business of Strategic Importance (BSI) incentive structuring</div>
+            <div class="deliv-item">Designated foreign-currency banking &amp; capital mobility setup</div>
+            <div class="deliv-item">Leasehold plot / commercial office space coordination</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-detail-card" style="margin-bottom: 0;">
+        <div class="service-detail-hdr">
+          <div class="left">
+            <span class="s-num">CBSL</span>
+            <h3>Foreign Exchange &amp; Banking</h3>
+          </div>
+        </div>
+        <div class="service-detail-body">
+          <p class="intro">
+            Compliant capital inflow structuring under the Foreign Exchange Act and Central Bank of Sri Lanka (CBSL) directions.
+          </p>
+          <div class="deliverables-grid" style="grid-template-columns: 1fr;">
+            <div class="deliv-item">Inward Investment Account (IIA) opening with licensed banks</div>
+            <div class="deliv-item">Equity remittance, shareholder loan &amp; repatriation structuring</div>
+            <div class="deliv-item">ROC eBiz company incorporation &amp; corporate secretarial setup</div>
+            <div class="deliv-item">IRD tax registration (TIN, Corporate Income Tax, VAT, SVAT)</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-detail-card" style="margin-bottom: 0;">
+        <div class="service-detail-hdr">
+          <div class="left">
+            <span class="s-num">LINE</span>
+            <h3>Line-Ministry &amp; Sector Approvals</h3>
+          </div>
+        </div>
+        <div class="service-detail-body">
+          <p class="intro">
+            Multi-agency environmental, municipal, and sector-specific approvals required for physical project execution.
+          </p>
+          <div class="deliverables-grid" style="grid-template-columns: 1fr;">
+            <div class="deliv-item">Central Environmental Authority (CEA) IEE / EIA &amp; EPL clearances</div>
+            <div class="deliv-item">Urban Development Authority (UDA) &amp; local authority permits</div>
+            <div class="deliv-item">Sri Lanka Sustainable Energy Authority (SLSEA) &amp; CEB approvals</div>
+            <div class="deliv-item">Sri Lanka Tourism Development Authority (SLTDA) licensing</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-lead-box" style="margin-bottom: 0;">
+      <p>
+        <strong>Single-Window Execution Advantage:</strong> Rather than managing separate legal, engineering, environmental, and corporate consultants, investors rely on Destination Consultancy as a unified project management office (PMO) that coordinates every regulatory milestone from day one.
+      </p>
+    </div>
+  </div>
+
+  <div class="footer-wave">
+    <div class="footer-wave-bg"></div>
+    <div class="footer-wave-gold"></div>
+    <div class="footer-content">
+      <span>DESTINATION CONSULTANCY (PVT) LTD &nbsp;|&nbsp; WWW.DESTINATIONCONSULTANCY.COM</span>
+      <span class="page-num">07</span>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== PAGE 8: INDUSTRIES & REPRESENTATIVE MANDATES ==================== -->
+<div class="page">
+  <div class="page-bg-pattern"></div>
+  <div class="header-wave">
+    <div class="header-wave-bg"></div>
+    <div class="header-wave-gold"></div>
+    <div class="header-brand">
+      <div class="header-brand-text">
+        <div class="company">Destination Consultancy (Pvt) Ltd</div>
+        <div class="tagline">Success Beyond Boundaries</div>
+      </div>
+      <img src="../assets/icon_compass.png" alt="Icon" class="compass-icon">
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="section-eyebrow">Industries &amp; Projects • Practical Execution</div>
+    <h2 class="section-title">Representative <span>Advisory Mandates</span></h2>
+    <div class="title-divider"></div>
+
+    <p style="font-size: 8.2pt; line-height: 1.5; color: var(--text-muted); margin-bottom: 4mm;">
+      Because many of our advisory mandates involve sensitive cross-border investments, M&amp;A transactions, and regulatory approvals, client identities are protected by strict confidentiality. Below is a representative portfolio of engagements across our six core industries.
+    </p>
+
+    <div class="mandates-grid">
+      <div class="mandate-card">
+        <div class="mandate-sector">01 • Infrastructure &amp; Mixed-Use Development</div>
+        <h4>Market Entry &amp; Regulatory Structuring</h4>
+        <p>
+          Structured local incorporation, BOI application strategy, line-ministry approvals, and land/lease due diligence for a regional development consortium entering Sri Lanka.
+        </p>
+        <div class="mandate-tags">
+          <span class="mandate-tag">BOI Advisory</span>
+          <span class="mandate-tag">Market Entry</span>
+          <span class="mandate-tag">Project Structuring</span>
+        </div>
+      </div>
+
+      <div class="mandate-card">
+        <div class="mandate-sector">02 • Renewable Energy &amp; Clean Tech</div>
+        <h4>Feasibility &amp; Sustainability Framework</h4>
+        <p>
+          Delivered commercial feasibility modelling, environmental alignment, grid-connection coordination, and ESG reporting frameworks for a utility-scale solar and biomass initiative.
+        </p>
+        <div class="mandate-tags">
+          <span class="mandate-tag">Feasibility Study</span>
+          <span class="mandate-tag">ESG &amp; Carbon</span>
+          <span class="mandate-tag">Renewable Energy</span>
+        </div>
+      </div>
+
+      <div class="mandate-card">
+        <div class="mandate-sector">03 • BPO &amp; Knowledge Services</div>
+        <h4>Turnkey Shared-Services Center Setup</h4>
+        <p>
+          Designed the operating model, secured BOI IT/BPO concessions, established facility infrastructure, mapped SOPs, and guided initial talent recruitment for a GCC-backed support hub in Colombo.
+        </p>
+        <div class="mandate-tags">
+          <span class="mandate-tag">BPO Setup</span>
+          <span class="mandate-tag">SOPs &amp; QA</span>
+          <span class="mandate-tag">Recruitment</span>
+        </div>
+      </div>
+
+      <div class="mandate-card">
+        <div class="mandate-sector">04 • Export Manufacturing &amp; Industrial</div>
+        <h4>Integrated ISO Management Systems Readiness</h4>
+        <p>
+          Conducted gap assessments, developed integrated manuals, trained internal auditor teams, and prepared an export manufacturer for successful ISO 9001, ISO 14001, and ISO 45001 certification audits.
+        </p>
+        <div class="mandate-tags">
+          <span class="mandate-tag">ISO 9001</span>
+          <span class="mandate-tag">ISO 14001</span>
+          <span class="mandate-tag">ISO 45001</span>
+        </div>
+      </div>
+
+      <div class="mandate-card">
+        <div class="mandate-sector">05 • Technology &amp; Digital Enterprises</div>
+        <h4>Digital Transformation &amp; Demand Generation</h4>
+        <p>
+          Rebuilt corporate digital presence, implemented CRM pipeline automation, and deployed SEO, AEO, and GEO content strategies to expand international B2B inbound inquiries.
+        </p>
+        <div class="mandate-tags">
+          <span class="mandate-tag">SEO / AEO / GEO</span>
+          <span class="mandate-tag">CRM Automation</span>
+          <span class="mandate-tag">Digital Strategy</span>
+        </div>
+      </div>
+
+      <div class="mandate-card">
+        <div class="mandate-sector">06 • Tourism &amp; Hospitality</div>
+        <h4>Eco-Resort &amp; Hospitality Investment Advisory</h4>
+        <p>
+          Advised foreign promoters on SLTDA approvals, environmental clearances, capital structuring, and sustainable operations for a boutique coastal hospitality asset.
+        </p>
+        <div class="mandate-tags">
+          <span class="mandate-tag">SLTDA Approvals</span>
+          <span class="mandate-tag">Investment Advisory</span>
+          <span class="mandate-tag">Sustainability</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top: 4.5mm; background: var(--gold-pale); border: 0.35mm solid var(--gold-main); border-radius: 2.5mm; padding: 3.5mm 5mm; display: flex; justify-content: space-between; align-items: center;">
+      <div>
+        <div style="font-size: 7.5pt; font-weight: 800; color: var(--navy-dark); text-transform: uppercase;">Looking for Investment Opportunities or Project Matchmaking?</div>
+        <div style="font-size: 7.5pt; color: var(--text-muted); margin-top: 0.5mm;">We maintain an active pipeline of vetted Sri Lankan projects in renewable energy, hospitality, agribusiness, BPO, and manufacturing.</div>
+      </div>
+      <div style="background: var(--navy-dark); color: var(--gold-light); font-size: 7pt; font-weight: 800; padding: 2mm 3.5mm; border-radius: 1.5mm; white-space: nowrap; letter-spacing: 0.8px;">BESPOKE MANDATES</div>
+    </div>
+  </div>
+
+  <div class="footer-wave">
+    <div class="footer-wave-bg"></div>
+    <div class="footer-wave-gold"></div>
+    <div class="footer-content">
+      <span>DESTINATION CONSULTANCY (PVT) LTD &nbsp;|&nbsp; WWW.DESTINATIONCONSULTANCY.COM</span>
+      <span class="page-num">08</span>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== PAGE 9: CONTACT US ==================== -->
+<div class="page">
+  <div class="page-bg-pattern"></div>
+  <div class="header-wave">
+    <div class="header-wave-bg"></div>
+    <div class="header-wave-gold"></div>
+    <div class="header-brand">
+      <div class="header-brand-text">
+        <div class="company">Destination Consultancy (Pvt) Ltd</div>
+        <div class="tagline">Success Beyond Boundaries</div>
+      </div>
+      <img src="../assets/icon_compass.png" alt="Icon" class="compass-icon">
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="section-eyebrow">Connect With Our Advisory Team</div>
+    <h2 class="section-title">Contact <span>Us</span></h2>
+    <div class="title-divider"></div>
+
+    <div style="background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy-main) 100%); border-radius: 4mm; padding: 6.5mm; color: var(--white); box-shadow: 0 10px 26px rgba(7,30,43,0.16); margin-bottom: 5.5mm; border-bottom: 1.8mm solid var(--gold-main);">
+      <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 0.3mm solid rgba(255,255,255,0.15); padding-bottom: 4.5mm; margin-bottom: 5mm;">
+        <div style="display: flex; align-items: center; gap: 4mm;">
+          <img src="../assets/icon_compass.png" alt="Compass" style="width: 15mm; height: 15mm; object-fit: contain;">
+          <div>
+            <div style="font-size: 7pt; color: var(--gold-light); letter-spacing: 2px; font-weight: 700; text-transform: uppercase;">Corporate Headquarters</div>
+            <h3 style="font-size: 15pt; font-weight: 800; margin-top: 0.8mm;">Destination Consultancy (Pvt) Ltd</h3>
+          </div>
+        </div>
+        <img src="../assets/logo_white.png" alt="Destination Consultancy" style="height: 12mm; width: auto; object-fit: contain;">
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1.35fr 0.65fr; gap: 6mm; align-items: center;">
+        <div style="display: flex; flex-direction: column; gap: 3.5mm;">
+          <div style="display: flex; gap: 3.5mm; align-items: flex-start;">
+            <div style="width: 8.5mm; height: 8.5mm; border-radius: 2mm; background: rgba(197,155,39,0.2); border: 0.3mm solid var(--gold-light); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--gold-light); font-weight: 800; font-size: 9pt;">📍</div>
+            <div>
+              <div style="font-size: 7pt; color: var(--gold-light); font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Registered Office Address</div>
+              <div style="font-size: 8.8pt; line-height: 1.45; color: var(--white); margin-top: 0.5mm;">
+                #14, Basement Level, Cinnamon Lakeside Hotel,<br>
+                No. 115, Sir Chittampalam A. Gardiner Mawatha,<br>
+                Colombo 02, Sri Lanka.
+              </div>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 3.5mm; align-items: flex-start;">
+            <div style="width: 8.5mm; height: 8.5mm; border-radius: 2mm; background: rgba(197,155,39,0.2); border: 0.3mm solid var(--gold-light); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--gold-light); font-weight: 800; font-size: 9pt;">📞</div>
+            <div>
+              <div style="font-size: 7pt; color: var(--gold-light); font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Telephone &amp; Direct Hotlines</div>
+              <div style="font-size: 8.8pt; line-height: 1.5; color: var(--white); margin-top: 0.5mm;">
+                <strong>General Lines:</strong> +94 11 233 6116 &nbsp;|&nbsp; +94 11 249 2821<br>
+                <strong>Direct Hotlines:</strong> +94 77 779 0919 &nbsp;|&nbsp; +94 75 675 3877
+              </div>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 3.5mm; align-items: flex-start;">
+            <div style="width: 8.5mm; height: 8.5mm; border-radius: 2mm; background: rgba(197,155,39,0.2); border: 0.3mm solid var(--gold-light); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--gold-light); font-weight: 800; font-size: 9pt;">✉</div>
+            <div>
+              <div style="font-size: 7pt; color: var(--gold-light); font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Digital &amp; Official Portal</div>
+              <div style="font-size: 8.8pt; line-height: 1.5; color: var(--white); margin-top: 0.5mm;">
+                <strong>Email:</strong> info@destinationconsultancy.com<br>
+                <strong>Website:</strong> www.destinationconsultancy.com
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="background: #FFFDF7; padding: 4mm; border-radius: 3mm; text-align: center; color: var(--navy-dark); border: 0.8mm solid var(--gold-main); box-shadow: 0 6px 16px rgba(0,0,0,0.25);">
+          <img src="../assets/qr_website.png" alt="Website QR Code" style="width: 36mm; height: 36mm; object-fit: contain; display: block; margin: 0 auto 2mm auto;">
+          <div style="font-size: 7pt; font-weight: 800; letter-spacing: 1px; color: var(--navy-dark); text-transform: uppercase;">Scan to Visit Website</div>
+          <div style="font-size: 6pt; color: var(--gold-main); font-weight: 700; margin-top: 0.5mm;">destinationconsultancy.com</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-eyebrow">Direct Practice Inquiries</div>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 3.5mm; margin-bottom: 5mm;">
+      <div class="pillar-mini">
+        <h4>Market Entry &amp; BOI</h4>
+        <p>Incorporation, BOI Section 17/16 approvals, Colombo Port City registration, and investor facilitation.</p>
+      </div>
+      <div class="pillar-mini">
+        <h4>ESG &amp; ISO Readiness</h4>
+        <p>Carbon footprint accounting, GRI/ISSB sustainability reporting, and ISO 9001/14001/45001/27001 readiness.</p>
+      </div>
+      <div class="pillar-mini">
+        <h4>BPO &amp; Digital Growth</h4>
+        <p>Turnkey shared-services setup, recruitment, SOPs, AI/CRM automation, and SEO/AEO/GEO demand generation.</p>
+      </div>
+    </div>
+
+    <div style="margin-top: auto; border-radius: 3.5mm; overflow: hidden; position: relative; height: 38mm; box-shadow: 0 6px 18px rgba(0,0,0,0.12);">
+      <img src="../assets/cover_hero.jpg" alt="Colombo" style="width: 100%; height: 100%; object-fit: cover; object-position: center 45%;">
+      <div style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(7,30,43,0.92) 0%, rgba(11,45,63,0.75) 100%); display: flex; align-items: center; justify-content: space-between; padding: 0 7mm;">
+        <div style="color: var(--white);">
+          <div style="font-size: 7pt; color: var(--gold-light); letter-spacing: 2px; font-weight: 700; text-transform: uppercase;">Schedule an Executive Consultation</div>
+          <div style="font-family: 'Cormorant Garamond', serif; font-size: 17pt; font-weight: 700; font-style: italic; margin-top: 1mm;">“Success Beyond Boundaries”</div>
+          <div style="font-size: 7.5pt; color: rgba(255,255,255,0.85); margin-top: 1mm;">Strategic Insight • Regulatory Navigation • Hands-On Execution</div>
+        </div>
+        <img src="../assets/icon_compass.png" alt="Compass" style="width: 20mm; height: 20mm; object-fit: contain;">
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-wave">
+    <div class="footer-wave-bg"></div>
+    <div class="footer-wave-gold"></div>
+    <div class="footer-content">
+      <span>DESTINATION CONSULTANCY (PVT) LTD &nbsp;|&nbsp; WWW.DESTINATIONCONSULTANCY.COM</span>
+      <span class="page-num">09</span>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
