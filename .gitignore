@@ -1,0 +1,26 @@
+# Temporary scratch dumps and browser profiles
+scratch/browser_profile/
+scratch/chrome_*/
+scratch/*_preview/
+scratch/previews_v2/
+scratch/*.tmp
+*.tmp
+
+# Raw AI exploratory stock generations (100MB+ prompt drafts)
+spillburg holdings/Stock/Gemini_Generated_Image_*.png
+spillburg holdings/Stock/ChatGPT Image *.png
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.env
+.venv/
+env/
+venv/
+
+# OS specific files
+.DS_Store
+Thumbs.db
+desktop.ini
+
