@@ -1,0 +1,2036 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Spillburg Corporate Services (Pvt) Ltd - Company Profile 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --royal-dark: #000038;
+    --royal-main: #00004D;
+    --indigo-mid: #0A1B69;
+    --cobalt-main: #173DED;
+    --cobalt-light: #3B63FB;
+    --champagne: #C5A059;
+    --champagne-light: #DFC082;
+    --champagne-pale: #FBF8F1;
+    --ice-bg: #F4F6FB;
+    --text-dark: #0A1128;
+    --text-muted: #4A5578;
+    --border-soft: #DCE2F2;
+    --white: #FFFFFF;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: #141824;
+    color: var(--text-dark);
+    margin: 0;
+    padding: 0;
+  }
+
+  .page {
+    width: 210mm;
+    height: 297mm;
+    position: relative;
+    overflow: hidden;
+    background: var(--white);
+    page-break-after: always;
+    break-after: page;
+    margin: 0 auto;
+  }
+
+  /* Unique Swiss Corporate Architectural Frame */
+  .arch-left-rail {
+    position: absolute;
+    top: 22mm;
+    bottom: 14mm;
+    left: 0;
+    width: 2.2mm;
+    background: linear-gradient(180deg, var(--cobalt-main) 0%, var(--royal-main) 65%, var(--champagne) 100%);
+    z-index: 4;
+  }
+
+  .page-grid-watermark {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(to right, rgba(23, 61, 237, 0.025) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(23, 61, 237, 0.025) 1px, transparent 1px);
+    background-size: 21mm 21mm;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  /* Distinct Executive Top Masthead (No diagonal wave!) */
+  .corp-masthead {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 21.5mm;
+    background: linear-gradient(90deg, var(--royal-dark) 0%, var(--royal-main) 65%, var(--indigo-mid) 100%);
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15mm;
+    border-bottom: 1.2mm solid var(--champagne);
+  }
+
+  .corp-masthead::after {
+    content: "";
+    position: absolute;
+    bottom: -1.2mm;
+    left: 0;
+    width: 62%;
+    height: 1.2mm;
+    background: var(--cobalt-main);
+  }
+
+  .masthead-logo-pill {
+    background: var(--white);
+    padding: 1.6mm 4mm;
+    border-radius: 1.8mm;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+  }
+
+  .masthead-logo-pill img {
+    height: 9mm;
+    width: auto;
+    object-fit: contain;
+  }
+
+  .masthead-right {
+    text-align: right;
+    color: var(--white);
+  }
+
+  .masthead-right .doc-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 8pt;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+
+  .masthead-right .doc-sub {
+    font-size: 6.3pt;
+    color: var(--champagne-light);
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    margin-top: 0.6mm;
+  }
+
+  /* Distinct Executive Bottom Bar */
+  .corp-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 13.5mm;
+    background: var(--royal-dark);
+    border-top: 0.8mm solid var(--cobalt-main);
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15mm;
+    color: rgba(255,255,255,0.82);
+    font-size: 6.8pt;
+    letter-spacing: 0.5px;
+  }
+
+  .corp-footer .f-left {
+    display: flex;
+    align-items: center;
+    gap: 3mm;
+  }
+
+  .corp-footer .f-dot {
+    width: 1.8mm;
+    height: 1.8mm;
+    background: var(--champagne);
+    border-radius: 50%;
+  }
+
+  .corp-page-badge {
+    background: linear-gradient(135deg, var(--cobalt-main), var(--indigo-mid));
+    border: 0.3mm solid var(--champagne);
+    color: var(--white);
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+    font-size: 7.5pt;
+    padding: 1mm 3.2mm;
+    border-radius: 1.2mm;
+    letter-spacing: 1px;
+  }
+
+  /* Main Content Area */
+  .content {
+    position: relative;
+    z-index: 3;
+    padding: 26.5mm 15mm 17.5mm 16mm;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sec-header-row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom: 0.5mm solid var(--border-soft);
+    padding-bottom: 2.8mm;
+    margin-bottom: 4.5mm;
+  }
+
+  .sec-kicker {
+    font-family: 'Outfit', sans-serif;
+    font-size: 7pt;
+    font-weight: 700;
+    color: var(--cobalt-main);
+    letter-spacing: 2.2px;
+    text-transform: uppercase;
+    margin-bottom: 1mm;
+    display: flex;
+    align-items: center;
+    gap: 2mm;
+  }
+
+  .sec-kicker::before {
+    content: "";
+    width: 2.2mm;
+    height: 2.2mm;
+    background: var(--champagne);
+    display: inline-block;
+  }
+
+  .sec-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 18.5pt;
+    font-weight: 800;
+    color: var(--royal-main);
+    line-height: 1.1;
+    letter-spacing: -0.3px;
+  }
+
+  .sec-title em {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 700;
+    color: var(--cobalt-main);
+  }
+
+  .sec-num-watermark {
+    font-family: 'Playfair Display', serif;
+    font-size: 24pt;
+    font-weight: 700;
+    color: rgba(23, 61, 237, 0.14);
+    line-height: 0.9;
+  }
+
+  /* ================= PAGE 1: COVER ================= */
+  .cover-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('../assets/cover_hero.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+  }
+
+  .cover-scrim {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg,
+      rgba(0, 0, 56, 0.95) 0%,
+      rgba(0, 0, 77, 0.88) 52%,
+      rgba(10, 27, 105, 0.92) 100%);
+    z-index: 2;
+  }
+
+  .cover-geom-accent {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 75mm;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(23, 61, 237, 0.18) 0%, rgba(197, 160, 89, 0.08) 100%);
+    clip-path: polygon(35% 0, 100% 0, 100% 100%, 0 100%);
+    z-index: 2;
+    border-left: 1mm solid rgba(197, 160, 89, 0.3);
+  }
+
+  .cover-top-bar {
+    position: absolute;
+    top: 12mm;
+    left: 15mm;
+    right: 15mm;
+    z-index: 5;
+    background: rgba(255, 255, 255, 0.97);
+    border-radius: 3mm;
+    padding: 4.5mm 6.5mm;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+    border-bottom: 1.2mm solid var(--champagne);
+  }
+
+  .cover-top-bar img {
+    height: 15mm;
+    width: auto;
+    object-fit: contain;
+  }
+
+  .cover-doc-tag {
+    text-align: right;
+  }
+
+  .cover-doc-tag .yr {
+    font-family: 'Outfit', sans-serif;
+    font-size: 9pt;
+    font-weight: 800;
+    color: var(--royal-main);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .cover-doc-tag .sub {
+    font-size: 7pt;
+    font-weight: 700;
+    color: var(--cobalt-main);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 0.5mm;
+  }
+
+  .cover-hero-box {
+    position: absolute;
+    top: 78mm;
+    left: 16mm;
+    right: 16mm;
+    z-index: 4;
+    color: var(--white);
+    padding-left: 6mm;
+    border-left: 1.8mm solid var(--champagne);
+  }
+
+  .cover-kicker {
+    display: inline-block;
+    background: rgba(23, 61, 237, 0.35);
+    border: 0.35mm solid var(--champagne-light);
+    color: var(--champagne-light);
+    font-family: 'Outfit', sans-serif;
+    font-size: 8pt;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    padding: 1.8mm 4.5mm;
+    border-radius: 1.2mm;
+    text-transform: uppercase;
+    margin-bottom: 5mm;
+  }
+
+  .cover-headline {
+    font-family: 'Outfit', sans-serif;
+    font-size: 31pt;
+    font-weight: 800;
+    line-height: 1.08;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+    margin-bottom: 2.5mm;
+  }
+
+  .cover-headline-serif {
+    font-family: 'Playfair Display', serif;
+    font-size: 28pt;
+    font-style: italic;
+    font-weight: 700;
+    color: var(--champagne-light);
+    line-height: 1.15;
+    margin-bottom: 5.5mm;
+  }
+
+  .cover-lead {
+    font-size: 10.2pt;
+    line-height: 1.62;
+    color: rgba(255,255,255,0.9);
+    max-width: 155mm;
+    margin-bottom: 7mm;
+  }
+
+  .cover-practice-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.2mm;
+    max-width: 165mm;
+  }
+
+  .cover-pill {
+    background: rgba(255,255,255,0.09);
+    border: 0.3mm solid rgba(255,255,255,0.25);
+    color: var(--white);
+    font-size: 7.3pt;
+    font-weight: 600;
+    padding: 1.6mm 3.4mm;
+    border-radius: 1.5mm;
+    letter-spacing: 0.4px;
+  }
+
+  .cover-stats-strip {
+    position: absolute;
+    bottom: 26mm;
+    left: 15mm;
+    right: 15mm;
+    z-index: 5;
+    background: rgba(255, 255, 255, 0.97);
+    border-radius: 3mm;
+    padding: 4.5mm 6mm;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4mm;
+    box-shadow: 0 10px 28px rgba(0,0,0,0.35);
+    border-top: 1.2mm solid var(--cobalt-main);
+  }
+
+  .c-stat {
+    text-align: center;
+    border-right: 0.3mm solid var(--border-soft);
+    padding-right: 2mm;
+  }
+
+  .c-stat:last-child {
+    border-right: none;
+  }
+
+  .c-stat .val {
+    font-family: 'Outfit', sans-serif;
+    font-size: 18pt;
+    font-weight: 800;
+    color: var(--royal-main);
+    line-height: 1;
+  }
+
+  .c-stat .val span {
+    color: var(--cobalt-main);
+  }
+
+  .c-stat .lbl {
+    font-size: 7pt;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    margin-top: 1.2mm;
+  }
+
+  .cover-foot {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 18mm;
+    background: var(--royal-dark);
+    border-top: 0.8mm solid var(--champagne);
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15mm;
+    color: rgba(255,255,255,0.85);
+    font-size: 7.5pt;
+  }
+
+  /* Interior Components */
+  .story-banner {
+    background: linear-gradient(135deg, var(--royal-dark) 0%, var(--royal-main) 60%, var(--indigo-mid) 100%);
+    color: var(--white);
+    border-radius: 2.8mm;
+    padding: 4.8mm 5.8mm;
+    border-left: 2mm solid var(--champagne);
+    margin-bottom: 4.5mm;
+  }
+
+  .story-banner h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 10pt;
+    font-weight: 700;
+    color: var(--champagne-light);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1.8mm;
+  }
+
+  .story-banner p {
+    font-size: 8.3pt;
+    line-height: 1.54;
+    color: rgba(255,255,255,0.92);
+  }
+
+  .story-banner p + p {
+    margin-top: 2mm;
+  }
+
+  .editorial-2col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4.5mm;
+    margin-bottom: 4.5mm;
+  }
+
+  .ed-box {
+    background: var(--ice-bg);
+    border: 0.35mm solid var(--border-soft);
+    border-left: 1.4mm solid var(--cobalt-main);
+    border-radius: 2.2mm;
+    padding: 4mm 4.8mm;
+  }
+
+  .ed-box.gold {
+    border-left-color: var(--champagne);
+    background: var(--champagne-pale);
+  }
+
+  .ed-box h4 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 9.8pt;
+    font-weight: 800;
+    color: var(--royal-main);
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    margin-bottom: 1.5mm;
+  }
+
+  .ed-box p {
+    font-size: 8.1pt;
+    line-height: 1.5;
+    color: var(--text-dark);
+  }
+
+  /* 6 Client Segments Grid */
+  .segments-6-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3mm;
+    margin-bottom: 4.5mm;
+  }
+
+  .seg-card {
+    background: var(--white);
+    border: 0.35mm solid var(--border-soft);
+    border-top: 1mm solid var(--royal-main);
+    border-radius: 2mm;
+    padding: 3mm 3.5mm;
+  }
+
+  .seg-card:nth-child(even) {
+    border-top-color: var(--cobalt-main);
+  }
+
+  .seg-card .s-idx {
+    font-family: 'Playfair Display', serif;
+    font-size: 10pt;
+    font-weight: 700;
+    color: var(--champagne);
+    line-height: 1;
+    margin-bottom: 1mm;
+  }
+
+  .seg-card h5 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 8.3pt;
+    font-weight: 700;
+    color: var(--royal-main);
+    margin-bottom: 1mm;
+  }
+
+  .seg-card p {
+    font-size: 7.2pt;
+    line-height: 1.38;
+    color: var(--text-muted);
+  }
+
+  /* 5 Principles Strip */
+  .principles-5-strip {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2.5mm;
+  }
+
+  .prin-tile {
+    background: var(--royal-main);
+    color: var(--white);
+    border-radius: 2mm;
+    padding: 3.2mm 2.8mm;
+    border-bottom: 1mm solid var(--champagne);
+  }
+
+  .prin-tile h5 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 7.6pt;
+    font-weight: 700;
+    color: var(--champagne-light);
+    margin-bottom: 1mm;
+    line-height: 1.2;
+  }
+
+  .prin-tile p {
+    font-size: 6.7pt;
+    line-height: 1.38;
+    color: rgba(255,255,255,0.85);
+  }
+
+  /* Leadership Horizontal Dossier Cards (Page 3) */
+  .leader-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 3.6mm;
+    margin-bottom: 4mm;
+  }
+
+  .leader-row {
+    background: var(--white);
+    border: 0.35mm solid var(--border-soft);
+    border-left: 1.6mm solid var(--royal-main);
+    border-radius: 2.5mm;
+    padding: 3.5mm 4.5mm;
+    display: flex;
+    gap: 4.5mm;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 77, 0.04);
+  }
+
+  .leader-row:nth-child(even) {
+    border-left-color: var(--cobalt-main);
+    background: var(--ice-bg);
+  }
+
+  .leader-avatar {
+    width: 22mm;
+    height: 22mm;
+    border-radius: 2.5mm;
+    object-fit: cover;
+    object-position: top center;
+    border: 0.7mm solid var(--champagne);
+    flex-shrink: 0;
+    background: var(--royal-main);
+  }
+
+  .leader-avatar-initials {
+    width: 22mm;
+    height: 22mm;
+    border-radius: 2.5mm;
+    background: linear-gradient(135deg, var(--royal-main), var(--cobalt-main));
+    border: 0.7mm solid var(--champagne);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .leader-info {
+    flex: 1;
+  }
+
+  .leader-top-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.8mm;
+  }
+
+  .leader-top-line h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 10.5pt;
+    font-weight: 800;
+    color: var(--royal-main);
+  }
+
+  .leader-top-line .role-badge {
+    background: var(--royal-main);
+    color: var(--champagne-light);
+    font-size: 6.5pt;
+    font-weight: 700;
+    padding: 0.8mm 2.5mm;
+    border-radius: 1mm;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+  }
+
+  .leader-creds {
+    font-size: 7.2pt;
+    font-weight: 700;
+    color: var(--cobalt-main);
+    margin-bottom: 1.5mm;
+  }
+
+  .leader-bio {
+    font-size: 7.7pt;
+    line-height: 1.45;
+    color: var(--text-dark);
+  }
+
+  /* 2x2 Service Dossier Grid (Pages 4 & 5) */
+  .srv-2x2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4mm;
+    flex: 1;
+  }
+
+  .srv-dossier {
+    background: var(--white);
+    border: 0.35mm solid var(--border-soft);
+    border-top: 1.4mm solid var(--royal-main);
+    border-radius: 2.5mm;
+    padding: 4mm 4.5mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 14px rgba(0, 0, 77, 0.04);
+  }
+
+  .srv-dossier:nth-child(2), .srv-dossier:nth-child(3) {
+    border-top-color: var(--cobalt-main);
+  }
+
+  .srv-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2mm;
+  }
+
+  .srv-kicker {
+    font-size: 6.5pt;
+    font-weight: 700;
+    color: var(--cobalt-main);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 0.5mm;
+  }
+
+  .srv-head h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 10.5pt;
+    font-weight: 800;
+    color: var(--royal-main);
+    line-height: 1.18;
+  }
+
+  .srv-idx {
+    font-family: 'Playfair Display', serif;
+    font-size: 14pt;
+    font-weight: 700;
+    color: var(--champagne);
+    line-height: 1;
+  }
+
+  .srv-desc {
+    font-size: 7.5pt;
+    line-height: 1.44;
+    color: var(--text-muted);
+    margin-bottom: 2.5mm;
+  }
+
+  .srv-list-title {
+    font-size: 6.6pt;
+    font-weight: 800;
+    color: var(--royal-main);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 1.2mm;
+    border-bottom: 0.25mm solid var(--border-soft);
+    padding-bottom: 0.6mm;
+  }
+
+  .srv-bullets {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1mm 2.5mm;
+    margin-bottom: 2.5mm;
+  }
+
+  .srv-bullet {
+    font-size: 7pt;
+    color: var(--text-dark);
+    line-height: 1.3;
+    display: flex;
+    align-items: flex-start;
+    gap: 1.2mm;
+  }
+
+  .srv-bullet::before {
+    content: "•";
+    color: var(--cobalt-main);
+    font-weight: 800;
+  }
+
+  .srv-output-box {
+    background: var(--ice-bg);
+    border-left: 1mm solid var(--champagne);
+    padding: 2mm 2.8mm;
+    border-radius: 1.2mm;
+    font-size: 6.8pt;
+    line-height: 1.35;
+    color: var(--text-dark);
+  }
+
+  /* Regulatory Directory Grid (Page 7) */
+  .reg-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3.8mm;
+    margin-bottom: 4mm;
+  }
+
+  .reg-cat-card {
+    background: var(--white);
+    border: 0.35mm solid var(--border-soft);
+    border-radius: 2.5mm;
+    overflow: hidden;
+  }
+
+  .reg-cat-hdr {
+    background: var(--royal-main);
+    color: var(--white);
+    padding: 2.5mm 4mm;
+    font-family: 'Outfit', sans-serif;
+    font-size: 8.5pt;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.7mm solid var(--champagne);
+  }
+
+  .reg-cat-hdr span {
+    color: var(--champagne-light);
+    font-size: 6.8pt;
+  }
+
+  .reg-items {
+    padding: 3mm 4mm;
+    display: flex;
+    flex-direction: column;
+    gap: 2mm;
+  }
+
+  .reg-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 0.2mm dashed var(--border-soft);
+    padding-bottom: 1.4mm;
+  }
+
+  .reg-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .reg-item .r-name {
+    font-size: 7.4pt;
+    font-weight: 700;
+    color: var(--royal-main);
+  }
+
+  .reg-item .r-sub {
+    font-size: 6.6pt;
+    color: var(--text-muted);
+    display: block;
+  }
+
+  .reg-item .r-url {
+    font-size: 6.5pt;
+    font-weight: 700;
+    color: var(--cobalt-main);
+    background: var(--ice-bg);
+    padding: 0.5mm 1.8mm;
+    border-radius: 1mm;
+    white-space: nowrap;
+  }
+
+  /* Testimonials Grid (Page 8) */
+  .testi-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3.5mm;
+    margin-bottom: 4mm;
+  }
+
+  .testi-card {
+    background: var(--ice-bg);
+    border: 0.35mm solid var(--border-soft);
+    border-left: 1.2mm solid var(--cobalt-main);
+    border-radius: 2.2mm;
+    padding: 3.2mm 4mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .testi-card:nth-child(even) {
+    border-left-color: var(--champagne);
+    background: var(--champagne-pale);
+  }
+
+  .testi-quote {
+    font-size: 7.3pt;
+    font-style: italic;
+    line-height: 1.42;
+    color: var(--text-dark);
+    margin-bottom: 2mm;
+  }
+
+  .testi-author {
+    font-size: 7.4pt;
+    font-weight: 800;
+    color: var(--royal-main);
+  }
+
+  .testi-role {
+    font-size: 6.5pt;
+    font-weight: 600;
+    color: var(--cobalt-main);
+  }
+
+  .partners-bar {
+    background: var(--white);
+    border: 0.35mm solid var(--border-soft);
+    border-radius: 2.5mm;
+    padding: 3mm 5mm;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .partners-bar img {
+    height: 7.5mm;
+    width: auto;
+    object-fit: contain;
+    opacity: 0.88;
+  }
+</style>
+</head>
+<body>
+
+<!-- ==================== PAGE 1: COVER ==================== -->
+<div class="page">
+  <div class="cover-bg"></div>
+  <div class="cover-scrim"></div>
+  <div class="cover-geom-accent"></div>
+
+  <div class="cover-top-bar">
+    <img src="../assets/logo_corporate.png" alt="Spillburg Corporate Services">
+    <div class="cover-doc-tag">
+      <div class="yr">Corporate Profile • 2026</div>
+      <div class="sub">Colombo • Sri Lanka</div>
+    </div>
+  </div>
+
+  <div class="cover-hero-box">
+    <div class="cover-kicker">One-Stop Corporate &amp; Financial Advisory</div>
+    <h1 class="cover-headline">Compliance. Assurance.</h1>
+    <div class="cover-headline-serif">Accelerate Growth.</div>
+    <p class="cover-lead">
+      Spillburg Corporate Services (Private) Limited is your trusted partner for sustainable growth. We assist global enterprises, multinational corporations, and investors with comprehensive internal audit, taxation, accounting, company secretarial, due diligence, M&amp;A, stock market listing, and workforce solutions.
+    </p>
+
+    <div class="cover-practice-pills">
+      <span class="cover-pill">01 • Accounting &amp; Finance</span>
+      <span class="cover-pill">02 • Taxation &amp; RAMIS</span>
+      <span class="cover-pill">03 • Audit &amp; Assurance</span>
+      <span class="cover-pill">04 • Payroll &amp; HR</span>
+      <span class="cover-pill">05 • Due Diligence (DD)</span>
+      <span class="cover-pill">06 • M&amp;A &amp; Takeovers</span>
+      <span class="cover-pill">07 • Stock Market Listing</span>
+      <span class="cover-pill">08 • Mitigation &amp; Arbitration</span>
+    </div>
+  </div>
+
+  <div class="cover-stats-strip">
+    <div class="c-stat">
+      <div class="val">15<span>+</span></div>
+      <div class="lbl">Years Experience</div>
+    </div>
+    <div class="c-stat">
+      <div class="val">200<span>+</span></div>
+      <div class="lbl">Global Clients</div>
+    </div>
+    <div class="c-stat">
+      <div class="val">200<span>+</span></div>
+      <div class="lbl">Successful Projects</div>
+    </div>
+    <div class="c-stat">
+      <div class="val">100<span>%</span></div>
+      <div class="lbl">Satisfaction Rate</div>
+    </div>
+  </div>
+
+  <div class="cover-foot">
+    <div><strong>REGISTERED OFFICE:</strong> Office 14, Basement Level, Cinnamon Lakeside Hotel, Colombo 02, Sri Lanka</div>
+    <div><strong>WEB:</strong> www.spillburgcorporate.com &nbsp;|&nbsp; <strong>EMAIL:</strong> info@spillburg.com</div>
+  </div>
+</div>
+
+<!-- ==================== PAGE 2: ABOUT US & WHO WE SERVE ==================== -->
+<div class="page">
+  <div class="page-grid-watermark"></div>
+  <div class="arch-left-rail"></div>
+
+  <div class="corp-masthead">
+    <div class="masthead-logo-pill">
+      <img src="../assets/logo_corporate.png" alt="Spillburg Corporate Services">
+    </div>
+    <div class="masthead-right">
+      <div class="doc-title">Compliance. Assurance. Accelerate Growth.</div>
+      <div class="doc-sub">Section 01 • Corporate Identity</div>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="sec-header-row">
+      <div>
+        <div class="sec-kicker">The Spillburg Story • Who We Are</div>
+        <h2 class="sec-title">One-Stop-Shop <em>Corporate Solutions</em></h2>
+      </div>
+      <div class="sec-num-watermark">01</div>
+    </div>
+
+    <div class="story-banner">
+      <h3>Architects of Corporate Excellence in Sri Lanka</h3>
+      <p>
+        Founded over 15 years ago, <strong>Spillburg Corporate Services (Private) Limited</strong> was built on a singular premise: businesses expanding into or operating within Sri Lanka deserve a single, reliable partner capable of handling complex regulatory, financial, secretarial, and operational mandates under one roof.
+      </p>
+      <p>
+        We have evolved from a boutique consultancy into a full-scale corporate services powerhouse. By combining deep local regulatory intelligence across the <strong>Registrar of Companies (ROC), Board of Investment (BOI), Inland Revenue Department (IRD), Central Bank (CBSL), and Colombo Stock Exchange (CSE)</strong> with global best practices, we ensure absolute compliance and financial precision.
+      </p>
+    </div>
+
+    <div class="editorial-2col">
+      <div class="ed-box">
+        <h4>Our Mission</h4>
+        <p>
+          To empower global and local enterprises with seamless, accurate, and compliant corporate services—transforming complex regulatory challenges into strategic advantages that accelerate sustainable growth.
+        </p>
+      </div>
+      <div class="ed-box gold">
+        <h4>Our Vision</h4>
+        <p>
+          To be the undisputed premier corporate services and transaction advisory partner in Sri Lanka, recognized globally for unwavering integrity, precision, and transformative client success.
+        </p>
+      </div>
+    </div>
+
+    <div class="sec-kicker">Who We Serve • Over 150 Business Ventures Established in the Last 10 Years</div>
+    <div class="segments-6-grid">
+      <div class="seg-card">
+        <div class="s-idx">01</div>
+        <h5>International Investors</h5>
+        <p>Foreign promoters and funds entering or expanding into Sri Lanka via BOI or normal law.</p>
+      </div>
+      <div class="seg-card">
+        <div class="s-idx">02</div>
+        <h5>Multinational Companies</h5>
+        <p>Global subsidiaries needing local IFRS accounting, tax, audit, and statutory compliance.</p>
+      </div>
+      <div class="seg-card">
+        <div class="s-idx">03</div>
+        <h5>Growing SMEs</h5>
+        <p>Established domestic enterprises looking for outsourced finance, tax, and HR functions.</p>
+      </div>
+      <div class="seg-card">
+        <div class="s-idx">04</div>
+        <h5>High-Growth Startups</h5>
+        <p>Founders incorporating their business and establishing compliant financial operations.</p>
+      </div>
+      <div class="seg-card">
+        <div class="s-idx">05</div>
+        <h5>Project Developers</h5>
+        <p>Infrastructure, hospitality, and real estate sponsors requiring structuring and DD support.</p>
+      </div>
+      <div class="seg-card">
+        <div class="s-idx">06</div>
+        <h5>Expatriate Executives</h5>
+        <p>Foreign professionals requiring visa coordination, personal tax, and corporate support.</p>
+      </div>
+    </div>
+
+    <div class="sec-kicker">Principles of Our Work</div>
+    <div class="principles-5-strip">
+      <div class="prin-tile">
+        <h5>01. Accuracy &amp; Precision</h5>
+        <p>Every financial and corporate detail captured with zero error tolerance.</p>
+      </div>
+      <div class="prin-tile">
+        <h5>02. Regulatory Compliance</h5>
+        <p>Strict adherence to Sri Lankan statutes and international IFRS/GAAP standards.</p>
+      </div>
+      <div class="prin-tile">
+        <h5>03. Confidentiality</h5>
+        <p>Fiduciary-grade data security and strict client privacy across all mandates.</p>
+      </div>
+      <div class="prin-tile">
+        <h5>04. Timeliness</h5>
+        <p>Delivering statutory filings and executive insights ahead of every deadline.</p>
+      </div>
+      <div class="prin-tile">
+        <h5>05. Strategic Insights</h5>
+        <p>Going beyond bookkeeping to provide actionable commercial intelligence.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="corp-footer">
+    <div class="f-left">
+      <span class="f-dot"></span>
+      <span>SPILLBURG CORPORATE SERVICES (PVT) LTD &nbsp;|&nbsp; WWW.SPILLBURGCORPORATE.COM</span>
+    </div>
+    <span class="corp-page-badge">PAGE 02</span>
+  </div>
+</div>
+
+<!-- ==================== PAGE 3: LEADERSHIP & ADVISORY TEAM ==================== -->
+<div class="page">
+  <div class="page-grid-watermark"></div>
+  <div class="arch-left-rail"></div>
+
+  <div class="corp-masthead">
+    <div class="masthead-logo-pill">
+      <img src="../assets/logo_corporate.png" alt="Spillburg Corporate Services">
+    </div>
+    <div class="masthead-right">
+      <div class="doc-title">Compliance. Assurance. Accelerate Growth.</div>
+      <div class="doc-sub">Section 02 • Executive Leadership</div>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="sec-header-row">
+      <div>
+        <div class="sec-kicker">Governance &amp; Senior Partners</div>
+        <h2 class="sec-title">Leadership &amp; <em>Advisory Team</em></h2>
+      </div>
+      <div class="sec-num-watermark">02</div>
+    </div>
+
+    <p style="font-size: 8.1pt; line-height: 1.5; color: var(--text-muted); margin-bottom: 3.8mm;">
+      Spillburg Corporate Services is led by a multidisciplinary team of Chartered &amp; Certified Practising Accountants, former Board of Investment (BOI) &amp; international banking executives, Chartered Tax Advisors, and Attorneys-at-Law.
+    </p>
+
+    <div class="leader-stack">
+      <!-- Leader 1 -->
+      <div class="leader-row">
+        <img src="../assets/dir_hameez.jpg" alt="M H K M Hameez" class="leader-avatar">
+        <div class="leader-info">
+          <div class="leader-top-line">
+            <h3>M H K M Hameez</h3>
+            <span class="role-badge">Managing Director</span>
+          </div>
+          <div class="leader-creds">BSc. (Hons) University of London &nbsp;•&nbsp; CPM (London) &nbsp;•&nbsp; CPA (Australia)</div>
+          <p class="leader-bio">
+            Former Director attached to the Investment Promotions Division of the <strong>Board of Investment (BOI) of Sri Lanka</strong>, bringing over 15 years of hands-on experience setting up foreign and domestic projects, corporate structuring, financial due diligence, and cross-border investment advisory across regional trade frameworks (SAFTA, ISLFTA, SLPFTA).
+          </p>
+        </div>
+      </div>
+
+      <!-- Leader 2 -->
+      <div class="leader-row">
+        <img src="../assets/dir_shaameel.jpg" alt="Mohideen Shaameel (JP)" class="leader-avatar">
+        <div class="leader-info">
+          <div class="leader-top-line">
+            <h3>Mohideen Shaameel (JP)</h3>
+            <span class="role-badge">Director / Chief Executive Officer</span>
+          </div>
+          <div class="leader-creds">MABE (UK) &nbsp;•&nbsp; MBA (Sydney) &nbsp;•&nbsp; CMA (Australia) &nbsp;•&nbsp; FCPM &nbsp;•&nbsp; AM SLIM &nbsp;•&nbsp; JP (All Island)</div>
+          <p class="leader-bio">
+            Former trade and corporate banker attached to <strong>HSBC and Standard Chartered Bank</strong> with over 15 years of senior executive experience in project financing, M&amp;A deal structuring, BOI &amp; Port City regulatory approvals, capital market readiness, and international investor facilitation.
+          </p>
+        </div>
+      </div>
+
+      <!-- Leader 3 -->
+      <div class="leader-row">
+        <div class="leader-avatar-initials">
+          <span style="font-family: 'Outfit', sans-serif; font-size: 13pt; font-weight: 800; color: var(--champagne-light);">NHH</span>
+          <span style="font-size: 5.5pt; font-weight: 700; letter-spacing: 0.8px; margin-top: 0.5mm;">ACA • CPA</span>
+        </div>
+        <div class="leader-info">
+          <div class="leader-top-line">
+            <h3>N H Hameez</h3>
+            <span class="role-badge">Senior Tax &amp; Audit Consultant</span>
+          </div>
+          <div class="leader-creds">Associate Chartered Accountant (ACA) &nbsp;•&nbsp; Certified Practising Accountant (CPA)</div>
+          <p class="leader-bio">
+            Over 15 years of specialized public practice and corporate advisory experience guiding multinational corporations, mega infrastructure projects, and SMEs on IFRS financial reporting, statutory &amp; internal auditing, RAMIS corporate tax compliance, VAT/APIT planning, and IRD tax appeal representation.
+          </p>
+        </div>
+      </div>
+
+      <!-- Leader 4 -->
+      <div class="leader-row">
+        <img src="../assets/dir_razik.jpg" alt="M. I. Razik" class="leader-avatar">
+        <div class="leader-info">
+          <div class="leader-top-line">
+            <h3>M. I. Razik</h3>
+            <span class="role-badge">Director – Legal &amp; Secretarial Advisory</span>
+          </div>
+          <div class="leader-creds">Attorney-at-Law (Sri Lanka) &nbsp;•&nbsp; Commissioner for Oaths &nbsp;•&nbsp; Notary Public</div>
+          <p class="leader-bio">
+            Over 30 years of distinguished legal practice specialising in corporate and commercial law, Companies Act secretarial governance, M&amp;A legal due diligence, shareholder &amp; joint-venture agreements, property conveyancing, and commercial arbitration &amp; dispute resolution.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div style="background: var(--royal-dark); color: var(--white); border-radius: 2.5mm; padding: 3.8mm 5mm; border-top: 1mm solid var(--champagne); display: flex; justify-content: space-between; align-items: center;">
+      <div>
+        <div style="font-family: 'Outfit', sans-serif; font-size: 7.5pt; font-weight: 700; color: var(--champagne-light); text-transform: uppercase; letter-spacing: 1.2px;">Multidisciplinary Practice Teams</div>
+        <div style="font-size: 7.6pt; color: rgba(255,255,255,0.88); margin-top: 0.6mm;">Supported by qualified Company Secretaries, CIMA/ACCA Financial Analysts, Payroll Specialists, and Legal Associates.</div>
+      </div>
+      <div style="background: var(--cobalt-main); color: var(--white); font-size: 6.8pt; font-weight: 800; padding: 1.8mm 3.2mm; border-radius: 1.2mm; letter-spacing: 0.8px; white-space: nowrap;">FIDUCIARY EXCELLENCE</div>
+    </div>
+  </div>
+
+  <div class="corp-footer">
+    <div class="f-left">
+      <span class="f-dot"></span>
+      <span>SPILLBURG CORPORATE SERVICES (PVT) LTD &nbsp;|&nbsp; WWW.SPILLBURGCORPORATE.COM</span>
+    </div>
+    <span class="corp-page-badge">PAGE 03</span>
+  </div>
+</div>
+
+<!-- ==================== PAGE 4: CORE SERVICES PART I (01 - 04) ==================== -->
+<div class="page">
+  <div class="page-grid-watermark"></div>
+  <div class="arch-left-rail"></div>
+
+  <div class="corp-masthead">
+    <div class="masthead-logo-pill">
+      <img src="../assets/logo_corporate.png" alt="Spillburg Corporate Services">
+    </div>
+    <div class="masthead-right">
+      <div class="doc-title">Compliance. Assurance. Accelerate Growth.</div>
+      <div class="doc-sub">Section 03 • Core Practice Areas (I)</div>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="sec-header-row">
+      <div>
+        <div class="sec-kicker">Core Services Portfolio • Part I (01 – 04)</div>
+        <h2 class="sec-title">Finance, Tax, Audit &amp; <em>Workforce</em></h2>
+      </div>
+      <div class="sec-num-watermark">03</div>
+    </div>
+
+    <div class="srv-2x2">
+      <!-- 01 Accounting & Finance -->
+      <div class="srv-dossier">
+        <div>
+          <div class="srv-head">
+            <div>
+              <div class="srv-kicker">Financial Intelligence &amp; Control</div>
+              <h3>Accounting &amp; Finance</h3>
+            </div>
+            <div class="srv-idx">01</div>
+          </div>
+          <p class="srv-desc">
+            Unlock meaningful financial transparency. Our accounting team combines rigorous bookkeeping and reconciliation discipline with executive-level reporting aligned with SLFRS / IFRS and GAAP standards.
+          </p>
+          <div class="srv-list-title">What It Covers</div>
+          <div class="srv-bullets">
+            <div class="srv-bullet">Full-Spectrum Bookkeeping</div>
+            <div class="srv-bullet">Statutory Financial Statements</div>
+            <div class="srv-bullet">Monthly Management Accounts</div>
+            <div class="srv-bullet">Financial Reporting &amp; KPIs</div>
+            <div class="srv-bullet">Financial &amp; Cashflow Analysis</div>
+            <div class="srv-bullet">Outsourced Finance Functions</div>
+          </div>
+        </div>
+        <div class="srv-output-box">
+          <strong>Key Outputs:</strong> Monthly/quarterly management accounts with commentary, audit-ready annual financial statements &amp; forecasting models.
+        </div>
+      </div>
+
+      <!-- 02 Taxation -->
+      <div class="srv-dossier">
+        <div>
+          <div class="srv-head">
+            <div>
+              <div class="srv-kicker">Strategic Planning &amp; Fiscal Adherence</div>
+              <h3>Taxation Advisory</h3>
+            </div>
+            <div class="srv-idx">02</div>
+          </div>
+          <p class="srv-desc">
+            From statutory registrations to forward-thinking tax planning and IRD dispute resolution, our specialists protect your bottom line against fiscal friction while maintaining 100% statutory compliance.
+          </p>
+          <div class="srv-list-title">What It Covers</div>
+          <div class="srv-bullets">
+            <div class="srv-bullet">Corporate Income Tax (CIT)</div>
+            <div class="srv-bullet">VAT &amp; SVAT Administration</div>
+            <div class="srv-bullet">PAYE / APIT &amp; WHT Filings</div>
+            <div class="srv-bullet">TIN &amp; RAMIS Registration</div>
+            <div class="srv-bullet">Strategic Tax Planning</div>
+            <div class="srv-bullet">Tax Appeals &amp; Dispute Support</div>
+          </div>
+        </div>
+        <div class="srv-output-box">
+          <strong>Key Outputs:</strong> Annual CIT returns, recurring RAMIS VAT/APIT schedules, tax planning memorandums &amp; IRD representation dossiers.
+        </div>
+      </div>
+
+      <!-- 03 Audit & Assurance -->
+      <div class="srv-dossier">
+        <div>
+          <div class="srv-head">
+            <div>
+              <div class="srv-kicker">Governance &amp; Independent Assurance</div>
+              <h3>Audit &amp; Assurance</h3>
+            </div>
+            <div class="srv-idx">03</div>
+          </div>
+          <p class="srv-desc">
+            We deliver independent assurance and 360° internal control evaluations to safeguard enterprise value, eliminate operational vulnerabilities, and drive organizational resilience.
+          </p>
+          <div class="srv-list-title">What It Covers</div>
+          <div class="srv-bullets">
+            <div class="srv-bullet">External Audit Coordination</div>
+            <div class="srv-bullet">Internal Audit &amp; Forensic</div>
+            <div class="srv-bullet">Financial Controls Review</div>
+            <div class="srv-bullet">Enterprise Risk Assessment</div>
+            <div class="srv-bullet">Statutory Compliance Reviews</div>
+            <div class="srv-bullet">Board Governance Advisory</div>
+          </div>
+        </div>
+        <div class="srv-output-box">
+          <strong>Key Outputs:</strong> Internal audit reports, prioritized management letters, internal control matrices &amp; seamless statutory audit sign-offs.
+        </div>
+      </div>
+
+      <!-- 04 Payroll & HR -->
+      <div class="srv-dossier">
+        <div>
+          <div class="srv-head">
+            <div>
+              <div class="srv-kicker">Turnkey Workforce Management</div>
+              <h3>Payroll &amp; HR Services</h3>
+            </div>
+            <div class="srv-idx">04</div>
+          </div>
+          <p class="srv-desc">
+            Empower your workforce with frictionless, 100% confidential payroll processing, meticulous documentation, and compliant Sri Lankan employment practices, including expatriate support.
+          </p>
+          <div class="srv-list-title">What It Covers</div>
+          <div class="srv-bullets">
+            <div class="srv-bullet">Monthly Payroll Processing</div>
+            <div class="srv-bullet">EPF &amp; ETF Contributions</div>
+            <div class="srv-bullet">Employment Contracts &amp; Files</div>
+            <div class="srv-bullet">Turnkey HR Administration</div>
+            <div class="srv-bullet">Shop &amp; Office Act Compliance</div>
+            <div class="srv-bullet">Expatriate Visa Coordination</div>
+          </div>
+        </div>
+        <div class="srv-output-box">
+          <strong>Key Outputs:</strong> Monthly payroll summaries, bank disbursement files, payslips, EPF/ETF C-Form schedules &amp; expatriate visa packets.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="corp-footer">
+    <div class="f-left">
+      <span class="f-dot"></span>
+      <span>SPILLBURG CORPORATE SERVICES (PVT) LTD &nbsp;|&nbsp; WWW.SPILLBURGCORPORATE.COM</span>
+    </div>
+    <span class="corp-page-badge">PAGE 04</span>
+  </div>
+</div>
+
+<!-- ==================== PAGE 5: CORE SERVICES PART II (05 - 08) ==================== -->
+<div class="page">
+  <div class="page-grid-watermark"></div>
+  <div class="arch-left-rail"></div>
+
+  <div class="corp-masthead">
+    <div class="masthead-logo-pill">
+      <img src="../assets/logo_corporate.png" alt="Spillburg Corporate Services">
+    </div>
+    <div class="masthead-right">
+      <div class="doc-title">Compliance. Assurance. Accelerate Growth.</div>
+      <div class="doc-sub">Section 04 • Core Practice Areas (II)</div>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="sec-header-row">
+      <div>
+        <div class="sec-kicker">Core Services Portfolio • Part II (05 – 08)</div>
+        <h2 class="sec-title">Transactions, IPOs &amp; <em>Arbitration</em></h2>
+      </div>
+      <div class="sec-num-watermark">04</div>
+    </div>
+
+    <div class="srv-2x2">
+      <!-- 05 Due Diligence -->
+      <div class="srv-dossier">
+        <div>
+          <div class="srv-head">
+            <div>
+              <div class="srv-kicker">Risk Assessment &amp; Investment Intelligence</div>
+              <h3>Due Diligence (DD)</h3>
+            </div>
+            <div class="srv-idx">05</div>
+          </div>
+          <p class="srv-desc">
+            Make high-confidence investment decisions. Our multi-disciplinary Due Diligence team combines financial forensics, legal analysis, and tax reviews to provide an unbiased 360° picture of any target business or asset.
+          </p>
+          <div class="srv-list-title">What It Covers</div>
+          <div class="srv-bullets">
+            <div class="srv-bullet">Financial Due Diligence</div>
+            <div class="srv-bullet">Legal &amp; Regulatory DD</div>
+            <div class="srv-bullet">Operational Due Diligence</div>
+            <div class="srv-bullet">Tax Exposure Due Diligence</div>
+            <div class="srv-bullet">Commercial Due Diligence</div>
+            <div class="srv-bullet">Vendor DD &amp; Red Flag Reviews</div>
+          </div>
+        </div>
+        <div class="srv-output-box">
+          <strong>Key Outputs:</strong> Comprehensive DD report with Risk Register, Quality-of-Earnings (QoE) analysis &amp; contingent liability quantification.
+        </div>
+      </div>
+
+      <!-- 06 Mergers & Acquisitions -->
+      <div class="srv-dossier">
+        <div>
+          <div class="srv-head">
+            <div>
+              <div class="srv-kicker">Strategic Transactions &amp; Restructuring</div>
+              <h3>M&amp;A &amp; Takeovers</h3>
+            </div>
+            <div class="srv-idx">06</div>
+          </div>
+          <p class="srv-desc">
+            Execute transactions with precision. We provide strategic counsel across the full deal lifecycle—from target identification and valuation through negotiation, structuring, regulatory approvals, and post-merger integration.
+          </p>
+          <div class="srv-list-title">What It Covers</div>
+          <div class="srv-bullets">
+            <div class="srv-bullet">Buy-Side &amp; Sell-Side Advisory</div>
+            <div class="srv-bullet">Independent Business Valuation</div>
+            <div class="srv-bullet">Deal Structuring &amp; Term Sheets</div>
+            <div class="srv-bullet">Takeover Advisory &amp; Defense</div>
+            <div class="srv-bullet">CBSL, SEC &amp; BOI Approvals</div>
+            <div class="srv-bullet">Post-Merger Integration &amp; MBOs</div>
+          </div>
+        </div>
+        <div class="srv-output-box">
+          <strong>Key Outputs:</strong> Target shortlists, comparative valuation &amp; fairness opinions, transaction memorandums &amp; regulatory clearance packages.
+        </div>
+      </div>
+
+      <!-- 07 Stock Market Listing -->
+      <div class="srv-dossier">
+        <div>
+          <div class="srv-head">
+            <div>
+              <div class="srv-kicker">Capital Markets &amp; IPO Advisory</div>
+              <h3>Stock Market Listing</h3>
+            </div>
+            <div class="srv-idx">07</div>
+          </div>
+          <p class="srv-desc">
+            Unlock public capital markets with confidence. We coordinate closely with stockbrokers, corporate lawyers, reporting accountants, the SEC, and the Colombo Stock Exchange (CSE) for Main Board, Diri Savi, and Empower listings.
+          </p>
+          <div class="srv-list-title">What It Covers</div>
+          <div class="srv-bullets">
+            <div class="srv-bullet">IPO Readiness Assessment</div>
+            <div class="srv-bullet">Pre-Listing Restructuring</div>
+            <div class="srv-bullet">Prospectus Drafting Support</div>
+            <div class="srv-bullet">SEC &amp; CSE Submissions</div>
+            <div class="srv-bullet">Pre-IPO Investor Relations</div>
+            <div class="srv-bullet">Post-Listing &amp; Rights Issues</div>
+          </div>
+        </div>
+        <div class="srv-output-box">
+          <strong>Key Outputs:</strong> IPO gap analysis &amp; remediation roadmap, restructured financial statements, prospectus packages &amp; CSE compliance calendar.
+        </div>
+      </div>
+
+      <!-- 08 Mitigation & Arbitration -->
+      <div class="srv-dossier">
+        <div>
+          <div class="srv-head">
+            <div>
+              <div class="srv-kicker">Dispute Resolution &amp; Risk Mitigation</div>
+              <h3>Mitigation &amp; Arbitration</h3>
+            </div>
+            <div class="srv-idx">08</div>
+          </div>
+          <p class="srv-desc">
+            Resolve commercial disputes efficiently and protect enterprise value. We combine forensic financial analysis, contractual risk assessment, and deep knowledge of Sri Lanka’s arbitration framework (SLNAC / ICLP).
+          </p>
+          <div class="srv-list-title">What It Covers</div>
+          <div class="srv-bullets">
+            <div class="srv-bullet">Commercial Arbitration Support</div>
+            <div class="srv-bullet">Mediation &amp; Conciliation</div>
+            <div class="srv-bullet">Financial Expert Witness</div>
+            <div class="srv-bullet">Contractual Risk Audits</div>
+            <div class="srv-bullet">Regulatory Dispute Navigation</div>
+            <div class="srv-bullet">Settlement Strategy Advisory</div>
+          </div>
+        </div>
+        <div class="srv-output-box">
+          <strong>Key Outputs:</strong> Independent expert financial &amp; quantum reports for arbitration panels, evidence chronologies &amp; settlement memorandums.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="corp-footer">
+    <div class="f-left">
+      <span class="f-dot"></span>
+      <span>SPILLBURG CORPORATE SERVICES (PVT) LTD &nbsp;|&nbsp; WWW.SPILLBURGCORPORATE.COM</span>
+    </div>
+    <span class="corp-page-badge">PAGE 05</span>
+  </div>
+</div>
+
+<!-- ==================== PAGE 6: COMPANY SECRETARIAL & ENTITY SETUP LIFECYCLE ==================== -->
+<div class="page">
+  <div class="page-grid-watermark"></div>
+  <div class="arch-left-rail"></div>
+
+  <div class="corp-masthead">
+    <div class="masthead-logo-pill">
+      <img src="../assets/logo_corporate.png" alt="Spillburg Corporate Services">
+    </div>
+    <div class="masthead-right">
+      <div class="doc-title">Compliance. Assurance. Accelerate Growth.</div>
+      <div class="doc-sub">Section 05 • Secretarial &amp; Market Entry</div>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="sec-header-row">
+      <div>
+        <div class="sec-kicker">Uncompromising Corporate Excellence</div>
+        <h2 class="sec-title">Entity Incorporation &amp; <em>Secretarial Lifecycle</em></h2>
+      </div>
+      <div class="sec-num-watermark">05</div>
+    </div>
+
+    <div style="border-radius: 2.8mm; overflow: hidden; height: 42mm; position: relative; margin-bottom: 4.5mm; box-shadow: 0 6px 18px rgba(0,0,77,0.12);">
+      <img src="../assets/boardroom_hero.jpg" alt="Boardroom" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+      <div style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,0,56,0.93) 0%, rgba(0,0,77,0.75) 65%, rgba(23,61,237,0.4) 100%); display: flex; align-items: center; padding: 0 6.5mm;">
+        <div style="color: var(--white); max-width: 145mm;">
+          <div style="font-family: 'Outfit', sans-serif; font-size: 7pt; font-weight: 700; color: var(--champagne-light); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1mm;">Registered Company Secretaries &amp; BOI Advisors</div>
+          <h3 style="font-family: 'Outfit', sans-serif; font-size: 13.5pt; font-weight: 800; line-height: 1.2; margin-bottom: 1.5mm;">Seamless Business Establishment Under the Companies Act No. 07 of 2007</h3>
+          <p style="font-size: 7.7pt; color: rgba(255,255,255,0.88); line-height: 1.45;">
+            From name reservation on the ROC eBiz portal to BOI Section 17/16 investment agreements and ongoing board governance, we handle every statutory formality with zero administrative friction.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sec-kicker">Why Global Enterprises Choose Spillburg Corporate Services</div>
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 3.2mm; margin-bottom: 4.5mm;">
+      <div class="seg-card">
+        <div class="s-idx">01.</div>
+        <h5>Reliable &amp; Proven</h5>
+        <p>A service-oriented firm ensuring absolute delivery and flawless execution on every corporate engagement.</p>
+      </div>
+      <div class="seg-card">
+        <div class="s-idx">02.</div>
+        <h5>Impeccable Trust</h5>
+        <p>Unwavering commitment to confidentiality and fiduciary integrity to safeguard our clients' interests.</p>
+      </div>
+      <div class="seg-card">
+        <div class="s-idx">03.</div>
+        <h5>Frictionless Expansion</h5>
+        <p>Our seasoned experts rapidly navigate complex bureaucratic requirements so your operations are hassle-free.</p>
+      </div>
+      <div class="seg-card">
+        <div class="s-idx">04.</div>
+        <h5>Bespoke Attention</h5>
+        <p>We dedicate time to deeply understand your corporate architecture, deploying strategically tailored plans.</p>
+      </div>
+    </div>
+
+    <div class="sec-kicker">End-to-End Corporate Secretarial &amp; Statutory Governance Matrix</div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3.8mm;">
+      <div class="ed-box">
+        <h4>Phase I: Incorporation &amp; Licensing</h4>
+        <div class="srv-bullets" style="grid-template-columns: 1fr; margin-top: 2mm; margin-bottom: 0;">
+          <div class="srv-bullet">Name search &amp; reservation via Department of Registrar of Companies (ROC)</div>
+          <div class="srv-bullet">Drafting bespoke Articles of Association &amp; Shareholder Agreements</div>
+          <div class="srv-bullet">Private Limited, Public Limited, Overseas Branch &amp; Offshore setups</div>
+          <div class="srv-bullet">BOI Section 17 / 16 approvals &amp; CBSL Inward Investment Account (IIA) setup</div>
+        </div>
+      </div>
+      <div class="ed-box gold">
+        <h4>Phase II: Ongoing Statutory Secretarial</h4>
+        <div class="srv-bullets" style="grid-template-columns: 1fr; margin-top: 2mm; margin-bottom: 0;">
+          <div class="srv-bullet">Acting as Named Registered Company Secretary &amp; Registered Office</div>
+          <div class="srv-bullet">Filing Annual Returns (Form 15) &amp; maintaining Statutory Registers</div>
+          <div class="srv-bullet">Share allotments (Form 6), transfers, share buybacks &amp; capital reductions</div>
+          <div class="srv-bullet">Board &amp; AGM minutes, resolutions, director changes (Form 20) &amp; liquidations</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="corp-footer">
+    <div class="f-left">
+      <span class="f-dot"></span>
+      <span>SPILLBURG CORPORATE SERVICES (PVT) LTD &nbsp;|&nbsp; WWW.SPILLBURGCORPORATE.COM</span>
+    </div>
+    <span class="corp-page-badge">PAGE 06</span>
+  </div>
+</div>
+
+<!-- ==================== PAGE 7: IMPORTANT REGULATORY & INSTITUTIONAL LINKS ==================== -->
+<div class="page">
+  <div class="page-grid-watermark"></div>
+  <div class="arch-left-rail"></div>
+
+  <div class="corp-masthead">
+    <div class="masthead-logo-pill">
+      <img src="../assets/logo_corporate.png" alt="Spillburg Corporate Services">
+    </div>
+    <div class="masthead-right">
+      <div class="doc-title">Compliance. Assurance. Accelerate Growth.</div>
+      <div class="doc-sub">Section 06 • Regulatory Ecosystem</div>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="sec-header-row">
+      <div>
+        <div class="sec-kicker">Sri Lankan Statutory &amp; Institutional Directory</div>
+        <h2 class="sec-title">Regulatory &amp; <em>Institutional Ecosystem</em></h2>
+      </div>
+      <div class="sec-num-watermark">06</div>
+    </div>
+
+    <p style="font-size: 8pt; line-height: 1.48; color: var(--text-muted); margin-bottom: 3.8mm;">
+      Spillburg Corporate Services maintains daily operational interfaces across Sri Lanka’s primary statutory, fiscal, financial, capital-market, and arbitration institutions to execute filings, secure clearances, and represent our clients.
+    </p>
+
+    <div class="reg-grid">
+      <!-- Category 1: Government Portals -->
+      <div class="reg-cat-card">
+        <div class="reg-cat-hdr">
+          01 • Government &amp; Corporate Portals
+          <span>Incorporation &amp; Trade</span>
+        </div>
+        <div class="reg-items">
+          <div class="reg-item">
+            <div>
+              <span class="r-name">Department of Registrar of Companies (ROC)</span>
+              <span class="r-sub">eBiz online company registration, filings &amp; corporate records</span>
+            </div>
+            <span class="r-url">drc.gov.lk</span>
+          </div>
+          <div class="reg-item">
+            <div>
+              <span class="r-name">Board of Investment of Sri Lanka (BOI)</span>
+              <span class="r-sub">Central facilitation agency for foreign direct investment &amp; tax concessions</span>
+            </div>
+            <span class="r-url">investsrilanka.com</span>
+          </div>
+          <div class="reg-item">
+            <div>
+              <span class="r-name">Sri Lanka Export Development Board (EDB)</span>
+              <span class="r-sub">Apex institution for export promotion, registration &amp; trade advisory</span>
+            </div>
+            <span class="r-url">srilankabusiness.com</span>
+          </div>
+          <div class="reg-item">
+            <div>
+              <span class="r-name">Department of Labour</span>
+              <span class="r-sub">Labour laws, Shop &amp; Office Act compliance, ETF &amp; industrial relations</span>
+            </div>
+            <span class="r-url">labourdept.gov.lk</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category 2: Regulatory Authorities -->
+      <div class="reg-cat-card">
+        <div class="reg-cat-hdr">
+          02 • Financial &amp; Audit Regulators
+          <span>Supervision &amp; Standards</span>
+        </div>
+        <div class="reg-items">
+          <div class="reg-item">
+            <div>
+              <span class="r-name">Central Bank of Sri Lanka (CBSL)</span>
+              <span class="r-sub">Monetary authority, Foreign Exchange Act &amp; IIA investment accounts</span>
+            </div>
+            <span class="r-url">cbsl.gov.lk</span>
+          </div>
+          <div class="reg-item">
+            <div>
+              <span class="r-name">Securities &amp; Exchange Commission (SEC)</span>
+              <span class="r-sub">Capital market regulator overseeing public listings, takeovers &amp; funds</span>
+            </div>
+            <span class="r-url">sec.gov.lk</span>
+          </div>
+          <div class="reg-item">
+            <div>
+              <span class="r-name">SL Accounting &amp; Auditing Standards Board</span>
+              <span class="r-sub">SLAASMB statutory monitoring of SLFRS financial statements &amp; audits</span>
+            </div>
+            <span class="r-url">slaasmb.gov.lk</span>
+          </div>
+          <div class="reg-item">
+            <div>
+              <span class="r-name">Employees' Provident Fund (EPF)</span>
+              <span class="r-sub">CBSL-administered mandatory retirement fund &amp; C-Form returns</span>
+            </div>
+            <span class="r-url">epf.lk</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category 3: Taxation & Revenue -->
+      <div class="reg-cat-card">
+        <div class="reg-cat-hdr">
+          03 • Taxation &amp; Revenue Authorities
+          <span>Fiscal &amp; Customs</span>
+        </div>
+        <div class="reg-items">
+          <div class="reg-item">
+            <div>
+              <span class="r-name">Inland Revenue Department (IRD)</span>
+              <span class="r-sub">Corporate Income Tax, VAT, APIT/PAYE, WHT &amp; tax circulars</span>
+            </div>
+            <span class="r-url">ird.gov.lk</span>
+          </div>
+          <div class="reg-item">
+            <div>
+              <span class="r-name">IRD RAMIS e-Services Portal</span>
+              <span class="r-sub">Revenue Administration Management Information System for online tax filing</span>
+            </div>
+            <span class="r-url">eservices.ird.gov.lk</span>
+          </div>
+          <div class="reg-item">
+            <div>
+              <span class="r-name">Sri Lanka Customs &amp; Treasury</span>
+              <span class="r-sub">Import/export tariffs, customs declarations &amp; Ministry of Finance policy</span>
+            </div>
+            <span class="r-url">customs.gov.lk</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category 4: Capital Markets & Arbitration -->
+      <div class="reg-cat-card">
+        <div class="reg-cat-hdr">
+          04 • Capital Markets &amp; Arbitration
+          <span>Listings &amp; Dispute Resolution</span>
+        </div>
+        <div class="reg-items">
+          <div class="reg-item">
+            <div>
+              <span class="r-name">Colombo Stock Exchange (CSE) &amp; CDS</span>
+              <span class="r-sub">Main Board, Diri Savi &amp; Empower equity/debt listings &amp; depository</span>
+            </div>
+            <span class="r-url">cse.lk / cds.lk</span>
+          </div>
+          <div class="reg-item">
+            <div>
+              <span class="r-name">SL National Arbitration Centre (SLNAC)</span>
+              <span class="r-sub">Premier institutional centre for commercial arbitration &amp; ADR</span>
+            </div>
+            <span class="r-url">slnac.org.lk</span>
+          </div>
+          <div class="reg-item">
+            <div>
+              <span class="r-name">ICLP Arbitration Centre &amp; BASL</span>
+              <span class="r-sub">Institute for the Development of Commercial Law &amp; Practice</span>
+            </div>
+            <span class="r-url">iclp.lk / basl.lk</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="story-banner" style="margin-bottom: 0; padding: 3.5mm 5mm;">
+      <p style="font-size: 7.8pt;">
+        <strong>Continuous Regulatory Intelligence:</strong> Our technical desk actively tracks real-time gazettes, Inland Revenue circulars, Central Bank Monetary Policy Reviews, and Colombo Stock Exchange listing rule updates so our clients remain ahead of every statutory change.
+      </p>
+    </div>
+  </div>
+
+  <div class="corp-footer">
+    <div class="f-left">
+      <span class="f-dot"></span>
+      <span>SPILLBURG CORPORATE SERVICES (PVT) LTD &nbsp;|&nbsp; WWW.SPILLBURGCORPORATE.COM</span>
+    </div>
+    <span class="corp-page-badge">PAGE 07</span>
+  </div>
+</div>
+
+<!-- ==================== PAGE 8: CLIENT TESTIMONIALS & SUCCESS STORIES ==================== -->
+<div class="page">
+  <div class="page-grid-watermark"></div>
+  <div class="arch-left-rail"></div>
+
+  <div class="corp-masthead">
+    <div class="masthead-logo-pill">
+      <img src="../assets/logo_corporate.png" alt="Spillburg Corporate Services">
+    </div>
+    <div class="masthead-right">
+      <div class="doc-title">Compliance. Assurance. Accelerate Growth.</div>
+      <div class="doc-sub">Section 07 • Client Success Stories</div>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="sec-header-row">
+      <div>
+        <div class="sec-kicker">Enduring Partnerships • Verified Track Record</div>
+        <h2 class="sec-title">Client Testimonials &amp; <em>Success Stories</em></h2>
+      </div>
+      <div class="sec-num-watermark">07</div>
+    </div>
+
+    <div class="story-banner" style="padding: 3.8mm 5mm; margin-bottom: 3.8mm;">
+      <p style="font-size: 8pt;">
+        <strong>150+ Business Ventures Set Up Over the Last 10 Years:</strong> From fast-growing regional enterprises to global industry leaders with 10 to 2,000+ employees, we have established and supported over 150 ventures across <strong>Infrastructure Development, Tourism &amp; Leisure, Housing &amp; Real Estate, Investment Holding &amp; Finance, Trading &amp; Distribution, and Manufacturing &amp; Export</strong>.
+      </p>
+    </div>
+
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="testi-quote">
+          “We have been using Spillburg services for more than 10 years and have always been completely satisfied with their commitment and overall performance. They are knowledgeable, courteous and accessible at any time. They do an excellent job, very cost-effective and always prompt.”
+        </div>
+        <div>
+          <div class="testi-author">Maneevannan Bhakthavathsalu</div>
+          <div class="testi-role">Country Director, ECU World Wide Lanka (Pvt) Ltd</div>
+        </div>
+      </div>
+
+      <div class="testi-card">
+        <div class="testi-quote">
+          “I have been using Spillburg for a long time now and their service is punctual and efficient. They have a ‘can do’ and ‘work with’ attitude and approach to the services they provide. I would highly recommend them and their execution.”
+        </div>
+        <div>
+          <div class="testi-author">Ross Mayles</div>
+          <div class="testi-role">Director, RDM Investments (Pvt) Ltd</div>
+        </div>
+      </div>
+
+      <div class="testi-card">
+        <div class="testi-quote">
+          “Spillburg Corporate Services is a reliable partner on the way to the success of the company. We are happy to walk together for eight years. Always finds ways and solutions to complex problems. I recommend for a successful business!”
+        </div>
+        <div>
+          <div class="testi-author">Sergey Mikheev</div>
+          <div class="testi-role">Founder &amp; CEO, Surf Discovery Lanka (Private) Limited</div>
+        </div>
+      </div>
+
+      <div class="testi-card">
+        <div class="testi-quote">
+          “Spillburg Corporate Services has provided us professional services for more than 8 years in Sri Lanka. All the staff of the company are accessible and well educated along with adequate regulatory and financial knowledge.”
+        </div>
+        <div>
+          <div class="testi-author">Qu Yucai</div>
+          <div class="testi-role">General Manager, Yanjian Group Lanka (Pvt) Ltd</div>
+        </div>
+      </div>
+
+      <div class="testi-card">
+        <div class="testi-quote">
+          “Professional, efficient and get the job done. Have no hesitation in recommending them for corporate and advisory mandates.”
+        </div>
+        <div>
+          <div class="testi-author">Mr. Shabbir Abidali Jafferjee</div>
+          <div class="testi-role">Chairman, Serendib Properties Group of Companies</div>
+        </div>
+      </div>
+
+      <div class="testi-card">
+        <div class="testi-quote">
+          “Thank you for the excellent corporate secretarial, accounting, and compliance service—greatly appreciated by our board.”
+        </div>
+        <div>
+          <div class="testi-author">Mark Butson</div>
+          <div class="testi-role">Director, Sharafi Lanka (Pvt) Ltd</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sec-kicker">Selected Global &amp; Regional Clients Empowered</div>
+    <div class="partners-bar">
+      <img src="../assets/partner_agoda.png" alt="Agoda">
+      <img src="../assets/partner_balaji.png" alt="Balaji">
+      <img src="../assets/partner_royalty.png" alt="Royalty">
+      <img src="../assets/partner_amtrad.png" alt="Amtrad">
+      <img src="../assets/partner_umms.png" alt="UMMS">
+    </div>
+  </div>
+
+  <div class="corp-footer">
+    <div class="f-left">
+      <span class="f-dot"></span>
+      <span>SPILLBURG CORPORATE SERVICES (PVT) LTD &nbsp;|&nbsp; WWW.SPILLBURGCORPORATE.COM</span>
+    </div>
+    <span class="corp-page-badge">PAGE 08</span>
+  </div>
+</div>
+
+<!-- ==================== PAGE 9: CONTACT US ==================== -->
+<div class="page">
+  <div class="page-grid-watermark"></div>
+  <div class="arch-left-rail"></div>
+
+  <div class="corp-masthead">
+    <div class="masthead-logo-pill">
+      <img src="../assets/logo_corporate.png" alt="Spillburg Corporate Services">
+    </div>
+    <div class="masthead-right">
+      <div class="doc-title">Compliance. Assurance. Accelerate Growth.</div>
+      <div class="doc-sub">Section 08 • Executive Contact</div>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="sec-header-row">
+      <div>
+        <div class="sec-kicker">Start a Conversation • Let's Shape Your Future</div>
+        <h2 class="sec-title">Consult With <em>Our Experts</em></h2>
+      </div>
+      <div class="sec-num-watermark">08</div>
+    </div>
+
+    <div style="background: linear-gradient(135deg, var(--royal-dark) 0%, var(--royal-main) 65%, var(--indigo-mid) 100%); border-radius: 3.5mm; padding: 6mm; color: var(--white); box-shadow: 0 10px 26px rgba(0,0,56,0.18); margin-bottom: 5mm; border-top: 1.5mm solid var(--champagne);">
+      <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 0.3mm solid rgba(255,255,255,0.15); padding-bottom: 4mm; margin-bottom: 5mm;">
+        <div>
+          <div style="font-family: 'Outfit', sans-serif; font-size: 7pt; color: var(--champagne-light); letter-spacing: 2px; font-weight: 700; text-transform: uppercase;">Corporate Headquarters • Colombo, Sri Lanka</div>
+          <h3 style="font-family: 'Outfit', sans-serif; font-size: 14.5pt; font-weight: 800; margin-top: 0.8mm;">Spillburg Corporate Services (Private) Limited</h3>
+        </div>
+        <div style="background: var(--white); padding: 2mm 4mm; border-radius: 2mm;">
+          <img src="../assets/logo_corporate.png" alt="Spillburg Corporate Services" style="height: 9.5mm; width: auto; object-fit: contain;">
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1.35fr 0.65fr; gap: 6mm; align-items: center;">
+        <div style="display: flex; flex-direction: column; gap: 3.5mm;">
+          <div style="display: flex; gap: 3.5mm; align-items: flex-start;">
+            <div style="width: 8.5mm; height: 8.5mm; border-radius: 1.8mm; background: rgba(23,61,237,0.45); border: 0.3mm solid var(--champagne-light); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--champagne-light); font-weight: 800; font-size: 9pt;">📍</div>
+            <div>
+              <div style="font-size: 6.8pt; color: var(--champagne-light); font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Registered Office Location</div>
+              <div style="font-size: 8.6pt; line-height: 1.45; color: var(--white); margin-top: 0.5mm;">
+                Office 14, Basement Level, Cinnamon Lakeside Hotel,<br>
+                No. 115, Sir Chittampalam A. Gardiner Mawatha,<br>
+                Colombo 02, Sri Lanka.
+              </div>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 3.5mm; align-items: flex-start;">
+            <div style="width: 8.5mm; height: 8.5mm; border-radius: 1.8mm; background: rgba(23,61,237,0.45); border: 0.3mm solid var(--champagne-light); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--champagne-light); font-weight: 800; font-size: 9pt;">📞</div>
+            <div>
+              <div style="font-size: 6.8pt; color: var(--champagne-light); font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Direct Telephone &amp; Facsimile</div>
+              <div style="font-size: 8.6pt; line-height: 1.5; color: var(--white); margin-top: 0.5mm;">
+                <strong>Telephone:</strong> +94 11 233 6116<br>
+                <strong>Hotlines:</strong> +94 77 779 0919 &nbsp;|&nbsp; +94 77 748 7720<br>
+                <strong>Facsimile:</strong> +94 11 252 9309
+              </div>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 3.5mm; align-items: flex-start;">
+            <div style="width: 8.5mm; height: 8.5mm; border-radius: 1.8mm; background: rgba(23,61,237,0.45); border: 0.3mm solid var(--champagne-light); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--champagne-light); font-weight: 800; font-size: 9pt;">✉</div>
+            <div>
+              <div style="font-size: 6.8pt; color: var(--champagne-light); font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Official Email &amp; Web Portal</div>
+              <div style="font-size: 8.6pt; line-height: 1.5; color: var(--white); margin-top: 0.5mm;">
+                <strong>Email:</strong> info@spillburg.com<br>
+                <strong>Website:</strong> www.spillburgcorporate.com
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="background: #F8FAFF; padding: 4mm; border-radius: 2.8mm; text-align: center; color: var(--royal-main); border: 0.8mm solid var(--cobalt-main); box-shadow: 0 6px 16px rgba(0,0,0,0.28);">
+          <img src="../assets/qr_website.png" alt="Website QR Code" style="width: 36mm; height: 36mm; object-fit: contain; display: block; margin: 0 auto 2mm auto;">
+          <div style="font-family: 'Outfit', sans-serif; font-size: 7pt; font-weight: 800; letter-spacing: 1px; color: var(--royal-main); text-transform: uppercase;">Scan to Visit Website</div>
+          <div style="font-size: 6pt; color: var(--cobalt-main); font-weight: 700; margin-top: 0.5mm;">spillburgcorporate.com</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sec-kicker">Practice Desks Available for Immediate Consultation</div>
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 3mm; margin-bottom: 5mm;">
+      <div class="seg-card">
+        <h5>Accounting &amp; Audit</h5>
+        <p>SLFRS bookkeeping, management accounts, internal audit &amp; statutory audit coordination.</p>
+      </div>
+      <div class="seg-card">
+        <h5>Tax &amp; Secretarial</h5>
+        <p>RAMIS filings, CIT/VAT planning, ROC eBiz company incorporation &amp; board secretarial.</p>
+      </div>
+      <div class="seg-card">
+        <h5>DD, M&amp;A &amp; CSE</h5>
+        <p>Forensic due diligence, business valuations, M&amp;A deal advisory &amp; CSE IPO readiness.</p>
+      </div>
+      <div class="seg-card">
+        <h5>Payroll &amp; ADR</h5>
+        <p>EPF/ETF payroll administration, expatriate visas &amp; commercial arbitration support.</p>
+      </div>
+    </div>
+
+    <div style="margin-top: auto; border-radius: 3mm; overflow: hidden; position: relative; height: 36mm; box-shadow: 0 6px 18px rgba(0,0,0,0.12);">
+      <img src="../assets/boardroom_hero.jpg" alt="Boardroom" style="width: 100%; height: 100%; object-fit: cover; object-position: center 40%;">
+      <div style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,0,56,0.94) 0%, rgba(23,61,237,0.82) 100%); display: flex; align-items: center; justify-content: space-between; padding: 0 7mm;">
+        <div style="color: var(--white);">
+          <div style="font-family: 'Outfit', sans-serif; font-size: 7pt; color: var(--champagne-light); letter-spacing: 2px; font-weight: 700; text-transform: uppercase;">Your Trusted Partner for Sustainable Growth</div>
+          <div style="font-family: 'Playfair Display', serif; font-size: 16.5pt; font-weight: 700; font-style: italic; margin-top: 1mm;">“Compliance. Assurance. Accelerate Growth.”</div>
+          <div style="font-size: 7.4pt; color: rgba(255,255,255,0.88); margin-top: 1mm;">15+ Years Experience • 200+ Global Clients • 100% Satisfaction Rate</div>
+        </div>
+        <img src="../assets/icon_corporate.png" alt="Icon" style="width: 18mm; height: 18mm; object-fit: contain; background: var(--white); padding: 2mm; border-radius: 2.5mm;">
+      </div>
+    </div>
+  </div>
+
+  <div class="corp-footer">
+    <div class="f-left">
+      <span class="f-dot"></span>
+      <span>SPILLBURG CORPORATE SERVICES (PVT) LTD &nbsp;|&nbsp; WWW.SPILLBURGCORPORATE.COM</span>
+    </div>
+    <span class="corp-page-badge">PAGE 09</span>
+  </div>
+</div>
+
+</body>
+</html>

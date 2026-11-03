@@ -1,0 +1,1681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Spillburg Logistics 1 (Pvt) Ltd - Company Profile 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700;800&family=Public+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --slate-dark: #0B1120;
+    --slate-main: #0F172A;
+    --slate-mid: #1E293B;
+    --ocean-blue: #0284C7;
+    --sky-bright: #0099FF;
+    --sky-light: #38BDF8;
+    --cargo-amber: #D97706;
+    --amber-light: #F59E0B;
+    --amber-pale: #FFFBEB;
+    --tech-bg: #F1F5F9;
+    --text-dark: #0F172A;
+    --text-muted: #475569;
+    --border-tech: #CBD5E1;
+    --white: #FFFFFF;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+
+  body {
+    font-family: 'Public Sans', sans-serif;
+    background: #0F172A;
+    color: var(--text-dark);
+    margin: 0;
+    padding: 0;
+  }
+
+  .page {
+    width: 210mm;
+    height: 297mm;
+    position: relative;
+    overflow: hidden;
+    background: var(--white);
+    page-break-after: always;
+    break-after: page;
+    margin: 0 auto;
+  }
+
+  /* Technical Blueprint Background Grid */
+  .tech-grid-bg {
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(rgba(2, 132, 199, 0.08) 1px, transparent 1px);
+    background-size: 8mm 8mm;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  /* Unique Split Industrial Command Header */
+  .log-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 22mm;
+    background: var(--slate-main);
+    z-index: 5;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    border-bottom: 1.1mm solid var(--ocean-blue);
+  }
+
+  .log-header::after {
+    content: "";
+    position: absolute;
+    bottom: -1.1mm;
+    right: 0;
+    width: 34%;
+    height: 1.1mm;
+    background: var(--amber-light);
+  }
+
+  .log-header-dock {
+    background: var(--white);
+    padding: 0 12mm 0 14mm;
+    display: flex;
+    align-items: center;
+    clip-path: polygon(0 0, 100% 0, 91% 100%, 0 100%);
+    min-width: 88mm;
+  }
+
+  .log-header-dock img {
+    height: 12mm;
+    width: auto;
+    object-fit: contain;
+  }
+
+  .log-header-telemetry {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding-right: 15mm;
+    color: var(--white);
+  }
+
+  .telemetry-code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 6.4pt;
+    font-weight: 700;
+    color: var(--sky-light);
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+  }
+
+  .telemetry-tagline {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 8.2pt;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    margin-top: 0.6mm;
+  }
+
+  /* Unique Industrial Command Footer */
+  .log-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 13.5mm;
+    background: var(--slate-dark);
+    border-top: 0.8mm solid var(--ocean-blue);
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15mm;
+    color: rgba(255,255,255,0.8);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 6.5pt;
+  }
+
+  .log-page-chip {
+    background: var(--ocean-blue);
+    color: var(--white);
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 800;
+    font-size: 7.2pt;
+    padding: 1mm 3mm;
+    clip-path: polygon(8% 0, 100% 0, 92% 100%, 0 100%);
+  }
+
+  /* Content Container */
+  .content {
+    position: relative;
+    z-index: 3;
+    padding: 27mm 15mm 17.5mm 15mm;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tech-sec-hdr {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--tech-bg);
+    border-left: 1.8mm solid var(--ocean-blue);
+    border-right: 0.4mm solid var(--border-tech);
+    border-top: 0.4mm solid var(--border-tech);
+    border-bottom: 0.4mm solid var(--border-tech);
+    padding: 2.6mm 4.5mm;
+    margin-bottom: 4.5mm;
+  }
+
+  .tech-sec-kicker {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 6.6pt;
+    font-weight: 700;
+    color: var(--ocean-blue);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 0.6mm;
+  }
+
+  .tech-sec-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 16.5pt;
+    font-weight: 700;
+    color: var(--slate-main);
+    text-transform: uppercase;
+    letter-spacing: -0.3px;
+    line-height: 1.1;
+  }
+
+  .tech-sec-title span {
+    color: var(--ocean-blue);
+  }
+
+  .tech-sec-code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 7.5pt;
+    font-weight: 800;
+    color: var(--slate-main);
+    background: var(--white);
+    border: 0.35mm solid var(--border-tech);
+    padding: 1.2mm 2.8mm;
+  }
+
+  /* ================= PAGE 1: COVER ================= */
+  .cover-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('../assets/cover_hero.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+  }
+
+  .cover-scrim {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(145deg,
+      rgba(11, 17, 32, 0.94) 0%,
+      rgba(15, 23, 42, 0.85) 50%,
+      rgba(2, 132, 199, 0.82) 100%);
+    z-index: 2;
+  }
+
+  .cover-top-dock {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 32mm;
+    z-index: 5;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .cover-logo-plate {
+    background: var(--white);
+    padding: 5.5mm 14mm 5.5mm 15mm;
+    clip-path: polygon(0 0, 100% 0, 88% 100%, 0 100%);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+    border-bottom: 1.5mm solid var(--sky-bright);
+  }
+
+  .cover-logo-plate img {
+    height: 17mm;
+    width: auto;
+    object-fit: contain;
+  }
+
+  .cover-port-telemetry {
+    margin-top: 6mm;
+    margin-right: 15mm;
+    background: rgba(15, 23, 42, 0.88);
+    border: 0.4mm solid var(--sky-light);
+    padding: 2.5mm 4.5mm;
+    text-align: right;
+    color: var(--white);
+  }
+
+  .cover-port-telemetry .p-code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 7pt;
+    font-weight: 700;
+    color: var(--amber-light);
+    letter-spacing: 1.4px;
+  }
+
+  .cover-port-telemetry .p-sub {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 6.2pt;
+    color: var(--sky-light);
+    margin-top: 0.6mm;
+  }
+
+  .cover-main-frame {
+    position: absolute;
+    top: 84mm;
+    left: 15mm;
+    right: 15mm;
+    z-index: 4;
+    color: var(--white);
+  }
+
+  .cover-mode-tags {
+    display: inline-flex;
+    gap: 2mm;
+    margin-bottom: 5mm;
+  }
+
+  .cover-mode-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 7.2pt;
+    font-weight: 700;
+    background: rgba(0, 153, 255, 0.25);
+    border: 0.35mm solid var(--sky-light);
+    color: var(--white);
+    padding: 1.5mm 3.5mm;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+  }
+
+  .cover-mode-tag.amber {
+    background: rgba(245, 158, 11, 0.25);
+    border-color: var(--amber-light);
+    color: var(--amber-light);
+  }
+
+  .cover-h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 33pt;
+    font-weight: 700;
+    line-height: 1.04;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+    margin-bottom: 2.5mm;
+  }
+
+  .cover-h1 span {
+    color: var(--sky-light);
+    display: block;
+    font-size: 23pt;
+    letter-spacing: 2px;
+    margin-top: 1mm;
+  }
+
+  .cover-tagline-box {
+    display: inline-block;
+    background: var(--amber-light);
+    color: var(--slate-dark);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 13pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 2.2mm 6mm;
+    margin: 3mm 0 5.5mm 0;
+    clip-path: polygon(0 0, 100% 0, 96% 100%, 0 100%);
+  }
+
+  .cover-desc {
+    font-size: 9.8pt;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.92);
+    max-width: 162mm;
+    border-left: 1.4mm solid var(--sky-light);
+    padding-left: 4.5mm;
+    margin-bottom: 8mm;
+  }
+
+  .cover-4-promises {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3mm;
+  }
+
+  .promise-box {
+    background: rgba(15, 23, 42, 0.85);
+    border: 0.35mm solid rgba(56, 189, 248, 0.4);
+    border-top: 1.2mm solid var(--sky-light);
+    padding: 3.5mm 3.5mm;
+  }
+
+  .promise-box:nth-child(even) {
+    border-top-color: var(--amber-light);
+  }
+
+  .promise-box .p-idx {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 6.5pt;
+    font-weight: 700;
+    color: var(--amber-light);
+    margin-bottom: 1mm;
+  }
+
+  .promise-box h4 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 8.5pt;
+    font-weight: 700;
+    color: var(--white);
+    text-transform: uppercase;
+    margin-bottom: 1mm;
+  }
+
+  .promise-box p {
+    font-size: 6.8pt;
+    color: rgba(255,255,255,0.8);
+    line-height: 1.35;
+  }
+
+  .cover-bottom-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20mm;
+    background: var(--slate-dark);
+    border-top: 1.2mm solid var(--ocean-blue);
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15mm;
+    color: rgba(255,255,255,0.88);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 7.2pt;
+  }
+
+  /* Interior Components */
+  .tech-lead-panel {
+    background: var(--slate-main);
+    color: var(--white);
+    padding: 4.8mm 5.8mm;
+    border-left: 2mm solid var(--amber-light);
+    margin-bottom: 4.5mm;
+  }
+
+  .tech-lead-panel p {
+    font-size: 8.4pt;
+    line-height: 1.55;
+    color: rgba(255,255,255,0.92);
+  }
+
+  .tech-lead-panel p + p {
+    margin-top: 2.2mm;
+  }
+
+  .tech-2col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4mm;
+    margin-bottom: 4.5mm;
+  }
+
+  .tech-box {
+    background: var(--tech-bg);
+    border: 0.35mm solid var(--border-tech);
+    border-top: 1.2mm solid var(--ocean-blue);
+    padding: 4mm 4.5mm;
+  }
+
+  .tech-box.amber {
+    border-top-color: var(--cargo-amber);
+    background: var(--amber-pale);
+  }
+
+  .tech-box h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 10pt;
+    font-weight: 700;
+    color: var(--slate-main);
+    text-transform: uppercase;
+    margin-bottom: 1.5mm;
+  }
+
+  .tech-box p {
+    font-size: 8pt;
+    line-height: 1.48;
+    color: var(--text-dark);
+  }
+
+  /* 5 Pillars Strip */
+  .why-5-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2.5mm;
+  }
+
+  .why-tile {
+    background: var(--slate-main);
+    color: var(--white);
+    padding: 3.2mm 2.8mm;
+    border-bottom: 1.1mm solid var(--sky-light);
+  }
+
+  .why-tile:nth-child(even) {
+    border-bottom-color: var(--amber-light);
+  }
+
+  .why-tile .w-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 7pt;
+    font-weight: 800;
+    color: var(--sky-light);
+    margin-bottom: 1mm;
+  }
+
+  .why-tile h5 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 7.8pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 1mm;
+    line-height: 1.2;
+  }
+
+  .why-tile p {
+    font-size: 6.7pt;
+    line-height: 1.36;
+    color: rgba(255,255,255,0.82);
+  }
+
+  /* Management Team 2x2 Grid (Page 3 - Sourced from 4-BOD.jpg) */
+  .mgmt-2x2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4.2mm;
+    margin-bottom: 4.5mm;
+  }
+
+  .mgmt-card {
+    background: var(--white);
+    border: 0.4mm solid var(--border-tech);
+    border-top: 1.4mm solid var(--slate-main);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+  }
+
+  .mgmt-card:nth-child(even) {
+    border-top-color: var(--ocean-blue);
+  }
+
+  .mgmt-hdr {
+    background: var(--tech-bg);
+    padding: 3.5mm 4.2mm;
+    display: flex;
+    align-items: center;
+    gap: 3.8mm;
+    border-bottom: 0.35mm solid var(--border-tech);
+  }
+
+  .mgmt-photo {
+    width: 21mm;
+    height: 21mm;
+    object-fit: cover;
+    object-position: top center;
+    border: 0.7mm solid var(--ocean-blue);
+    flex-shrink: 0;
+    background: var(--slate-mid);
+  }
+
+  .mgmt-title-block h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 10pt;
+    font-weight: 700;
+    color: var(--slate-main);
+    line-height: 1.2;
+  }
+
+  .mgmt-title-block .m-role {
+    display: inline-block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 6.5pt;
+    font-weight: 700;
+    background: var(--slate-main);
+    color: var(--amber-light);
+    padding: 0.6mm 2mm;
+    margin-top: 1mm;
+    text-transform: uppercase;
+  }
+
+  .mgmt-title-block .m-creds {
+    font-size: 6.6pt;
+    font-weight: 600;
+    color: var(--ocean-blue);
+    margin-top: 1mm;
+    line-height: 1.25;
+  }
+
+  .mgmt-body {
+    padding: 3.8mm 4.2mm;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .mgmt-body p {
+    font-size: 7.6pt;
+    line-height: 1.48;
+    color: var(--text-dark);
+    margin-bottom: 2.5mm;
+  }
+
+  .mgmt-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.4mm;
+  }
+
+  .mgmt-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 6pt;
+    font-weight: 700;
+    background: var(--tech-bg);
+    color: var(--slate-main);
+    border: 0.25mm solid var(--border-tech);
+    padding: 0.6mm 2mm;
+    text-transform: uppercase;
+  }
+
+  /* Freight Modules (Pages 4 & 5) */
+  .freight-module {
+    background: var(--white);
+    border: 0.4mm solid var(--border-tech);
+    margin-bottom: 4.2mm;
+  }
+
+  .freight-mod-bar {
+    background: var(--slate-main);
+    color: var(--white);
+    padding: 2.8mm 4.5mm;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 0.9mm solid var(--ocean-blue);
+  }
+
+  .freight-mod-bar .left {
+    display: flex;
+    align-items: center;
+    gap: 3mm;
+  }
+
+  .freight-mod-bar .m-code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 7.5pt;
+    font-weight: 800;
+    background: var(--ocean-blue);
+    color: var(--white);
+    padding: 0.8mm 2.2mm;
+  }
+
+  .freight-mod-bar h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 10.5pt;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .freight-mod-bar .m-mode {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 6.5pt;
+    color: var(--amber-light);
+    text-transform: uppercase;
+  }
+
+  .freight-mod-body {
+    padding: 3.5mm 4.5mm;
+  }
+
+  .freight-mod-body p.lead {
+    font-size: 7.9pt;
+    line-height: 1.48;
+    color: var(--text-dark);
+    margin-bottom: 2.5mm;
+  }
+
+  .spec-list-2col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.6mm 4.5mm;
+  }
+
+  .spec-item {
+    font-size: 7.4pt;
+    line-height: 1.36;
+    color: var(--text-dark);
+    display: flex;
+    align-items: flex-start;
+    gap: 1.8mm;
+  }
+
+  .spec-item::before {
+    content: "■";
+    color: var(--ocean-blue);
+    font-size: 5.5pt;
+    margin-top: 0.8mm;
+    flex-shrink: 0;
+  }
+
+  /* Technical Table (Page 6) */
+  .tech-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 7.2pt;
+    margin-top: 2mm;
+  }
+
+  .tech-table th {
+    background: var(--slate-main);
+    color: var(--white);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 6.6pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: left;
+    padding: 2.4mm 3mm;
+    border: 0.3mm solid var(--slate-mid);
+  }
+
+  .tech-table td {
+    padding: 2.2mm 3mm;
+    border: 0.3mm solid var(--border-tech);
+    color: var(--text-dark);
+    vertical-align: top;
+    line-height: 1.35;
+  }
+
+  .tech-table tr:nth-child(even) td {
+    background: var(--tech-bg);
+  }
+
+  .tech-table td.svc-col {
+    font-weight: 800;
+    color: var(--slate-main);
+  }
+
+  .tech-table td.mono-col {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 6.6pt;
+    color: var(--ocean-blue);
+    font-weight: 700;
+  }
+</style>
+</head>
+<body>
+
+<!-- ==================== PAGE 1: COVER ==================== -->
+<div class="page">
+  <div class="cover-bg"></div>
+  <div class="cover-scrim"></div>
+
+  <div class="cover-top-dock">
+    <div class="cover-logo-plate">
+      <img src="../assets/logo_logistics_live.png" alt="Spillburg Logistics 1 Private Limited">
+    </div>
+    <div class="cover-port-telemetry">
+      <div class="p-code">PORT OF COLOMBO // LKCMB</div>
+      <div class="p-sub">COMPANY PROFILE • 2026 EDITION</div>
+    </div>
+  </div>
+
+  <div class="cover-main-frame">
+    <div class="cover-mode-tags">
+      <span class="cover-mode-tag">SEA FREIGHT</span>
+      <span class="cover-mode-tag">AIR FREIGHT</span>
+      <span class="cover-mode-tag">LAND FREIGHT</span>
+      <span class="cover-mode-tag amber">CUSTOMS CLEARING &amp; WAREHOUSING</span>
+    </div>
+
+    <h1 class="cover-h1">
+      Spillburg Logistics 1
+      <span>(Private) Limited</span>
+    </h1>
+
+    <div class="cover-tagline-box">Moving Cargo. Connecting Businesses.</div>
+
+    <p class="cover-desc">
+      A licensed international Freight Forwarder, Customs House Agent, and Multimodal Logistics Service Provider headquartered in Colombo, Sri Lanka—delivering economical, secure, and time-critical export and import cargo solutions across the globe.
+    </p>
+
+    <div class="cover-4-promises">
+      <div class="promise-box">
+        <div class="p-idx">[01 // SUPPORT]</div>
+        <h4>Contact 24h</h4>
+        <p>Dedicated operations &amp; customer support desk ready round-the-clock.</p>
+      </div>
+      <div class="promise-box">
+        <div class="p-idx">[02 // CUSTODY]</div>
+        <h4>Package Security</h4>
+        <p>All export, import &amp; bonded goods handled with extreme care and CCTV security.</p>
+      </div>
+      <div class="promise-box">
+        <div class="p-idx">[03 // LICENSED]</div>
+        <h4>Full Permissions</h4>
+        <p>Required statutory authority &amp; ASYCUDA customs permissions in Sri Lanka.</p>
+      </div>
+      <div class="promise-box">
+        <div class="p-idx">[04 // SCHEDULE]</div>
+        <h4>Delivery On Time</h4>
+        <p>Precision vessel, flight &amp; haulage scheduling for punctual door delivery.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="cover-bottom-bar">
+    <div>HQ: OFFICE 14, BASEMENT LEVEL, CINNAMON LAKESIDE HOTEL, COLOMBO 02</div>
+    <div>WEB: WWW.SPILLBURGLOGISTICS1.COM &nbsp;|&nbsp; TEL: +94 11 233 6116</div>
+  </div>
+</div>
+
+<!-- ==================== PAGE 2: ABOUT US, VISION & MISSION ==================== -->
+<div class="page">
+  <div class="tech-grid-bg"></div>
+  <div class="log-header">
+    <div class="log-header-dock">
+      <img src="../assets/logo_logistics_live.png" alt="Spillburg Logistics 1">
+    </div>
+    <div class="log-header-telemetry">
+      <div class="telemetry-code">SEC-01 // CORPORATE OVERVIEW</div>
+      <div class="telemetry-tagline">Moving Cargo. Connecting Businesses.</div>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="tech-sec-hdr">
+      <div>
+        <div class="tech-sec-kicker">Who We Are • International Transport &amp; Clearing Specialists</div>
+        <h2 class="tech-sec-title">About <span>Spillburg Logistics 1</span></h2>
+      </div>
+      <div class="tech-sec-code">SL1 // PROFILE</div>
+    </div>
+
+    <div class="tech-lead-panel">
+      <p>
+        <strong>Spillburg Logistics 1 (Private) Limited</strong> is a premier Logistic Service Provider and licensed clearing agent with a team of seasoned experts providing international transport solutions for customers around the globe. Headquartered in Colombo, we deliver reliable cargo handling services for both export and import consignments at Sri Lanka Customs.
+      </p>
+      <p>
+        Ensuring that cargo arrives at the right place and at the right time involves real skill. Spillburg Logistics 1 ensures that moving goods from one part of the world to another is executed economically and efficiently, following strict statutory procedures and accurate shipping documentation to facilitate every transaction seamlessly.
+      </p>
+    </div>
+
+    <div class="tech-2col">
+      <div class="tech-box">
+        <h3>Fast &amp; Professional Execution</h3>
+        <p>
+          Moving finished products, raw materials, and industrial equipment worldwide requires specialized operational expertise. Businesses across Sri Lanka and international trade corridors rely on Spillburg Logistics 1 for experienced, responsive, and high-efficiency freight forwarding across ocean, air, and road networks.
+        </p>
+      </div>
+      <div class="tech-box amber">
+        <h3>Customized Supply Chain Solutions</h3>
+        <p>
+          Every mandate starts with a complete assessment of your business needs. No matter how simple or complex your logistics and supply management requirements are, we engineer tailored routing, consolidation, and customs clearance workflows from order origin to final destination delivery.
+        </p>
+      </div>
+    </div>
+
+    <div class="tech-2col">
+      <div class="tech-box" style="border-top-color: var(--slate-main); background: var(--white);">
+        <h3>Our Vision</h3>
+        <p>
+          “To be the preferred transportation and total logistics solutions provider for our customers across domestic and international trade lanes.”
+        </p>
+      </div>
+      <div class="tech-box" style="border-top-color: var(--ocean-blue); background: var(--white);">
+        <h3>Our Mission</h3>
+        <p>
+          “To provide total logistics solutions that gain the confidence and trust of our valued clients by conducting business with complete integrity, speed, and accountability.”
+        </p>
+      </div>
+    </div>
+
+    <div class="tech-sec-kicker" style="margin-bottom: 2mm;">Why Choose Spillburg Logistics 1 • Five Operational Commitments</div>
+    <div class="why-5-grid">
+      <div class="why-tile">
+        <div class="w-num">01 // SUPPORT</div>
+        <h5>100% Customer Support</h5>
+        <p>24-hour operational desk providing proactive shipment status updates.</p>
+      </div>
+      <div class="why-tile">
+        <div class="w-num">02 // FRICTIONLESS</div>
+        <h5>Ease &amp; Convenience</h5>
+        <p>Single-window handling of freight, customs, warehousing, and drayage.</p>
+      </div>
+      <div class="why-tile">
+        <div class="w-num">03 // BESPOKE</div>
+        <h5>Customer Oriented</h5>
+        <p>Tailored FCL, LCL, air consolidation, and project cargo schedules.</p>
+      </div>
+      <div class="why-tile">
+        <div class="w-num">04 // NETWORK</div>
+        <h5>Wide Global Coverage</h5>
+        <p>Agency networks spanning Asia, Middle East, Europe, Africa &amp; Americas.</p>
+      </div>
+      <div class="why-tile">
+        <div class="w-num">05 // DISCIPLINE</div>
+        <h5>Professional &amp; Efficient</h5>
+        <p>Zero-defect documentation and rapid ASYCUDA customs turnarounds.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="log-footer">
+    <span>SPILLBURG LOGISTICS 1 (PVT) LTD // WWW.SPILLBURGLOGISTICS1.COM</span>
+    <span class="log-page-chip">PAGE 02</span>
+  </div>
+</div>
+
+<!-- ==================== PAGE 3: MANAGEMENT TEAM (FROM 4-BOD.JPG) ==================== -->
+<div class="page">
+  <div class="tech-grid-bg"></div>
+  <div class="log-header">
+    <div class="log-header-dock">
+      <img src="../assets/logo_logistics_live.png" alt="Spillburg Logistics 1">
+    </div>
+    <div class="log-header-telemetry">
+      <div class="telemetry-code">SEC-02 // LEADERSHIP &amp; GOVERNANCE</div>
+      <div class="telemetry-tagline">Moving Cargo. Connecting Businesses.</div>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="tech-sec-hdr">
+      <div>
+        <div class="tech-sec-kicker">Board of Directors &amp; Senior Operations Leadership</div>
+        <h2 class="tech-sec-title">Management <span>Team</span></h2>
+      </div>
+      <div class="tech-sec-code">SL1 // BOARD</div>
+    </div>
+
+    <p style="font-size: 8pt; line-height: 1.48; color: var(--text-muted); margin-bottom: 4mm;">
+      Spillburg Logistics 1 is guided by an accomplished leadership team combining regional trade-agreement expertise (SAFTA, ISLFTA, SLPFTA), international trade banking, maritime &amp; commercial law, and 20+ years of port and cruise-line logistics execution.
+    </p>
+
+    <div class="mgmt-2x2">
+      <!-- Member 1 -->
+      <div class="mgmt-card">
+        <div class="mgmt-hdr">
+          <img src="../assets/dir_hameez.jpg" alt="Mr. M H K M Hameez" class="mgmt-photo">
+          <div class="mgmt-title-block">
+            <h3>Mr. M H K M Hameez</h3>
+            <span class="m-role">Managing Director</span>
+            <div class="m-creds">BSc. (Hons) University of London, CPM (London), CPA (Australia)</div>
+          </div>
+        </div>
+        <div class="mgmt-body">
+          <p>
+            Former Director attached to the Investment Promotions division of the <strong>Board of Investment (BOI) of Sri Lanka</strong>, with over 15 years of hands-on experience setting up projects and providing project management services. Worked intensively with regional countries across diverse sectors, serving as a seasoned adviser and expert in regional Trade Agreements including <strong>SAFTA, ISLFTA, and SLPFTA</strong>.
+          </p>
+          <div class="mgmt-tags">
+            <span class="mgmt-tag">SAFTA / ISLFTA / SLPFTA</span>
+            <span class="mgmt-tag">BOI Duty-Free Logistics</span>
+            <span class="mgmt-tag">Project Management</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Member 2 -->
+      <div class="mgmt-card">
+        <div class="mgmt-hdr">
+          <img src="../assets/dir_shaameel.jpg" alt="Shaameel Mohideen" class="mgmt-photo">
+          <div class="mgmt-title-block">
+            <h3>Shaameel Mohideen</h3>
+            <span class="m-role">Director</span>
+            <div class="m-creds">MABE (UK), MBA (Aus), CMA (Aus)</div>
+          </div>
+        </div>
+        <div class="mgmt-body">
+          <p>
+            Former banker attached to the <strong>Trade and Finance divisions of HSBC and Standard Chartered Bank</strong>, bringing over 15 years of senior experience in international trade finance, Letters of Credit (LC), documentary collections, project financing, project management, and cross-border supply chain structuring.
+          </p>
+          <div class="mgmt-tags">
+            <span class="mgmt-tag">Trade Finance &amp; LCs</span>
+            <span class="mgmt-tag">Project Structuring</span>
+            <span class="mgmt-tag">Global Corridors</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Member 3 -->
+      <div class="mgmt-card">
+        <div class="mgmt-hdr">
+          <img src="../assets/dir_razik.jpg" alt="Mr. M. I. Razik" class="mgmt-photo">
+          <div class="mgmt-title-block">
+            <h3>Mr. M. I. Razik</h3>
+            <span class="m-role">Director</span>
+            <div class="m-creds">Attorney-at-Law (SL), Commissioner of Oaths &amp; Notary Public</div>
+          </div>
+        </div>
+        <div class="mgmt-body">
+          <p>
+            Attorney-at-Law, Notary Public, and Senior Legal Consultant with over 30 years of experience across commercial and corporate law, M&amp;A, business structuring, customs and maritime legal compliance, bills of lading and charterparty governance, and legal advisory.
+          </p>
+          <div class="mgmt-tags">
+            <span class="mgmt-tag">Commercial &amp; Trade Law</span>
+            <span class="mgmt-tag">Regulatory Governance</span>
+            <span class="mgmt-tag">Notary Public</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Member 4 -->
+      <div class="mgmt-card">
+        <div class="mgmt-hdr">
+          <img src="../assets/dir_mafaz.jpg" alt="Mr. Mafaz Azeez" class="mgmt-photo">
+          <div class="mgmt-title-block">
+            <h3>Mr. Mafaz Azeez</h3>
+            <span class="m-role">Senior Manager</span>
+            <div class="m-creds">21+ Years in Maritime Port, Cruise &amp; Freight Operations</div>
+          </div>
+        </div>
+        <div class="mgmt-body">
+          <p>
+            Over 21 years of hands-on operational experience in transport, tourism, and port logistics, including complex passenger (Pax) and baggage exchange operations for international passenger cruise lines calling at Sri Lankan ports alongside time-critical air, sea, and land cargo coordination.
+          </p>
+          <div class="mgmt-tags">
+            <span class="mgmt-tag">Port &amp; Cruise Logistics</span>
+            <span class="mgmt-tag">Pax &amp; Baggage Exchange</span>
+            <span class="mgmt-tag">Field Operations</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="background: var(--slate-main); color: var(--white); padding: 3.8mm 5mm; border-left: 1.8mm solid var(--ocean-blue); display: flex; align-items: center; justify-content: space-between;">
+      <div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 6.8pt; color: var(--amber-light); font-weight: 700; text-transform: uppercase;">Integrated Trade Finance, Customs Law &amp; Port Execution</div>
+        <div style="font-size: 7.8pt; color: rgba(255,255,255,0.88); margin-top: 0.6mm;">
+          Our leadership bridges the gap between physical freight forwarding, BOI/FTA tariff exemptions, bank documentary compliance, and on-ground port operations.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="log-footer">
+    <span>SPILLBURG LOGISTICS 1 (PVT) LTD // WWW.SPILLBURGLOGISTICS1.COM</span>
+    <span class="log-page-chip">PAGE 03</span>
+  </div>
+</div>
+
+<!-- ==================== PAGE 4: CORE SERVICES PART I (SEA, AIR & LAND FREIGHT) ==================== -->
+<div class="page">
+  <div class="tech-grid-bg"></div>
+  <div class="log-header">
+    <div class="log-header-dock">
+      <img src="../assets/logo_logistics_live.png" alt="Spillburg Logistics 1">
+    </div>
+    <div class="log-header-telemetry">
+      <div class="telemetry-code">SEC-03 // MULTIMODAL TRANSPORT (I)</div>
+      <div class="telemetry-tagline">Moving Cargo. Connecting Businesses.</div>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="tech-sec-hdr">
+      <div>
+        <div class="tech-sec-kicker">From Documents to Bulk Goods • Global Forwarding Network</div>
+        <h2 class="tech-sec-title">Sea, Air &amp; <span>Land Freight</span></h2>
+      </div>
+      <div class="tech-sec-code">MOD 01 – 03</div>
+    </div>
+
+    <!-- Module 01: Sea Freight -->
+    <div class="freight-module">
+      <div class="freight-mod-bar">
+        <div class="left">
+          <span class="m-code">MOD-01</span>
+          <h3>Sea Freight Forwarding (FCL &amp; LCL)</h3>
+        </div>
+        <span class="m-mode">OCEAN // PORT OF COLOMBO (LKCMB)</span>
+      </div>
+      <div class="freight-mod-body">
+        <p class="lead">
+          With our flexible ocean freight solutions, you can ship large volumes of cargo across global trade lanes economically and reliably. We handle containerized shipments of any scale—both Full Container Load (FCL) and Less-Than-Container Load (LCL)—alongside project shipping.
+        </p>
+        <div class="spec-list-2col">
+          <div class="spec-item"><strong>FCL &amp; LCL Handling:</strong> 20' / 40' / 40'HC dry &amp; buyer's consolidation boxes</div>
+          <div class="spec-item"><strong>Export &amp; Import:</strong> Complete port-to-port and door-to-door ocean execution</div>
+          <div class="spec-item"><strong>Project Shipping:</strong> Breakbulk, Ro-Ro, Flat Rack &amp; Open Top vessel space</div>
+          <div class="spec-item"><strong>Reefer Containers:</strong> Temperature-controlled ocean transport for perishables</div>
+          <div class="spec-item"><strong>MCC Transshipment:</strong> Multi-Country Consolidation via Port of Colombo</div>
+          <div class="spec-item"><strong>Cargo Insurance:</strong> Comprehensive marine transit insurance upon request</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Module 02: Air Freight -->
+    <div class="freight-module">
+      <div class="freight-mod-bar">
+        <div class="left">
+          <span class="m-code">MOD-02</span>
+          <h3>Air Freight &amp; Express Cargo Coordination</h3>
+        </div>
+        <span class="m-mode">AIR // BANDARANAIKE INT'L (CMB)</span>
+      </div>
+      <div class="freight-mod-body">
+        <p class="lead">
+          When speed is critical, our robust global air freight network covers everything from origin pick-up and consolidation to airport customs clearance and final delivery to end customers—offering the quickest way of sending and receiving your goods worldwide.
+        </p>
+        <div class="spec-list-2col">
+          <div class="spec-item"><strong>Import &amp; Export Consolidation:</strong> Scheduled belly-hold &amp; main-deck air cargo</div>
+          <div class="spec-item"><strong>Door-to-Door Express:</strong> Time-definite airport-to-door &amp; AOG urgent spares</div>
+          <div class="spec-item"><strong>Air Customs Clearance:</strong> Rapid CMB airport cargo village clearance</div>
+          <div class="spec-item"><strong>Air Documentation:</strong> Master/House Air Waybills (MAWB/HAWB) &amp; certificates</div>
+          <div class="spec-item"><strong>Airport Warehousing:</strong> Secure transit staging &amp; cold-room handling</div>
+          <div class="spec-item"><strong>DG &amp; High-Value Cargo:</strong> IATA-compliant handling for sensitive shipments</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Module 03: Land Freight -->
+    <div class="freight-module" style="margin-bottom: 0;">
+      <div class="freight-mod-bar">
+        <div class="left">
+          <span class="m-code">MOD-03</span>
+          <h3>Land Freight &amp; Inland Road Haulage</h3>
+        </div>
+        <span class="m-mode">ROAD // FTL, LTL &amp; CONTAINER DRAYAGE</span>
+      </div>
+      <div class="freight-mod-body">
+        <p class="lead">
+          We have the fleet capacity to transport and forward all road freight shipments throughout Sri Lanka. Whether connecting factories in BOI Export Processing Zones to Colombo terminals or executing nationwide distribution, we guarantee flexible and safe transportation.
+        </p>
+        <div class="spec-list-2col">
+          <div class="spec-item"><strong>FTL &amp; LTL Shipments:</strong> Full Truck Load &amp; Less-Than-Truck Load domestic haulage</div>
+          <div class="spec-item"><strong>Container Deliveries:</strong> 20' &amp; 40' skeletal trailer port-to-factory drayage</div>
+          <div class="spec-item"><strong>Door-to-Door Freight:</strong> Domestic &amp; international multimodal road links</div>
+          <div class="spec-item"><strong>Residential &amp; Commercial:</strong> Pick-up, tail-lift &amp; door deliveries island-wide</div>
+          <div class="spec-item"><strong>High-Quality Wrapping:</strong> Protective industrial packaging for road transit</div>
+          <div class="spec-item"><strong>GPS-Monitored Dispatch:</strong> Real-time route tracking &amp; proof of delivery (POD)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="log-footer">
+    <span>SPILLBURG LOGISTICS 1 (PVT) LTD // WWW.SPILLBURGLOGISTICS1.COM</span>
+    <span class="log-page-chip">PAGE 04</span>
+  </div>
+</div>
+
+<!-- ==================== PAGE 5: CORE SERVICES PART II (WAREHOUSING, CUSTOMS & PROJECT CARGO) ==================== -->
+<div class="page">
+  <div class="tech-grid-bg"></div>
+  <div class="log-header">
+    <div class="log-header-dock">
+      <img src="../assets/logo_logistics_live.png" alt="Spillburg Logistics 1">
+    </div>
+    <div class="log-header-telemetry">
+      <div class="telemetry-code">SEC-04 // MULTIMODAL TRANSPORT (II)</div>
+      <div class="telemetry-tagline">Moving Cargo. Connecting Businesses.</div>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="tech-sec-hdr">
+      <div>
+        <div class="tech-sec-kicker">Ancillary Shipping, Storage &amp; Border Clearance</div>
+        <h2 class="tech-sec-title">Warehousing, Customs &amp; <span>Special Cargo</span></h2>
+      </div>
+      <div class="tech-sec-code">MOD 04 – 06</div>
+    </div>
+
+    <!-- Module 04: Warehousing -->
+    <div class="freight-module">
+      <div class="freight-mod-bar">
+        <div class="left">
+          <span class="m-code">MOD-04</span>
+          <h3>Warehousing, Bonded Storage &amp; Cold Room</h3>
+        </div>
+        <span class="m-mode">STORAGE // GENERAL, BONDED &amp; REEFER</span>
+      </div>
+      <div class="freight-mod-body">
+        <p class="lead">
+          We accommodate your goods safely until they are ready to be shipped or collected at the destination. Spillburg Logistics 1 offers tailored warehousing spaces suited to individual requests and specific commodity profiles across Colombo’s primary logistics corridors.
+        </p>
+        <div class="spec-list-2col">
+          <div class="spec-item"><strong>Picking &amp; Packing:</strong> Order fulfillment, export crating, palletizing &amp; shrink-wrapping</div>
+          <div class="spec-item"><strong>24-Hour Security &amp; CCTV:</strong> Continuous perimeter surveillance &amp; access control</div>
+          <div class="spec-item"><strong>Bonding Warehouse:</strong> Duty-suspended storage for re-export &amp; BOI manufacturers</div>
+          <div class="spec-item"><strong>Cold Room Facilities:</strong> Temperature-controlled storage for food &amp; pharma</div>
+          <div class="spec-item"><strong>Bulk &amp; Racked Storage:</strong> Flexible short-term staging &amp; long-term inventory</div>
+          <div class="spec-item"><strong>Container CFS Operations:</strong> Stuffing, de-stuffing, labeling &amp; tally verification</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Module 05: Customs Brokerage -->
+    <div class="freight-module">
+      <div class="freight-mod-bar">
+        <div class="left">
+          <span class="m-code">MOD-05</span>
+          <h3>Customs Brokerage &amp; ASYCUDA Clearance</h3>
+        </div>
+        <span class="m-mode">CUSTOMS // LICENSED CLEARING AGENT</span>
+      </div>
+      <div class="freight-mod-body">
+        <p class="lead">
+          As an authorized Customs Clearing Agent in Sri Lanka, we handle all regulatory declarations and ancillary border formalities for export and import consignments—preventing port demurrage, detention penalties, and valuation delays.
+        </p>
+        <div class="spec-list-2col">
+          <div class="spec-item"><strong>ASYCUDA World Filing:</strong> Direct electronic CUSDEC submission &amp; assessment</div>
+          <div class="spec-item"><strong>HS Code Classification:</strong> Accurate tariff mapping &amp; duty calculation</div>
+          <div class="spec-item"><strong>FTA Preferential Clearance:</strong> SAFTA, ISLFTA &amp; SLPFTA Certificate of Origin processing</div>
+          <div class="spec-item"><strong>BOI &amp; TIEP Schemes:</strong> Section 17 duty-free project &amp; raw material clearance</div>
+          <div class="spec-item"><strong>Agency Approvals:</strong> SLSI, NMRA, Plant/Animal Quarantine &amp; TRC permits</div>
+          <div class="spec-item"><strong>Physical Inspection:</strong> On-ground wharf clerks at SAGT, CICT, JCT &amp; CMB Air</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Module 06: Project & Cruise Logistics -->
+    <div class="freight-module" style="margin-bottom: 0;">
+      <div class="freight-mod-bar">
+        <div class="left">
+          <span class="m-code">MOD-06</span>
+          <h3>Project Cargo, Heavy Lift &amp; Cruise Line Logistics</h3>
+        </div>
+        <span class="m-mode">SPECIALIZED // OOG &amp; CRUISE PAX EXCHANGE</span>
+      </div>
+      <div class="freight-mod-body">
+        <p class="lead">
+          Beyond standard containerized cargo, our team executes complex Out-of-Gauge (OOG) industrial moves and specialized maritime passenger/baggage turnarounds for international cruise vessels calling at Sri Lankan ports.
+        </p>
+        <div class="spec-list-2col">
+          <div class="spec-item"><strong>Heavy Lift &amp; OOG:</strong> Transformers, turbines, boilers &amp; construction machinery</div>
+          <div class="spec-item"><strong>Route &amp; Bridge Surveys:</strong> Low-bed trailer engineering &amp; police escort permits</div>
+          <div class="spec-item"><strong>Cruise Line Pax &amp; Baggage:</strong> Turnkey passenger &amp; baggage exchange at port</div>
+          <div class="spec-item"><strong>Ship Spares in Transit:</strong> Urgent marine spare parts clearance &amp; launch delivery</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="log-footer">
+    <span>SPILLBURG LOGISTICS 1 (PVT) LTD // WWW.SPILLBURGLOGISTICS1.COM</span>
+    <span class="log-page-chip">PAGE 05</span>
+  </div>
+</div>
+
+<!-- ==================== PAGE 6: 5-STEP OPERATING PROCEDURE & PARAMETER MATRIX ==================== -->
+<div class="page">
+  <div class="tech-grid-bg"></div>
+  <div class="log-header">
+    <div class="log-header-dock">
+      <img src="../assets/logo_logistics_live.png" alt="Spillburg Logistics 1">
+    </div>
+    <div class="log-header-telemetry">
+      <div class="telemetry-code">SEC-05 // OPERATIONAL WORKFLOW &amp; SPECS</div>
+      <div class="telemetry-tagline">Moving Cargo. Connecting Businesses.</div>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="tech-sec-hdr">
+      <div>
+        <div class="tech-sec-kicker">Standardized Chain-of-Custody &amp; Technical Matrix</div>
+        <h2 class="tech-sec-title">Operating Procedure &amp; <span>Capabilities</span></h2>
+      </div>
+      <div class="tech-sec-code">SOP // MATRIX</div>
+    </div>
+
+    <div style="height: 36mm; position: relative; overflow: hidden; margin-bottom: 4mm; border: 0.4mm solid var(--border-tech);">
+      <img src="../assets/warehouse_hero.jpg" alt="Warehouse Operations" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+      <div style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(11,17,32,0.94) 0%, rgba(15,23,42,0.72) 100%); display: flex; align-items: center; padding: 0 6mm;">
+        <div style="color: var(--white);">
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 6.5pt; color: var(--amber-light); font-weight: 700;">END-TO-END SHIPMENT EXECUTION PROTOCOL</div>
+          <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 13pt; font-weight: 700; text-transform: uppercase; margin: 1mm 0;">Five-Stage Multimodal Shipment Lifecycle</h3>
+          <p style="font-size: 7.5pt; color: rgba(255,255,255,0.88); max-width: 155mm; line-height: 1.4;">
+            Every consignment managed by Spillburg Logistics 1 follows a documented 5-stage operational workflow from carrier space allocation to signed Proof of Delivery (POD).
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="why-5-grid" style="margin-bottom: 4.5mm;">
+      <div class="why-tile">
+        <div class="w-num">STEP 01</div>
+        <h5>Booking &amp; Space</h5>
+        <p>Carrier routing, rate lock, container release order &amp; flight/vessel slot allocation.</p>
+      </div>
+      <div class="why-tile">
+        <div class="w-num">STEP 02</div>
+        <h5>Documentation</h5>
+        <p>Verification of Commercial Invoice, Packing List, B/L or AWB, and Certificates of Origin.</p>
+      </div>
+      <div class="why-tile">
+        <div class="w-num">STEP 03</div>
+        <h5>Customs Clearance</h5>
+        <p>Electronic ASYCUDA World CUSDEC filing, tariff assessment &amp; wharf inspection.</p>
+      </div>
+      <div class="why-tile">
+        <div class="w-num">STEP 04</div>
+        <h5>Transit Monitoring</h5>
+        <p>Proactive vessel/flight milestone tracking, transshipment alerts &amp; arrival notices.</p>
+      </div>
+      <div class="why-tile">
+        <div class="w-num">STEP 05</div>
+        <h5>Final Handover</h5>
+        <p>DO collection, terminal gate-out, inland haulage &amp; signed Proof of Delivery (POD).</p>
+      </div>
+    </div>
+
+    <div class="tech-sec-kicker">Technical Service Capabilities &amp; Parameter Matrix</div>
+    <table class="tech-table">
+      <thead>
+        <tr>
+          <th style="width: 22%;">Service Line</th>
+          <th style="width: 15%;">Primary Mode</th>
+          <th style="width: 25%;">Equipment / System</th>
+          <th style="width: 18%;">Operational Scope</th>
+          <th style="width: 20%;">Key Documentation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="svc-col">Sea Freight Forwarding</td>
+          <td class="mono-col">OCEAN FCL/LCL</td>
+          <td>20' / 40' / 40'HC Dry, Reefer, Open Top, Flat Rack</td>
+          <td>Global Port-to-Port &amp; Door-to-Door</td>
+          <td>Ocean B/L, Sea Waybill, VGM, Manifest</td>
+        </tr>
+        <tr>
+          <td class="svc-col">Air Cargo Coordination</td>
+          <td class="mono-col">AIR EXPRESS</td>
+          <td>ULD Pallets, Belly-Hold, Main-Deck Freighter</td>
+          <td>CMB Airport to Global Hubs</td>
+          <td>MAWB / HAWB, Dangerous Goods Decl.</td>
+        </tr>
+        <tr>
+          <td class="svc-col">Land Freight &amp; Drayage</td>
+          <td class="mono-col">ROAD FTL/LTL</td>
+          <td>20'/40' Prime Movers, Covered Box Trucks, Tail-Lift</td>
+          <td>Island-wide Sri Lanka &amp; BOI Zones</td>
+          <td>Waybill, Gate Pass, EIR, Signed POD</td>
+        </tr>
+        <tr>
+          <td class="svc-col">Customs Brokerage</td>
+          <td class="mono-col">BORDER CLEAR</td>
+          <td>ASYCUDA World, RAMIS, Single Window</td>
+          <td>Seaport (LKCMB) &amp; Airport (CMB)</td>
+          <td>CUSDEC, HS Assessment, FTA CoO, BOI</td>
+        </tr>
+        <tr>
+          <td class="svc-col">Warehousing &amp; Storage</td>
+          <td class="mono-col">CFS / BONDED</td>
+          <td>Racked Dry, Customs Bonded, Cold Room</td>
+          <td>Colombo Port Access Corridors</td>
+          <td>Goods Received Note (GRN), Tally Sheet</td>
+        </tr>
+        <tr>
+          <td class="svc-col">Project &amp; Cruise Logistics</td>
+          <td class="mono-col">OOG / CRUISE</td>
+          <td>Low-Bed Modular Trailers, Breakbulk, Pax Coaches</td>
+          <td>Industrial Sites &amp; Passenger Terminals</td>
+          <td>Method Statement, Route Survey, Pax List</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="log-footer">
+    <span>SPILLBURG LOGISTICS 1 (PVT) LTD // WWW.SPILLBURGLOGISTICS1.COM</span>
+    <span class="log-page-chip">PAGE 06</span>
+  </div>
+</div>
+
+<!-- ==================== PAGE 7: SRI LANKA MARITIME CROSSROADS SPOTLIGHT ==================== -->
+<div class="page">
+  <div class="tech-grid-bg"></div>
+  <div class="log-header">
+    <div class="log-header-dock">
+      <img src="../assets/logo_logistics_live.png" alt="Spillburg Logistics 1">
+    </div>
+    <div class="log-header-telemetry">
+      <div class="telemetry-code">SEC-06 // COLOMBO HUB ADVANTAGE</div>
+      <div class="telemetry-tagline">Moving Cargo. Connecting Businesses.</div>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="tech-sec-hdr">
+      <div>
+        <div class="tech-sec-kicker">Strategic Indian Ocean Transshipment &amp; FTA Gateway</div>
+        <h2 class="tech-sec-title">Sri Lanka <span>Maritime Crossroads</span></h2>
+      </div>
+      <div class="tech-sec-code">HUB // LKCMB</div>
+    </div>
+
+    <div class="tech-lead-panel" style="margin-bottom: 4mm;">
+      <p>
+        Positioned directly on the primary East–West Indian Ocean maritime trade route linking Europe, the Middle East, Africa, and Asia-Pacific, the <strong>Port of Colombo (LKCMB)</strong> is South Asia’s premier deep-water transshipment and multi-country consolidation hub. Spillburg Logistics 1 operates at the heart of this ecosystem, connecting global shipping lines and airlines to regional and domestic supply chains.
+      </p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 3.5mm; margin-bottom: 4.5mm;">
+      <div style="background: var(--slate-main); color: var(--white); padding: 4mm 3.5mm; border-top: 1.2mm solid var(--sky-light); text-align: center;">
+        <div style="font-family: 'Space Grotesk', sans-serif; font-size: 16pt; font-weight: 700; color: var(--sky-light);">#1 Hub</div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 6.5pt; color: var(--amber-light); margin-top: 1mm;">SOUTH ASIA TRANSSHIPMENT</div>
+        <div style="font-size: 6.8pt; color: rgba(255,255,255,0.8); margin-top: 1mm;">Direct feeder links to India, Bangladesh &amp; Maldives</div>
+      </div>
+      <div style="background: var(--slate-main); color: var(--white); padding: 4mm 3.5mm; border-top: 1.2mm solid var(--amber-light); text-align: center;">
+        <div style="font-family: 'Space Grotesk', sans-serif; font-size: 16pt; font-weight: 700; color: var(--amber-light);">18m+ Draft</div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 6.5pt; color: var(--sky-light); margin-top: 1mm;">DEEP-WATER BERTHS</div>
+        <div style="font-size: 6.8pt; color: rgba(255,255,255,0.8); margin-top: 1mm;">Accommodates 24,000+ TEU Ultra-Large Container Vessels</div>
+      </div>
+      <div style="background: var(--slate-main); color: var(--white); padding: 4mm 3.5mm; border-top: 1.2mm solid var(--sky-light); text-align: center;">
+        <div style="font-family: 'Space Grotesk', sans-serif; font-size: 16pt; font-weight: 700; color: var(--sky-light);">7.2M+ TEUs</div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 6.5pt; color: var(--amber-light); margin-top: 1mm;">TERMINAL CAPACITY</div>
+        <div style="font-size: 6.8pt; color: rgba(255,255,255,0.8); margin-top: 1mm;">Operations across JCT, SAGT, CICT &amp; East/West Terminals</div>
+      </div>
+      <div style="background: var(--slate-main); color: var(--white); padding: 4mm 3.5mm; border-top: 1.2mm solid var(--amber-light); text-align: center;">
+        <div style="font-family: 'Space Grotesk', sans-serif; font-size: 16pt; font-weight: 700; color: var(--amber-light);">24 / 7 / 365</div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 6.5pt; color: var(--sky-light); margin-top: 1mm;">ASYCUDA CLEARANCE</div>
+        <div style="font-size: 6.8pt; color: rgba(255,255,255,0.8); margin-top: 1mm;">Electronic customs processing &amp; rapid vessel turnaround</div>
+      </div>
+    </div>
+
+    <div class="tech-2col" style="margin-bottom: 4.5mm;">
+      <div class="tech-box">
+        <h3>Regional Trade Agreement Advisory (SAFTA / ISLFTA / SLPFTA)</h3>
+        <p>
+          Led by our Managing Director’s extensive background with the Board of Investment (BOI) and regional trade treaties, we assist exporters and importers in structuring shipments under the <strong>Indo-Sri Lanka Free Trade Agreement (ISLFTA)</strong>, <strong>Pakistan-Sri Lanka FTA (SLPFTA)</strong>, and <strong>SAFTA</strong>—securing duty concessions and rules-of-origin compliance.
+        </p>
+      </div>
+      <div class="tech-box amber">
+        <h3>Multi-Country Consolidation (MCC) &amp; Entrepôt Trade</h3>
+        <p>
+          We coordinate LCL cargo originating from multiple regional ports to be de-stuffed, sorted, relabeled, and consolidated into FCL containers under customs bond in Colombo for onward shipment to Europe, the UK, the Middle East, and North America—reducing overall landed freight costs.
+        </p>
+      </div>
+    </div>
+
+    <div class="tech-sec-kicker" style="margin-bottom: 2mm;">Direct Terminal &amp; Border Coverage Across Sri Lanka</div>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 3.2mm;">
+      <div class="tech-box" style="background: var(--white);">
+        <h3 style="font-size: 8.8pt;">Port of Colombo Terminals</h3>
+        <p style="font-size: 7.3pt;">Direct wharf operations across JCT (Jaya Container Terminal), SAGT (South Asia Gateway Terminals), CICT (Colombo International Container Terminals), and ECT.</p>
+      </div>
+      <div class="tech-box" style="background: var(--white);">
+        <h3 style="font-size: 8.8pt;">Hambantota &amp; Trincomalee</h3>
+        <p style="font-size: 7.3pt;">Ro-Ro vehicle transshipment, project breakbulk discharge, bulk industrial commodities, and heavy-lift port clearance at regional deep-water ports.</p>
+      </div>
+      <div class="tech-box" style="background: var(--white);">
+        <h3 style="font-size: 8.8pt;">BIA Air Cargo &amp; BOI Zones</h3>
+        <p style="font-size: 7.3pt;">Express air cargo clearance at Katunayake (CMB) and direct bonded trucking to Katunayake, Biyagama, Seethawaka, Horana, and Koggala EPZs.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="log-footer">
+    <span>SPILLBURG LOGISTICS 1 (PVT) LTD // WWW.SPILLBURGLOGISTICS1.COM</span>
+    <span class="log-page-chip">PAGE 07</span>
+  </div>
+</div>
+
+<!-- ==================== PAGE 8: INDUSTRIES SERVED & CLIENT TESTIMONIALS ==================== -->
+<div class="page">
+  <div class="tech-grid-bg"></div>
+  <div class="log-header">
+    <div class="log-header-dock">
+      <img src="../assets/logo_logistics_live.png" alt="Spillburg Logistics 1">
+    </div>
+    <div class="log-header-telemetry">
+      <div class="telemetry-code">SEC-07 // SECTORS &amp; CLIENT ENDORSEMENTS</div>
+      <div class="telemetry-tagline">Moving Cargo. Connecting Businesses.</div>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="tech-sec-hdr">
+      <div>
+        <div class="tech-sec-kicker">Vertical Supply Chain Expertise &amp; Proven Reliability</div>
+        <h2 class="tech-sec-title">Industries Served &amp; <span>Testimonials</span></h2>
+      </div>
+      <div class="tech-sec-code">SEC // REVIEWS</div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 3.2mm; margin-bottom: 4.5mm;">
+      <div class="tech-box" style="background: var(--white);">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 6.5pt; color: var(--ocean-blue); font-weight: 700; margin-bottom: 0.8mm;">SECTOR 01</div>
+        <h3 style="font-size: 9pt;">Apparel &amp; Textiles</h3>
+        <p style="font-size: 7.3pt;">Raw fabric rolls, trims &amp; accessories imports under BOI/TIEP, and time-critical Garments-on-Hanger (GOH) &amp; boxed apparel exports to EU, UK &amp; US retail brands.</p>
+      </div>
+      <div class="tech-box" style="background: var(--white);">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 6.5pt; color: var(--ocean-blue); font-weight: 700; margin-bottom: 0.8mm;">SECTOR 02</div>
+        <h3 style="font-size: 9pt;">Industrial Machinery</h3>
+        <p style="font-size: 7.3pt;">Factory production lines, power generators, construction plant, and steel structures handled via Flat Rack, Open Top, and low-bed inland haulage.</p>
+      </div>
+      <div class="tech-box" style="background: var(--white);">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 6.5pt; color: var(--ocean-blue); font-weight: 700; margin-bottom: 0.8mm;">SECTOR 03</div>
+        <h3 style="font-size: 9pt;">Retail &amp; FMCG</h3>
+        <p style="font-size: 7.3pt;">High-frequency FCL &amp; consolidated LCL consumer goods, SLSI/NMRA regulatory clearance, bonded warehousing, pick-and-pack, and island-wide distribution.</p>
+      </div>
+      <div class="tech-box" style="background: var(--white);">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 6.5pt; color: var(--ocean-blue); font-weight: 700; margin-bottom: 0.8mm;">SECTOR 04</div>
+        <h3 style="font-size: 9pt;">Automotive &amp; Spares</h3>
+        <p style="font-size: 7.3pt;">Urgent air freight spares for fleet maintenance alongside FCL tyres, batteries, lubricants, and commercial vehicle components.</p>
+      </div>
+      <div class="tech-box" style="background: var(--white);">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 6.5pt; color: var(--ocean-blue); font-weight: 700; margin-bottom: 0.8mm;">SECTOR 05</div>
+        <h3 style="font-size: 9pt;">Perishables &amp; Tea</h3>
+        <p style="font-size: 7.3pt;">Pure Ceylon Tea, spices, coconut products, seafood, and fresh produce shipped in pre-cooled Reefer containers and cold-room air freight.</p>
+      </div>
+      <div class="tech-box" style="background: var(--white);">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 6.5pt; color: var(--ocean-blue); font-weight: 700; margin-bottom: 0.8mm;">SECTOR 06</div>
+        <h3 style="font-size: 9pt;">Renewable Energy</h3>
+        <p style="font-size: 7.3pt;">Solar PV modules, inverters, battery storage units, wind components, and substation transformers delivered directly to regional project sites.</p>
+      </div>
+    </div>
+
+    <div class="tech-sec-kicker" style="margin-bottom: 2.5mm;">Verified Client Testimonials • From SpillburgLogistics1.com</div>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 3.5mm; margin-bottom: 4.5mm;">
+      <div style="background: var(--slate-main); color: var(--white); padding: 4.2mm; border-top: 1.2mm solid var(--amber-light); display: flex; flex-direction: column; justify-content: space-between;">
+        <p style="font-size: 7.6pt; font-style: italic; line-height: 1.48; color: rgba(255,255,255,0.9); margin-bottom: 3mm;">
+          “Very good service and I was very impressed with the product delivery and the packaging methods for long-time sea voyage.”
+        </p>
+        <div>
+          <div style="font-family: 'Space Grotesk', sans-serif; font-size: 8.5pt; font-weight: 700; color: var(--amber-light);">Marks Philip</div>
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 6pt; color: var(--sky-light);">INTERNATIONAL SEA FREIGHT CLIENT</div>
+        </div>
+      </div>
+
+      <div style="background: var(--slate-main); color: var(--white); padding: 4.2mm; border-top: 1.2mm solid var(--sky-light); display: flex; flex-direction: column; justify-content: space-between;">
+        <p style="font-size: 7.6pt; font-style: italic; line-height: 1.48; color: rgba(255,255,255,0.9); margin-bottom: 3mm;">
+          “Most trustable transportation company. All my goods were properly cared for and properly delivered. I am very happy to have worked with this company.”
+        </p>
+        <div>
+          <div style="font-family: 'Space Grotesk', sans-serif; font-size: 8.5pt; font-weight: 700; color: var(--sky-light);">Kavainda Perera</div>
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 6pt; color: var(--amber-light);">CARGO &amp; TRANSPORT CLIENT</div>
+        </div>
+      </div>
+
+      <div style="background: var(--slate-main); color: var(--white); padding: 4.2mm; border-top: 1.2mm solid var(--amber-light); display: flex; flex-direction: column; justify-content: space-between;">
+        <p style="font-size: 7.6pt; font-style: italic; line-height: 1.48; color: rgba(255,255,255,0.9); margin-bottom: 3mm;">
+          “One of the best services I had for the first time in my business—very flexible and reliable across every stage of delivery.”
+        </p>
+        <div>
+          <div style="font-family: 'Space Grotesk', sans-serif; font-size: 8.5pt; font-weight: 700; color: var(--amber-light);">Tony Johnson</div>
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 6pt; color: var(--sky-light);">COMMERCIAL LOGISTICS CLIENT</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="background: var(--amber-pale); border: 0.4mm solid var(--cargo-amber); padding: 3.5mm 4.5mm; display: flex; justify-content: space-between; align-items: center;">
+      <div>
+        <div style="font-family: 'Space Grotesk', sans-serif; font-size: 8.5pt; font-weight: 700; color: var(--slate-main); text-transform: uppercase;">High-Integrity Cargo Packaging &amp; Sealing Standards</div>
+        <div style="font-size: 7.3pt; color: var(--text-muted); margin-top: 0.5mm;">All container boxes and palletized consignments are sealed and wrapped with industrial-grade materials to prevent transit damage across air, sea, and land legs.</div>
+      </div>
+      <span style="font-family: 'JetBrains Mono', monospace; font-size: 6.8pt; font-weight: 800; background: var(--slate-main); color: var(--amber-light); padding: 1.8mm 3mm; white-space: nowrap;">ZERO-DAMAGE FOCUS</span>
+    </div>
+  </div>
+
+  <div class="log-footer">
+    <span>SPILLBURG LOGISTICS 1 (PVT) LTD // WWW.SPILLBURGLOGISTICS1.COM</span>
+    <span class="log-page-chip">PAGE 08</span>
+  </div>
+</div>
+
+<!-- ==================== PAGE 9: CONTACT US ==================== -->
+<div class="page">
+  <div class="tech-grid-bg"></div>
+  <div class="log-header">
+    <div class="log-header-dock">
+      <img src="../assets/logo_logistics_live.png" alt="Spillburg Logistics 1">
+    </div>
+    <div class="log-header-telemetry">
+      <div class="telemetry-code">SEC-08 // DISPATCH &amp; FREIGHT DESK</div>
+      <div class="telemetry-tagline">Moving Cargo. Connecting Businesses.</div>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="tech-sec-hdr">
+      <div>
+        <div class="tech-sec-kicker">24/7 Operations Desk • Request a Freight Quote</div>
+        <h2 class="tech-sec-title">Get In <span>Touch</span></h2>
+      </div>
+      <div class="tech-sec-code">HQ // COLOMBO</div>
+    </div>
+
+    <div style="background: var(--slate-main); padding: 6mm; color: var(--white); border-top: 1.5mm solid var(--ocean-blue); border-bottom: 1.5mm solid var(--amber-light); margin-bottom: 5mm; box-shadow: 0 10px 25px rgba(15,23,42,0.16);">
+      <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 0.3mm solid rgba(255,255,255,0.15); padding-bottom: 4mm; margin-bottom: 5mm;">
+        <div>
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 6.8pt; color: var(--amber-light); letter-spacing: 1.5px; font-weight: 700;">REGISTERED CORPORATE &amp; OPERATIONS OFFICE</div>
+          <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 15pt; font-weight: 700; text-transform: uppercase; margin-top: 0.8mm;">Spillburg Logistics 1 (Private) Limited</h3>
+        </div>
+        <div style="background: var(--white); padding: 2mm 4mm;">
+          <img src="../assets/logo_logistics_live.png" alt="Spillburg Logistics 1" style="height: 10mm; width: auto; object-fit: contain;">
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1.35fr 0.65fr; gap: 6mm; align-items: center;">
+        <div style="display: flex; flex-direction: column; gap: 3.5mm;">
+          <div style="display: flex; gap: 3.5mm; align-items: flex-start;">
+            <div style="width: 8.5mm; height: 8.5mm; background: rgba(2,132,199,0.3); border: 0.3mm solid var(--sky-light); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--sky-light); font-weight: 800; font-size: 9pt;">📍</div>
+            <div>
+              <div style="font-family: 'JetBrains Mono', monospace; font-size: 6.6pt; color: var(--sky-light); font-weight: 700; text-transform: uppercase;">Headquarters Address</div>
+              <div style="font-size: 8.6pt; line-height: 1.45; color: var(--white); margin-top: 0.5mm;">
+                Office 14, Basement Level, Cinnamon Lakeside Hotel,<br>
+                No. 115, Sir Chittampalam A. Gardiner Mawatha,<br>
+                Colombo 02, Sri Lanka.
+              </div>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 3.5mm; align-items: flex-start;">
+            <div style="width: 8.5mm; height: 8.5mm; background: rgba(2,132,199,0.3); border: 0.3mm solid var(--sky-light); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--sky-light); font-weight: 800; font-size: 9pt;">📞</div>
+            <div>
+              <div style="font-family: 'JetBrains Mono', monospace; font-size: 6.6pt; color: var(--sky-light); font-weight: 700; text-transform: uppercase;">24h Hotlines, Landline &amp; Fax</div>
+              <div style="font-size: 8.6pt; line-height: 1.5; color: var(--white); margin-top: 0.5mm;">
+                <strong>24h Hotlines:</strong> +94 777 487 720 &nbsp;|&nbsp; +94 777 790 919<br>
+                <strong>General Line:</strong> +94 11 233 6116 &nbsp;|&nbsp; <strong>Fax:</strong> +94 11 252 9309
+              </div>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 3.5mm; align-items: flex-start;">
+            <div style="width: 8.5mm; height: 8.5mm; background: rgba(2,132,199,0.3); border: 0.3mm solid var(--sky-light); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--sky-light); font-weight: 800; font-size: 9pt;">✉</div>
+            <div>
+              <div style="font-family: 'JetBrains Mono', monospace; font-size: 6.6pt; color: var(--sky-light); font-weight: 700; text-transform: uppercase;">Freight Desk Email &amp; Web Portal</div>
+              <div style="font-size: 8.6pt; line-height: 1.5; color: var(--white); margin-top: 0.5mm;">
+                <strong>Email:</strong> info@spillburglogistics1.com<br>
+                <strong>Website:</strong> www.spillburglogistics1.com
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="background: #F8FAFC; padding: 4mm; text-align: center; color: var(--slate-main); border: 0.8mm solid var(--ocean-blue); box-shadow: 0 6px 16px rgba(0,0,0,0.3);">
+          <img src="../assets/qr_website.png" alt="Website QR Code" style="width: 36mm; height: 36mm; object-fit: contain; display: block; margin: 0 auto 2mm auto;">
+          <div style="font-family: 'Space Grotesk', sans-serif; font-size: 7pt; font-weight: 700; letter-spacing: 0.8px; color: var(--slate-main); text-transform: uppercase;">Scan for Online Portal</div>
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 5.8pt; color: var(--ocean-blue); font-weight: 700; margin-top: 0.5mm;">spillburglogistics1.com</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tech-sec-kicker" style="margin-bottom: 2mm;">Information Required for Rapid Rate Quotations</div>
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 3mm; margin-bottom: 5mm;">
+      <div class="tech-box" style="background: var(--white);">
+        <h3 style="font-size: 8.3pt;">01. Mode &amp; Incoterm</h3>
+        <p style="font-size: 7pt;">Sea (FCL/LCL), Air, Road or Customs Brokerage; EXW, FOB, CIF, DAP, or DDP terms.</p>
+      </div>
+      <div class="tech-box" style="background: var(--white);">
+        <h3 style="font-size: 8.3pt;">02. Origin &amp; Port</h3>
+        <p style="font-size: 7pt;">Port/Airport of Loading (POL), Port of Discharge (POD), and final delivery address.</p>
+      </div>
+      <div class="tech-box" style="background: var(--white);">
+        <h3 style="font-size: 8.3pt;">03. Cargo Specs</h3>
+        <p style="font-size: 7pt;">Gross weight (kg), volume (CBM), dimensions, container size, and HS Code / commodity.</p>
+      </div>
+      <div class="tech-box" style="background: var(--white);">
+        <h3 style="font-size: 8.3pt;">04. Special Needs</h3>
+        <p style="font-size: 7pt;">Reefer temperature, DG class, BOI duty-free clearance, marine insurance, or storage.</p>
+      </div>
+    </div>
+
+    <div style="margin-top: auto; overflow: hidden; position: relative; height: 36mm; border: 0.4mm solid var(--border-tech);">
+      <img src="../assets/cover_hero.jpg" alt="Port Operations" style="width: 100%; height: 100%; object-fit: cover; object-position: center 55%;">
+      <div style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(11,17,32,0.94) 0%, rgba(2,132,199,0.82) 100%); display: flex; align-items: center; justify-content: space-between; padding: 0 7mm;">
+        <div style="color: var(--white);">
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 6.8pt; color: var(--amber-light); letter-spacing: 1.5px; font-weight: 700;">AIR FREIGHT • SEA FREIGHT • LAND FREIGHT • WAREHOUSING</div>
+          <div style="font-family: 'Space Grotesk', sans-serif; font-size: 16pt; font-weight: 700; text-transform: uppercase; margin-top: 1mm;">“Moving Cargo. Connecting Businesses.”</div>
+          <div style="font-size: 7.4pt; color: rgba(255,255,255,0.88); margin-top: 1mm;">Economical, Secure &amp; Time-Critical International Transport Solutions</div>
+        </div>
+        <div style="background: var(--white); padding: 2mm 3.5mm;">
+          <img src="../assets/icon_logistics.png" alt="SL1" style="height: 14mm; width: auto; object-fit: contain;">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="log-footer">
+    <span>SPILLBURG LOGISTICS 1 (PVT) LTD // WWW.SPILLBURGLOGISTICS1.COM</span>
+    <span class="log-page-chip">PAGE 09</span>
+  </div>
+</div>
+
+</body>
+</html>

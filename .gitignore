@@ -10,6 +10,10 @@ scratch/*.tmp
 spillburg holdings/Stock/Gemini_Generated_Image_*.png
 spillburg holdings/Stock/ChatGPT Image *.png
 
+# Track compressed figma_svg_pages.zip instead of uncompressed raw SVG XML
+*/figma_svg_pages/*.svg
+
+
 # Python artifacts
 __pycache__/
 *.py[cod]
